@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="The pleasure of getting slightly lost while traveling, discovering unfamiliar streets, unexpected corners and memorable details along the way."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="referrer"
+    content="no-referrer"
+  >
+
+  <title>The Pleasure of Getting Slightly Lost — Travel</title>
+
+
+  <!-- =========================================
+       GOOGLE FONTS
+  ========================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =========================================
+       HEADER / FOOTER
+  ========================================== -->
+
+  <script src="header.js" defer></script>
+  <script src="footer.js" defer></script>
+
+
+  <style>
+
+    /* =========================================
+       ROOT
+    ========================================== */
+
+    :root {
+
+      --bg: #f2f4f1;
+
+      --paper: #fafbf8;
+
+      --ink: #202622;
+
+      --muted: #717972;
+
+      --line: #d8ddd7;
+
+      --accent: #536c5c;
+
+      --soft: #e4e9e2;
+
+      --dark: #29362e;
+
+      --serif: "Playfair Display", Georgia, serif;
+
+      --sans: "DM Sans", Arial, sans-serif;
+
+    }
+
+
+    /* =========================================
+       RESET
+    ========================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--ink);
+
+      font-family: var(--sans);
+
+      line-height: 1.7;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+    /* =========================================
+       ARTICLE HERO
+    ========================================== */
+
+    .article-hero {
+
+      width: min(1080px, 90%);
+
+      margin: 0 auto;
+
+      padding: 105px 0 75px;
+
+    }
+
+
+    .article-meta {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .17em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-meta::before {
+
+      content: "";
+
+      width: 32px;
+
+      height: 1px;
+
+      background: var(--accent);
+
+    }
+
+
+    .article-hero h1 {
+
+      max-width: 950px;
+
+      margin-top: 28px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(55px, 8vw, 100px);
+
+      font-weight: 500;
+
+      line-height: .94;
+
+      letter-spacing: -.055em;
+
+    }
+
+
+    .article-hero h1 em {
+
+      font-weight: 500;
+
+    }
+
+
+    .article-intro {
+
+      max-width: 650px;
+
+      margin-top: 35px;
+
+      color: var(--muted);
+
+      font-size: 15px;
+
+      line-height: 1.9;
+
+    }
+
+
+    /* =========================================
+       DIVIDER
+    ========================================== */
+
+    .article-divider {
+
+      width: min(1080px, 90%);
+
+      height: 1px;
+
+      margin: 0 auto;
+
+      background: var(--line);
+
+    }
+
+
+    /* =========================================
+       ARTICLE CONTENT
+    ========================================== */
+
+    .article-content {
+
+      width: min(760px, 90%);
+
+      margin: 0 auto;
+
+      padding: 75px 0 110px;
+
+    }
+
+
+    .article-section {
+
+      margin-bottom: 62px;
+
+    }
+
+
+    .article-section:last-of-type {
+
+      margin-bottom: 0;
+
+    }
+
+
+    .section-number {
+
+      margin-bottom: 17px;
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .16em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-section h2 {
+
+      margin-bottom: 20px;
+
+      font-family: var(--serif);
+
+      font-size: 39px;
+
+      font-weight: 500;
+
+      line-height: 1.08;
+
+      letter-spacing: -.03em;
+
+    }
+
+
+    .article-section p {
+
+      margin-bottom: 20px;
+
+      color: #59615b;
+
+      font-size: 14px;
+
+      line-height: 2;
+
+    }
+
+
+    .article-section p:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+
+    /* =========================================
+       FEATURE QUOTE
+    ========================================== */
+
+    .article-pull {
+
+      margin: 55px 0;
+
+      padding: 35px 0 35px 30px;
+
+      border-left: 2px solid var(--accent);
+
+    }
+
+
+    .article-pull p {
+
+      margin: 0;
+
+      color: var(--dark);
+
+      font-family: var(--serif);
+
+      font-size: 27px;
+
+      line-height: 1.4;
+
+      letter-spacing: -.02em;
+
+    }
+
+
+    /* =========================================
+       CTA
+    ========================================== */
+
+    .travel-cta {
+
+      margin: -5px 0 62px;
+
+      padding: 42px 38px;
+
+      background: var(--soft);
+
+      border: 1px solid var(--line);
+
+      text-align: center;
+
+    }
+
+
+    .travel-cta-label {
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .17em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .travel-cta h2 {
+
+      max-width: 520px;
+
+      margin: 14px auto 0;
+
+      font-family: var(--serif);
+
+      font-size: 31px;
+
+      font-weight: 500;
+
+      line-height: 1.18;
+
+      letter-spacing: -.025em;
+
+    }
+
+
+    .travel-cta p {
+
+      max-width: 510px;
+
+      margin: 12px auto 0;
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.8;
+
+    }
+
+
+    .travel-cta-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 11px;
+
+      min-height: 49px;
+
+      width: 100%;
+
+      max-width: 310px;
+
+      margin-top: 21px;
+
+      padding: 0 20px;
+
+      background: var(--dark);
+
+      color: #ffffff !important;
+
+      border: 1px solid var(--dark);
+
+      border-radius: 4px;
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .13em;
+
+      text-transform: uppercase;
+
+      box-shadow: 0 7px 18px rgba(41,54,46,.12);
+
+      transition:
+
+        background .2s ease,
+
+        transform .2s ease,
+
+        box-shadow .2s ease;
+
+    }
+
+
+    .travel-cta-link::after {
+
+      content: "→";
+
+      font-size: 15px;
+
+    }
+
+
+    .travel-cta-link:hover {
+
+      background: var(--accent);
+
+      transform: translateY(-1px);
+
+      box-shadow: 0 10px 22px rgba(41,54,46,.16);
+
+    }
+
+
+    .travel-cta-note {
+
+      margin-top: 10px;
+
+      color: var(--muted);
+
+      font-size: 8px;
+
+      opacity: .75;
+
+    }
+
+
+    /* =========================================
+       DISCLOSURE
+    ========================================== */
+
+    .article-disclosure {
+
+      max-width: 620px;
+
+      margin: 42px auto 0;
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      line-height: 1.75;
+
+      text-align: center;
+
+      opacity: .8;
+
+    }
+
+
+    /* =========================================
+       FOOTER
+    ========================================== */
+
+    #footer-container {
+
+      width: 100%;
+
+    }
+
+
+    /* =========================================
+       TABLET
+    ========================================== */
+
+    @media (max-width: 750px) {
+
+      .article-hero {
+
+        padding: 80px 0 60px;
+
+      }
+
+
+      .article-hero h1 {
+
+        font-size: clamp(48px, 10vw, 76px);
+
+      }
+
+
+      .article-content {
+
+        padding: 60px 0 85px;
+
+      }
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================== */
+
+    @media (max-width: 600px) {
+
+      .article-hero {
+
+        width: 92%;
+
+        padding: 65px 0 50px;
+
+      }
+
+
+      .article-meta {
+
+        font-size: 7px;
+
+        letter-spacing: .14em;
+
+      }
+
+
+      .article-meta::before {
+
+        width: 22px;
+
+      }
+
+
+      .article-hero h1 {
+
+        margin-top: 20px;
+
+        font-size: 46px;
+
+        line-height: .98;
+
+      }
+
+
+      .article-intro {
+
+        margin-top: 24px;
+
+        font-size: 11px;
+
+        line-height: 1.85;
+
+      }
+
+
+      .article-divider {
+
+        width: 92%;
+
+      }
+
+
+      .article-content {
+
+        width: 92%;
+
+        padding: 48px 0 70px;
+
+      }
+
+
+      .article-section {
+
+        margin-bottom: 48px;
+
+      }
+
+
+      .section-number {
+
+        margin-bottom: 12px;
+
+        font-size: 7px;
+
+      }
+
+
+      .article-section h2 {
+
+        margin-bottom: 15px;
+
+        font-size: 30px;
+
+      }
+
+
+      .article-section p {
+
+        margin-bottom: 17px;
+
+        font-size: 10px;
+
+        line-height: 1.9;
+
+      }
+
+
+      .article-pull {
+
+        margin: 40px 0;
+
+        padding: 25px 0 25px 20px;
+
+      }
+
+
+      .article-pull p {
+
+        font-size: 21px;
+
+        line-height: 1.4;
+
+      }
+
+
+      .travel-cta {
+
+        margin: -2px 0 48px;
+
+        padding: 31px 19px 29px;
+
+      }
+
+
+      .travel-cta-label {
+
+        font-size: 7px;
+
+      }
+
+
+      .travel-cta h2 {
+
+        margin-top: 11px;
+
+        font-size: 24px;
+
+      }
+
+
+      .travel-cta p {
+
+        margin-top: 10px;
+
+        font-size: 8px;
+
+        line-height: 1.75;
+
+      }
+
+
+      .travel-cta-link {
+
+        max-width: none;
+
+        min-height: 50px;
+
+        margin-top: 17px;
+
+        font-size: 7px;
+
+        letter-spacing: .1em;
+
+      }
+
+
+      .travel-cta-note {
+
+        font-size: 7px;
+
+      }
+
+
+      .article-disclosure {
+
+        margin-top: 30px;
+
+        font-size: 7px;
+
+        line-height: 1.7;
+
+      }
+
+    }
+
+
+    /* =========================================
+       VERY SMALL MOBILE
+    ========================================== */
+
+    @media (max-width: 360px) {
+
+      .article-hero h1 {
+
+        font-size: 41px;
+
+      }
+
+
+      .article-section h2 {
+
+        font-size: 27px;
+
+      }
+
+
+      .article-pull p {
+
+        font-size: 19px;
+
+      }
+
+
+      .travel-cta h2 {
+
+        font-size: 22px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<main>
+
+
+  <!-- =========================================
+       HERO
+  ========================================== -->
+
+  <section class="article-hero">
+
+
+    <div class="article-meta">
+      Travel Journal · Wandering
+    </div>
+
+
+    <h1>
+      The Pleasure of
+      <em>Getting Slightly Lost</em>
+    </h1>
+
+
+    <p class="article-intro">
+      Not every turn needs to be planned. Sometimes an
+      unfamiliar street or unexpected corner becomes the
+      detail you remember most.
+    </p>
+
+
+  </section>
+
+
+  <div class="article-divider"></div>
+
+
+
+  <!-- =========================================
+       ARTICLE CONTENT
+  ========================================== -->
+
+  <article class="article-content">
+
+
+    <!-- =========================================
+         SECTION 01
+    ========================================== -->
+
+    <section class="article-section">
+
+
+      <div class="section-number">
+        01 · Leave Some Room
+      </div>
+
+
+      <h2>
+        When the map stops being the whole story
+      </h2>
+
+
+      <p>
+        Travel often begins with a plan. We choose where
+        to stay, decide which places deserve our time and
+        build routes between the things we hope to see.
+        A little structure can make a journey easier, but
+        it can also make every hour feel accounted for.
+      </p>
+
+
+      <p>
+        Leaving a small amount of room for uncertainty
+        changes that rhythm. A street that was not on the
+        list suddenly becomes interesting. A quiet square
+        appears between two busy roads. A café looks worth
+        stopping for simply because there is no reason not to.
+      </p>
+
+
+      <div class="article-pull">
+
+        <p>
+          Sometimes the most memorable part of a journey
+          is the moment that was never included in the plan.
+        </p>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         SECTION 02
+    ========================================== -->
+
+    <section class="article-section">
+
+
+      <div class="section-number">
+        02 · Follow the Small Details
+      </div>
+
+
+      <h2>
+        Let curiosity choose the next turn
+      </h2>
+
+
+      <p>
+        Getting slightly lost does not have to mean being
+        completely without direction. It can simply mean
+        choosing curiosity over efficiency for an hour or
+        an afternoon.
+      </p>
+
+
+      <p>
+        Notice the sound coming from a side street. Follow
+        the smell of fresh bread. Walk toward a building
+        that catches your attention. Watch where local
+        people seem to be heading. These small decisions
+        can reveal a side of a destination that a fixed
+        itinerary might easily miss.
+      </p>
+
+
+      <p>
+        The point is not to collect more attractions.
+        It is to experience the space between them — the
+        ordinary streets, storefronts, parks and corners
+        that give a place its everyday character.
+      </p>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         CTA — AFTER SECTION 02
+    ========================================== -->
+
+    <div class="travel-cta">
+
+
+      <div class="travel-cta-label">
+        Travel Inspiration
+      </div>
+
+
+      <h2>
+        Give your next journey a little more room to unfold.
+      </h2>
+
+
+      <p>
+        Explore travel options and destinations that can
+        make it easier to plan a stay while still leaving
+        space for the unexpected moments along the way.
+      </p>
+
+
+      <a
+        href="travelpark.html"
+        class="travel-cta-link"
+		target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Travel Options
+      </a>
+
+
+      <div class="travel-cta-note">
+        Continue to the travel information page.
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         SECTION 03
+    ========================================== -->
+
+    <section class="article-section">
+
+
+      <div class="section-number">
+        03 · Remember the Unexpected
+      </div>
+
+
+      <h2>
+        The details you never planned to find
+      </h2>
+
+
+      <p>
+        Planned highlights can be wonderful, but unexpected
+        moments often stay with us differently. Years later,
+        you may remember a particular street at sunset,
+        the tiny shop you wandered into, or the bench where
+        you stopped because you suddenly had nowhere else
+        to be.
+      </p>
+
+
+      <p>
+        That is the quiet pleasure of getting slightly lost.
+        It gives a journey permission to become personal.
+        Instead of simply moving from one destination to
+        another, you begin collecting small discoveries
+        that could belong only to your version of the trip.
+      </p>
+
+
+      <p>
+        A good journey needs direction, but it does not
+        need every moment decided in advance. Leave a little
+        space. Take the unfamiliar turn. Sometimes that is
+        where the story begins.
+      </p>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         DISCLOSURE
+    ========================================== -->
+
+    <p class="article-disclosure">
+
+      This article is provided for general travel
+      inspiration and informational purposes. Travel
+      options, availability, pricing and terms may vary
+      by provider and destination.
+
+    </p>
+
+
+  </article>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================== -->
+
+<div id="footer-container"></div>
+
+
+</body>
+</html>

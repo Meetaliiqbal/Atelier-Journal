@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="description"
+  content="Review the available offer details, eligibility information, and participation requirements directly on the provider's page."
+>
+
+<meta name="robots" content="index, follow">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Explore the Details</title>
+
+
+<!-- =====================================================
+     FONTS
+===================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+  rel="stylesheet"
+>
+
+
+<!-- =====================================================
+     HEADER & FOOTER
+===================================================== -->
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+
+<style>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root{
+
+  --bg:#f8f6f0;
+
+  --paper:#ffffff;
+
+  --paper-soft:#f4efe6;
+
+  --text:#211e1a;
+
+  --muted:#6e655c;
+
+  --line:#e6dfd3;
+
+  --accent:#7a5c43;
+
+  --accent-dark:#594231;
+
+  --serif:"Playfair Display",Georgia,serif;
+
+  --sans:"DM Sans",Arial,sans-serif;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+
+  margin:0;
+
+  padding:0;
+
+  box-sizing:border-box;
+
+}
+
+
+html{
+
+  scroll-behavior:smooth;
+
+}
+
+
+body{
+
+  background:var(--bg);
+
+  color:var(--text);
+
+  font-family:var(--sans);
+
+  overflow-x:hidden;
+
+  -webkit-font-smoothing:antialiased;
+
+}
+
+
+a{
+
+  color:inherit;
+
+  text-decoration:none;
+
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page{
+
+  width:min(720px,90%);
+
+  margin:0 auto;
+
+  padding:65px 0 80px;
+
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.recommendation-card{
+
+  background:var(--paper);
+
+  border:1px solid var(--line);
+
+  border-radius:7px;
+
+  padding:46px 42px;
+
+  box-shadow:
+
+    0 18px 45px rgba(45,38,31,.045);
+
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.card-eyebrow{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:9px;
+
+  color:var(--accent);
+
+  font-size:9px;
+
+  font-weight:600;
+
+  letter-spacing:.2em;
+
+  text-transform:uppercase;
+
+}
+
+
+.card-eyebrow::before{
+
+  content:"";
+
+  width:25px;
+
+  height:1px;
+
+  background:var(--accent);
+
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.recommendation-card h1{
+
+  max-width:570px;
+
+  margin-top:17px;
+
+  font-family:var(--serif);
+
+  font-size:clamp(32px,4.5vw,43px);
+
+  font-weight:400;
+
+  line-height:1.16;
+
+  letter-spacing:-.025em;
+
+}
+
+
+.recommendation-card h1 em{
+
+  color:var(--accent);
+
+  font-style:italic;
+
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.card-desc{
+
+  max-width:590px;
+
+  margin-top:16px;
+
+  color:var(--muted);
+
+  font-size:13px;
+
+  line-height:1.8;
+
+}
+
+
+/* =====================================================
+   DETAILS
+===================================================== */
+
+.details-box{
+
+  margin-top:29px;
+
+  padding:18px 20px;
+
+  background:var(--paper-soft);
+
+  border:1px solid #eee6da;
+
+  border-radius:5px;
+
+}
+
+
+.detail-row{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  padding:10px 0;
+
+  font-size:11px;
+
+}
+
+
+.detail-row:not(:last-child){
+
+  border-bottom:1px solid var(--line);
+
+}
+
+
+.detail-label{
+
+  color:var(--muted);
+
+  font-weight:500;
+
+}
+
+
+.detail-value{
+
+  color:var(--text);
+
+  font-weight:600;
+
+  text-align:right;
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta-area{
+
+  margin-top:32px;
+
+  padding-top:27px;
+
+  border-top:1px solid var(--line);
+
+  text-align:center;
+
+}
+
+
+.cta-heading{
+
+  font-family:var(--serif);
+
+  font-size:22px;
+
+  font-weight:400;
+
+  line-height:1.3;
+
+}
+
+
+.cta-copy{
+
+  max-width:470px;
+
+  margin:7px auto 0;
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  line-height:1.7;
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.offer-button{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:12px;
+
+  width:100%;
+
+  max-width:330px;
+
+  min-height:50px;
+
+  margin-top:19px;
+
+  padding:0 20px;
+
+  background:var(--accent-dark);
+
+  color:#ffffff !important;
+
+  border:1px solid var(--accent-dark);
+
+  border-radius:4px;
+
+  font-size:10px;
+
+  font-weight:600;
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+
+  opacity:1 !important;
+
+  visibility:visible !important;
+
+  cursor:pointer;
+
+  box-shadow:
+
+    0 7px 18px rgba(89,66,49,.12);
+
+  transition:
+
+    background .2s ease,
+
+    transform .2s ease,
+
+    box-shadow .2s ease;
+
+}
+
+
+.offer-button::after{
+
+  content:"→";
+
+  font-size:15px;
+
+}
+
+
+.offer-button:hover{
+
+  background:var(--accent);
+
+  transform:translateY(-1px);
+
+  box-shadow:
+
+    0 10px 22px rgba(89,66,49,.17);
+
+}
+
+
+.cta-subtext{
+
+  margin-top:10px;
+
+  color:var(--muted);
+
+  font-size:8px;
+
+  opacity:.75;
+
+}
+
+
+/* =====================================================
+   DISCLOSURE
+===================================================== */
+
+.disclosure{
+
+  max-width:590px;
+
+  margin:28px auto 0;
+
+  color:var(--muted);
+
+  font-size:9px;
+
+  line-height:1.75;
+
+  text-align:center;
+
+  opacity:.8;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+#footer-container{
+
+  width:100%;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .page{
+
+    width:92%;
+
+    padding:38px 0 60px;
+
+  }
+
+
+  .recommendation-card{
+
+    padding:29px 20px 30px;
+
+    border-radius:6px;
+
+  }
+
+
+  .card-eyebrow{
+
+    font-size:7px;
+
+    letter-spacing:.17em;
+
+  }
+
+
+  .card-eyebrow::before{
+
+    width:19px;
+
+  }
+
+
+  .recommendation-card h1{
+
+    margin-top:14px;
+
+    font-size:31px;
+
+    line-height:1.14;
+
+  }
+
+
+  .card-desc{
+
+    margin-top:13px;
+
+    font-size:10px;
+
+    line-height:1.8;
+
+  }
+
+
+  .details-box{
+
+    margin-top:23px;
+
+    padding:14px 15px;
+
+  }
+
+
+  .detail-row{
+
+    gap:12px;
+
+    padding:9px 0;
+
+    font-size:9px;
+
+  }
+
+
+  .detail-label{
+
+    max-width:48%;
+
+  }
+
+
+  .detail-value{
+
+    max-width:52%;
+
+  }
+
+
+  .cta-area{
+
+    margin-top:25px;
+
+    padding-top:22px;
+
+  }
+
+
+  .cta-heading{
+
+    font-size:20px;
+
+  }
+
+
+  .cta-copy{
+
+    font-size:8px;
+
+    line-height:1.7;
+
+  }
+
+
+  .offer-button{
+
+    display:inline-flex !important;
+
+    width:100%;
+
+    max-width:none;
+
+    min-height:51px;
+
+    margin-top:16px;
+
+    font-size:8px;
+
+    letter-spacing:.11em;
+
+    opacity:1 !important;
+
+    visibility:visible !important;
+
+    transform:none !important;
+
+  }
+
+
+  .offer-button:hover{
+
+    transform:none;
+
+    box-shadow:
+
+      0 7px 18px rgba(89,66,49,.12);
+
+  }
+
+
+  .cta-subtext{
+
+    font-size:7px;
+
+  }
+
+
+  .disclosure{
+
+    margin-top:23px;
+
+    font-size:7px;
+
+    line-height:1.7;
+
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media(max-width:360px){
+
+  .recommendation-card{
+
+    padding:25px 16px 27px;
+
+  }
+
+
+  .recommendation-card h1{
+
+    font-size:28px;
+
+  }
+
+
+  .detail-row{
+
+    font-size:8px;
+
+  }
+
+
+  .offer-button{
+
+    min-height:49px;
+
+    font-size:7px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<main class="page">
+
+
+  <!-- ===================================================
+       RECOMMENDATION CARD
+  ==================================================== -->
+
+  <section class="recommendation-card">
+
+
+    <div class="card-eyebrow">
+
+      Selected Opportunity
+
+    </div>
+
+
+    <h1>
+
+      Take a closer look
+
+      <em>at the details.</em>
+
+    </h1>
+
+
+    <p class="card-desc">
+
+      We came across this opportunity and thought it
+      might be worth a closer look. The provider's page
+      has the current information, availability and
+      requirements, so you can review everything before
+      deciding whether to continue.
+
+    </p>
+
+
+
+    <!-- =================================================
+         DETAILS
+    ================================================== -->
+
+    <div class="details-box">
+
+
+      <div class="detail-row">
+
+        <span class="detail-label">
+
+          Available Regions
+
+        </span>
+
+        <span class="detail-value">
+
+          US · UK · CA · AU
+
+        </span>
+
+      </div>
+
+
+      <div class="detail-row">
+
+        <span class="detail-label">
+
+          Information
+
+        </span>
+
+        <span class="detail-value">
+
+          Provider Details
+
+        </span>
+
+      </div>
+
+
+      <div class="detail-row">
+
+        <span class="detail-label">
+
+          What You'll See
+
+        </span>
+
+        <span class="detail-value">
+
+          Offer &amp; Requirements
+
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         CTA
+    ================================================== -->
+
+    <div class="cta-area">
+
+
+      <div class="cta-heading">
+
+        Curious to see what's available?
+
+      </div>
+
+
+      <p class="cta-copy">
+
+        Open the provider's page to explore the
+        current details and see whether the
+        opportunity is a good fit for you.
+
+      </p>
+
+
+      <a
+        href="https://linkthem.net/aff_c?offer_id=1846&aff_id=2281"
+        class="offer-button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        Explore the Opportunity
+
+      </a>
+
+
+      <div class="cta-subtext">
+
+        Opens the provider's page in a new tab.
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ===================================================
+       DISCLOSURE
+  ==================================================== -->
+
+  <p class="disclosure">
+
+    This page is an independent informational guide.
+    The opportunity is provided by a third party, and
+    availability, eligibility, terms and participation
+    requirements are determined by that provider.
+
+  </p>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<div id="footer-container"></div>
+
+
+</body>
+</html>

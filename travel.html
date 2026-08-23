@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Explore thoughtful travel stories, destination ideas, slow travel guides and inspiring ways to experience new places."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <title>Travel — Atelier Journal</title>
+
+
+  <!-- =========================================
+       GOOGLE FONTS
+  ========================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =========================================
+       HEADER / FOOTER
+  ========================================== -->
+
+  <script src="header.js" defer></script>
+
+  <script src="footer.js" defer></script>
+
+
+  <style>
+
+    /* =========================================
+       ROOT
+    ========================================= */
+
+    :root {
+
+      --bg: #f2f4f1;
+
+      --paper: #fafbf8;
+
+      --ink: #202622;
+
+      --muted: #717972;
+
+      --line: #d8ddd7;
+
+      --accent: #536c5c;
+
+      --soft: #e4e9e2;
+
+      --dark: #29362e;
+
+      --serif: "Playfair Display", Georgia, serif;
+
+      --sans: "DM Sans", Arial, sans-serif;
+
+    }
+
+
+    /* =========================================
+       RESET
+    ========================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--ink);
+
+      font-family: var(--sans);
+
+      line-height: 1.6;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .travel-hero {
+
+      width: min(1180px, 90%);
+
+      margin: 0 auto;
+
+      padding: 105px 0 80px;
+
+    }
+
+
+    .travel-meta {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 25px;
+
+      padding-bottom: 18px;
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .travel-label {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.18em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .travel-label::before {
+
+      content: "";
+
+      width: 30px;
+
+      height: 1px;
+
+      background: var(--accent);
+
+    }
+
+
+    .travel-edition {
+
+      color: #929a93;
+
+      font-size: 9px;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .travel-hero h1 {
+
+      max-width: 1050px;
+
+      margin-top: 42px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(70px, 10vw, 132px);
+
+      font-weight: 500;
+
+      line-height: 0.84;
+
+      letter-spacing: -0.065em;
+
+    }
+
+
+    .travel-hero h1 em {
+
+      font-weight: 500;
+
+    }
+
+
+    .travel-hero-bottom {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1.25fr;
+
+      gap: 70px;
+
+      margin-top: 55px;
+
+    }
+
+
+    .travel-route {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 14px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.12em;
+
+      line-height: 1.7;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .travel-route-mark {
+
+      width: 9px;
+
+      height: 9px;
+
+      margin-top: 5px;
+
+      border: 1px solid var(--accent);
+
+      border-radius: 50%;
+
+      flex: 0 0 auto;
+
+    }
+
+
+    .travel-description {
+
+      max-width: 600px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.95;
+
+    }
+
+
+    /* =========================================
+       MAIN CONTENT
+    ========================================== */
+
+    .travel-content {
+
+      width: min(1180px, 90%);
+
+      margin: 0 auto;
+
+      padding: 20px 0 120px;
+
+    }
+
+
+    .travel-section-header {
+
+      display: flex;
+
+      align-items: end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 35px;
+
+    }
+
+
+    .travel-section-header h2 {
+
+      font-family: var(--serif);
+
+      font-size: 43px;
+
+      font-weight: 500;
+
+      line-height: 1;
+
+      letter-spacing: -0.035em;
+
+    }
+
+
+    .travel-count {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =========================================
+       ARTICLE GRID
+    ========================================== */
+
+    .travel-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(12, 1fr);
+
+      gap: 16px;
+
+    }
+
+
+    /* =========================================
+       ARTICLE CARD
+    ========================================== */
+
+    .travel-card {
+
+      position: relative;
+
+      min-height: 390px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      padding: 27px;
+
+      overflow: hidden;
+
+      background: var(--paper);
+
+      border: 1px solid var(--line);
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+
+    }
+
+
+    .travel-card:hover {
+
+      transform: translateY(-5px);
+
+      border-color: #bfc8bf;
+
+      background: #ffffff;
+
+    }
+
+
+    .travel-card:nth-child(1) {
+
+      grid-column: span 8;
+
+      background: var(--soft);
+
+    }
+
+
+    .travel-card:nth-child(2) {
+
+      grid-column: span 4;
+
+    }
+
+
+    .travel-card:nth-child(3),
+
+    .travel-card:nth-child(4),
+
+    .travel-card:nth-child(5) {
+
+      grid-column: span 4;
+
+    }
+
+
+    .travel-card:nth-child(6) {
+
+      grid-column: span 8;
+
+      background: #e7ece6;
+
+    }
+
+
+    .travel-card:nth-child(7),
+
+    .travel-card:nth-child(8),
+
+    .travel-card:nth-child(9),
+
+    .travel-card:nth-child(10),
+
+    .travel-card:nth-child(11),
+
+    .travel-card:nth-child(12) {
+
+      grid-column: span 4;
+
+    }
+
+
+    /* =========================================
+       CARD TOP
+    ========================================== */
+
+    .travel-card-top {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+    }
+
+
+    .travel-number {
+
+      color: #929a93;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.12em;
+
+    }
+
+
+    .travel-category {
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.13em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =========================================
+       CARD BODY
+    ========================================== */
+
+    .travel-card-body {
+
+      margin-top: auto;
+
+      padding-top: 75px;
+
+    }
+
+
+    .travel-card h3 {
+
+      max-width: 420px;
+
+      font-family: var(--serif);
+
+      font-size: 29px;
+
+      font-weight: 500;
+
+      line-height: 1.08;
+
+      letter-spacing: -0.025em;
+
+    }
+
+
+    .travel-card p {
+
+      max-width: 470px;
+
+      margin-top: 16px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.85;
+
+    }
+
+
+    .travel-read {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-top: 23px;
+
+      color: var(--ink);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.13em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .travel-read::after {
+
+      content: "↗";
+
+      font-size: 14px;
+
+      transition: transform 0.2s ease;
+
+    }
+
+
+    .travel-card:hover .travel-read::after {
+
+      transform: translate(4px, -3px);
+
+    }
+
+
+    /* =========================================
+       FEATURED CARDS
+    ========================================== */
+
+    .travel-card:nth-child(1) h3,
+
+    .travel-card:nth-child(6) h3 {
+
+      max-width: 700px;
+
+      font-size: 46px;
+
+    }
+
+
+    .travel-card:nth-child(1) p,
+
+    .travel-card:nth-child(6) p {
+
+      max-width: 650px;
+
+    }
+
+
+    /* =========================================
+       TRAVEL NOTE
+    ========================================== */
+
+    .travel-note {
+
+      display: grid;
+
+      grid-template-columns: 180px 1fr;
+
+      gap: 60px;
+
+      margin-top: 85px;
+
+      padding: 38px 0;
+
+      border-top: 1px solid var(--line);
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .travel-note-label {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .travel-note-text {
+
+      max-width: 720px;
+
+      font-family: var(--serif);
+
+      font-size: 28px;
+
+      line-height: 1.32;
+
+      letter-spacing: -0.025em;
+
+    }
+
+
+    /* =========================================
+       TABLET
+    ========================================== */
+
+    @media (max-width: 950px) {
+
+      .travel-hero-bottom {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+      }
+
+
+      .travel-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+
+      .travel-card:nth-child(n) {
+
+        grid-column: span 1;
+
+      }
+
+
+      .travel-card:nth-child(1),
+
+      .travel-card:nth-child(6) {
+
+        grid-column: span 2;
+
+      }
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================== */
+
+    @media (max-width: 650px) {
+
+      .travel-hero {
+
+        padding: 75px 0 65px;
+
+      }
+
+
+      .travel-meta {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+      }
+
+
+      .travel-hero h1 {
+
+        margin-top: 30px;
+
+        font-size: 65px;
+
+      }
+
+
+      .travel-hero-bottom {
+
+        margin-top: 38px;
+
+      }
+
+
+      .travel-description {
+
+        font-size: 13px;
+
+      }
+
+
+      .travel-content {
+
+        padding: 0 0 80px;
+
+      }
+
+
+      .travel-section-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+      }
+
+
+      .travel-section-header h2 {
+
+        font-size: 36px;
+
+      }
+
+
+      .travel-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+      }
+
+
+      .travel-card:nth-child(n),
+
+      .travel-card:nth-child(1),
+
+      .travel-card:nth-child(6) {
+
+        grid-column: span 1;
+
+        min-height: 350px;
+
+      }
+
+
+      .travel-card {
+
+        padding: 25px;
+
+      }
+
+
+      .travel-card:nth-child(1) h3,
+
+      .travel-card:nth-child(6) h3 {
+
+        font-size: 36px;
+
+      }
+
+
+      .travel-card h3 {
+
+        font-size: 28px;
+
+      }
+
+
+      .travel-note {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 65px;
+
+      }
+
+
+      .travel-note-text {
+
+        font-size: 23px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main>
+
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <section class="travel-hero">
+
+
+      <div class="travel-meta">
+
+        <div class="travel-label">
+          Travel Journal
+        </div>
+
+        <div class="travel-edition">
+          Places / Journeys / Slow Travel
+        </div>
+
+      </div>
+
+
+      <h1>
+        Go somewhere
+        <em>worth remembering.</em>
+      </h1>
+
+
+      <div class="travel-hero-bottom">
+
+
+        <div class="travel-route">
+
+          <span class="travel-route-mark"></span>
+
+          <span>
+            Beyond the itinerary —
+            discovering places through
+            atmosphere, food and everyday life.
+          </span>
+
+        </div>
+
+
+        <p class="travel-description">
+          Destination inspiration, thoughtful travel ideas
+          and slower ways of exploring the world. From
+          quiet escapes to city walks, these stories are
+          about experiencing a place rather than simply
+          passing through it.
+        </p>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         ARTICLES
+    ====================================== -->
+
+    <section class="travel-content">
+
+
+      <div class="travel-section-header">
+
+        <h2>
+          Places & journeys
+        </h2>
+
+        <div class="travel-count">
+          12 stories / Travel
+        </div>
+
+      </div>
+
+
+
+      <div class="travel-grid">
+
+
+        <!-- =================================
+             01
+        ================================== -->
+
+        <!-- =================================
+     01
+================================== -->
+
+<a
+  href="when-a-journey-begins-before-you-leave.html"
+  class="travel-card"
+>
+
+  <div class="travel-card-top">
+
+    <span class="travel-number">
+      01
+    </span>
+
+    <span class="travel-category">
+      Perspective
+    </span>
+
+  </div>
+
+
+  <div class="travel-card-body">
+
+    <h3>
+      When a Journey Begins
+      Before You Leave
+    </h3>
+
+    <p>
+      The anticipation of a trip can be its own kind
+      of experience, shaped by small plans, possibilities
+      and the feeling of somewhere ahead.
+    </p>
+
+    <span class="travel-read">
+      Read story
+    </span>
+
+  </div>
+
+</a>
+
+
+
+<!-- =================================
+     02
+================================== -->
+
+<a
+  href="the-pleasure-of-getting-slightly-lost.html"
+  class="travel-card"
+>
+
+  <div class="travel-card-top">
+
+    <span class="travel-number">
+      02
+    </span>
+
+    <span class="travel-category">
+      Discovery
+    </span>
+
+  </div>
+
+
+  <div class="travel-card-body">
+
+    <h3>
+      The Pleasure of Getting
+      Slightly Lost
+    </h3>
+
+    <p>
+      Not every turn needs to be planned. Sometimes
+      an unfamiliar street or unexpected corner becomes
+      the detail you remember most.
+    </p>
+
+    <span class="travel-read">
+      Read story
+    </span>
+
+  </div>
+
+</a>
+
+
+
+<!-- =================================
+     03
+================================== -->
+
+<a
+  href="how-to-make-a-place-feel-familiar.html"
+  class="travel-card"
+>
+
+  <div class="travel-card-top">
+
+    <span class="travel-number">
+      03
+    </span>
+
+    <span class="travel-category">
+      Belonging
+    </span>
+
+  </div>
+
+
+  <div class="travel-card-body">
+
+    <h3>
+      How to Make an Unfamiliar
+      Place Feel Familiar
+    </h3>
+
+    <p>
+      A favorite café, a morning walk or a familiar
+      routine can make a new destination feel surprisingly
+      comfortable within a few days.
+    </p>
+
+    <span class="travel-read">
+      Read story
+    </span>
+
+  </div>
+
+</a>
+
+
+
+<!-- =================================
+     04
+================================== -->
+
+<a
+  href="the-small-details-that-make-trips-memorable.html"
+  class="travel-card"
+>
+
+  <div class="travel-card-top">
+
+    <span class="travel-number">
+      04
+    </span>
+
+    <span class="travel-category">
+      Details
+    </span>
+
+  </div>
+
+
+  <div class="travel-card-body">
+
+    <h3>
+      The Small Details That
+      Make Trips Memorable
+    </h3>
+
+    <p>
+      It may be the sound of a street, the smell of
+      breakfast or sunlight across an old building that
+      stays with you long after returning home.
+    </p>
+
+    <span class="travel-read">
+      Read story
+    </span>
+
+  </div>
+
+</a>
+
+
+
+<!-- =================================
+     05
+================================== -->
+
+<a
+  href="choosing-a-place-to-stay.html"
+  class="travel-card"
+>
+
+  <div class="travel-card-top">
+
+    <span class="travel-number">
+      05
+    </span>
+
+    <span class="travel-category">
+      Stays
+    </span>
+
+  </div>
+
+
+  <div class="travel-card-body">
+
+    <h3>
+      Choosing a Place to Stay
+      That Shapes the Journey
+    </h3>
+
+    <p>
+      Where you stay can influence how you experience
+      a destination, from the pace of your mornings
+      to the places you naturally discover nearby.
+    </p>
+
+    <span class="travel-read">
+      Read story
+    </span>
+
+  </div>
+
+</a>
+
+
+
+<!-- =================================
+     06
+================================== -->
+
+<a
+  href="when-the-landscape-slows-you-down.html"
+  class="travel-card"
+>
+
+  <div class="travel-card-top">
+
+    <span class="travel-number">
+      06
+    </span>
+
+    <span class="travel-category">
+      Landscapes
+    </span>
+
+  </div>
+
+
+  <div class="travel-card-body">
+
+    <h3>
+      When the Landscape
+      Slows You Down
+    </h3>
+
+    <p>
+      Some places naturally change the pace of a day.
+      Open landscapes can make us notice distance,
+      movement and silence again.
+    </p>
+
+    <span class="travel-read">
+      Read story
+    </span>
+
+  </div>
+
+</a>
+
+
+
+<!-- =================================
+     07
+================================== -->
+
+<a
+  href="the-first-hour-in-a-new-city.html"
+  class="travel-card"
+>
+
+  <div class="travel-card-top">
+
+    <span class="travel-number">
+      07
+    </span>
+
+    <span class="travel-category">
+      City Moments
+    </span>
+
+  </div>
+
+
+  <div class="travel-card-body">
+
+    <h3>
+      The First Hour in
+      a New City
+    </h3>
+
+    <p>
+      Before the landmarks and schedules begin, the
+      first quiet hour can reveal a city's atmosphere
+      in a completely different way.
+    </p>
+
+    <span class="travel-read">
+      Read story
+    </span>
+
+  </div>
+
+</a>
+
+
+
+<!-- =================================
+     08
+================================== -->
+
+<a
+  href="finding-the-local-rhythm.html"
+  class="travel-card"
+>
+
+  <div class="travel-card-top">
+
+    <span class="travel-number">
+      08
+    </span>
+
+    <span class="travel-category">
+      Local Life
+    </span>
+
+  </div>
+
+
+  <div class="travel-card-body">
+
+    <h3>
+      Finding the Local
+      Rhythm of a Place
+    </h3>
+
+    <p>
+      Markets opening, evening walks and ordinary daily
+      routines can tell you more about a destination
+      than a list of attractions ever could.
+    </p>
+
+    <span class="travel-read">
+      Read story
+    </span>
+
+  </div>
+
+</a>
+
+
+
+<!-- =================================
+     09
+================================== -->
+
+<a
+  href="travel-days-without-a-plan.html"
+  class="travel-card"
+>
+
+  <div class="travel-card-top">
+
+    <span class="travel-number">
+      09
+    </span>
+
+    <span class="travel-category">
+      Unplanned
+    </span>
+
+  </div>
+
+
+  <div class="travel-card-body">
+
+    <h3>
+      The Beauty of a Day
+      Without a Plan
+    </h3>
+
+    <p>
+      Leaving one day open can create room for long
+      walks, unexpected conversations and places that
+      were never part of the original itinerary.
+    </p>
+
+    <span class="travel-read">
+      Read story
+    </span>
+
+  </div>
+
+</a>
+
+
+
+<!-- =================================
+     10
+================================== -->
+
+<a
+  href="the-view-from-the-window.html"
+  class="travel-card"
+>
+
+  <div class="travel-card-top">
+
+    <span class="travel-number">
+      10
+    </span>
+
+    <span class="travel-category">
+      Observation
+    </span>
+
+  </div>
+
+
+  <div class="travel-card-body">
+
+    <h3>
+      The View From
+      the Window
+    </h3>
+
+    <p>
+      Sometimes the most memorable part of a journey
+      is simply watching unfamiliar streets, fields or
+      coastlines pass slowly by.
+    </p>
+
+    <span class="travel-read">
+      Read story
+    </span>
+
+  </div>
+
+</a>
+
+
+
+<!-- =================================
+     11
+================================== -->
+
+<a
+  href="bringing-home-the-feeling-of-a-place.html"
+  class="travel-card"
+>
+
+  <div class="travel-card-top">
+
+    <span class="travel-number">
+      11
+    </span>
+
+    <span class="travel-category">
+      Memories
+    </span>
+
+  </div>
+
+
+  <div class="travel-card-body">
+
+    <h3>
+      Bringing Home the Feeling
+      of a Place
+    </h3>
+
+    <p>
+      A photograph, a recipe, a scent or a simple
+      object can keep the atmosphere of a journey alive
+      long after the suitcase has been unpacked.
+    </p>
+
+    <span class="travel-read">
+      Read story
+    </span>
+
+  </div>
+
+</a>
+
+
+
+<!-- =================================
+     12
+================================== -->
+
+<a
+  href="why-some-places-stay-with-us.html"
+  class="travel-card"
+>
+
+  <div class="travel-card-top">
+
+    <span class="travel-number">
+      12
+    </span>
+
+    <span class="travel-category">
+      Reflection
+    </span>
+
+  </div>
+
+
+  <div class="travel-card-body">
+
+    <h3>
+      Why Some Places
+      Stay With Us
+    </h3>
+
+    <p>
+      Certain destinations become part of our memory
+      for reasons that have little to do with famous
+      sights and everything to do with how they felt.
+    </p>
+
+    <span class="travel-read">
+      Read story
+    </span>
+
+  </div>
+
+</a>
+
+
+      </div>
+
+
+
+      <!-- =====================================
+           CLOSING NOTE
+      ====================================== -->
+
+      <div class="travel-note">
+
+        <div class="travel-note-label">
+          A thought on travel
+        </div>
+
+
+        <div class="travel-note-text">
+          A good journey does not always take you
+          somewhere new. Sometimes it simply teaches
+          you to notice where you already are.
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+</body>
+</html>

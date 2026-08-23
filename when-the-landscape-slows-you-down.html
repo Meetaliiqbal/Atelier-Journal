@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="When the landscape slows you down, distance, silence and open space can change the way an ordinary day feels. A reflection on moving through nature at a gentler pace."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <title>When the Landscape Slows You Down — Atelier Journal</title>
+
+
+  <!-- =========================================
+       GOOGLE FONTS
+  ========================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =========================================
+       HEADER / FOOTER
+  ========================================== -->
+
+  <script src="header.js" defer></script>
+
+  <script src="footer.js" defer></script>
+
+
+  <style>
+
+    /* =========================================
+       ROOT
+    ========================================== */
+
+    :root {
+
+      --bg: #f3f5ef;
+
+      --paper: #fafbf7;
+
+      --ink: #20261f;
+
+      --muted: #747b70;
+
+      --line: #d8ddd2;
+
+      --accent: #61725b;
+
+      --deep: #344334;
+
+      --soft: #e6ebe1;
+
+      --serif: "Playfair Display", Georgia, serif;
+
+      --sans: "DM Sans", Arial, sans-serif;
+
+    }
+
+
+    /* =========================================
+       RESET
+    ========================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--ink);
+
+      font-family: var(--sans);
+
+      line-height: 1.7;
+
+      -webkit-font-smoothing: antialiased;
+
+      overflow-x: hidden;
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+    /* =========================================
+       ARTICLE WRAPPER
+    ========================================== */
+
+    .article-page {
+
+      width: min(900px, 90%);
+
+      margin: 0 auto;
+
+      padding: 110px 0 100px;
+
+    }
+
+
+    /* =========================================
+       ARTICLE HEADER
+    ========================================== */
+
+    .article-header {
+
+      max-width: 820px;
+
+      margin: 0 auto;
+
+      padding-bottom: 55px;
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .article-label {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      color: var(--accent);
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: .18em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-label::before {
+
+      content: "";
+
+      width: 32px;
+
+      height: 1px;
+
+      background: var(--accent);
+
+    }
+
+
+    .article-header h1 {
+
+      max-width: 780px;
+
+      margin-top: 28px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(48px, 7vw, 82px);
+
+      font-weight: 500;
+
+      line-height: .98;
+
+      letter-spacing: -.055em;
+
+    }
+
+
+    .article-intro {
+
+      max-width: 650px;
+
+      margin-top: 30px;
+
+      color: var(--muted);
+
+      font-size: 16px;
+
+      line-height: 1.9;
+
+    }
+
+
+    .article-meta {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 18px;
+
+      margin-top: 30px;
+
+      color: #92998e;
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .12em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .meta-dot {
+
+      width: 4px;
+
+      height: 4px;
+
+      border-radius: 50%;
+
+      background: var(--accent);
+
+    }
+
+
+    /* =========================================
+       ARTICLE CONTENT
+    ========================================== */
+
+    .article-content {
+
+      max-width: 720px;
+
+      margin: 65px auto 0;
+
+    }
+
+
+    .article-section {
+
+      margin-bottom: 58px;
+
+    }
+
+
+    .article-section h2 {
+
+      margin-bottom: 18px;
+
+      font-family: var(--serif);
+
+      font-size: 34px;
+
+      font-weight: 500;
+
+      line-height: 1.15;
+
+      letter-spacing: -.025em;
+
+    }
+
+
+    .article-section p {
+
+      margin-bottom: 20px;
+
+      color: #4f574c;
+
+      font-size: 15px;
+
+      line-height: 2;
+
+    }
+
+
+    .article-section p:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+
+    /* =========================================
+       PULL QUOTE
+    ========================================== */
+
+    .article-quote {
+
+      margin: 70px 0;
+
+      padding: 35px 0 35px 30px;
+
+      border-left: 2px solid var(--accent);
+
+    }
+
+
+    .article-quote p {
+
+      margin: 0;
+
+      color: var(--deep);
+
+      font-family: var(--serif);
+
+      font-size: 28px;
+
+      line-height: 1.4;
+
+      letter-spacing: -.02em;
+
+    }
+
+
+    /* =========================================
+       CTA
+    ========================================== */
+
+    .article-cta {
+
+      margin: 65px 0 70px;
+
+      padding: 34px;
+
+      background: var(--soft);
+
+      border: 1px solid var(--line);
+
+    }
+
+
+    .cta-label {
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .16em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-cta h3 {
+
+      max-width: 560px;
+
+      margin-top: 12px;
+
+      font-family: var(--serif);
+
+      font-size: 29px;
+
+      font-weight: 500;
+
+      line-height: 1.25;
+
+    }
+
+
+    .article-cta p {
+
+      max-width: 570px;
+
+      margin-top: 12px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.8;
+
+    }
+
+
+    .cta-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin-top: 22px;
+
+      padding: 13px 20px;
+
+      background: var(--deep);
+
+      color: #ffffff !important;
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .13em;
+
+      text-transform: uppercase;
+
+      transition:
+        transform .2s ease,
+        background .2s ease;
+
+    }
+
+
+    .cta-link::after {
+
+      content: "→";
+
+      font-size: 14px;
+
+    }
+
+
+    .cta-link:hover {
+
+      background: var(--accent);
+
+      transform: translateY(-2px);
+
+    }
+
+
+    .cta-note {
+
+      margin-top: 10px;
+
+      color: #8b9286;
+
+      font-size: 8px;
+
+      line-height: 1.6;
+
+    }
+
+
+    /* =========================================
+       END NOTE
+    ========================================== */
+
+    .article-ending {
+
+      margin-top: 75px;
+
+      padding-top: 35px;
+
+      border-top: 1px solid var(--line);
+
+    }
+
+
+    .article-ending-label {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .15em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-ending p {
+
+      max-width: 620px;
+
+      margin-top: 16px;
+
+      color: var(--deep);
+
+      font-family: var(--serif);
+
+      font-size: 25px;
+
+      line-height: 1.45;
+
+    }
+
+
+    /* =========================================
+       DISCLOSURE
+    ========================================== */
+
+    .article-disclosure {
+
+      max-width: 720px;
+
+      margin: 55px auto 0;
+
+      padding-top: 25px;
+
+      border-top: 1px solid var(--line);
+
+      color: #8b9286;
+
+      font-size: 9px;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================== */
+
+    @media (max-width: 650px) {
+
+      .article-page {
+
+        width: 92%;
+
+        padding: 70px 0 65px;
+
+      }
+
+
+      .article-header {
+
+        padding-bottom: 38px;
+
+      }
+
+
+      .article-label {
+
+        font-size: 8px;
+
+      }
+
+
+      .article-header h1 {
+
+        margin-top: 22px;
+
+        font-size: 43px;
+
+        line-height: 1.02;
+
+      }
+
+
+      .article-intro {
+
+        margin-top: 22px;
+
+        font-size: 13px;
+
+        line-height: 1.85;
+
+      }
+
+
+      .article-meta {
+
+        margin-top: 23px;
+
+        gap: 12px;
+
+        font-size: 7px;
+
+      }
+
+
+      .article-content {
+
+        margin-top: 45px;
+
+      }
+
+
+      .article-section {
+
+        margin-bottom: 45px;
+
+      }
+
+
+      .article-section h2 {
+
+        margin-bottom: 14px;
+
+        font-size: 28px;
+
+      }
+
+
+      .article-section p {
+
+        font-size: 13px;
+
+        line-height: 1.9;
+
+      }
+
+
+      .article-quote {
+
+        margin: 50px 0;
+
+        padding: 25px 0 25px 20px;
+
+      }
+
+
+      .article-quote p {
+
+        font-size: 22px;
+
+      }
+
+
+      .article-cta {
+
+        margin: 50px 0 55px;
+
+        padding: 25px 20px;
+
+      }
+
+
+      .article-cta h3 {
+
+        font-size: 25px;
+
+      }
+
+
+      .article-cta p {
+
+        font-size: 10px;
+
+        line-height: 1.75;
+
+      }
+
+
+      .cta-link {
+
+        width: 100%;
+
+        justify-content: center;
+
+        min-height: 48px;
+
+        margin-top: 19px;
+
+        font-size: 8px;
+
+      }
+
+
+      .cta-note {
+
+        font-size: 7px;
+
+      }
+
+
+      .article-ending {
+
+        margin-top: 55px;
+
+      }
+
+
+      .article-ending p {
+
+        font-size: 21px;
+
+      }
+
+
+      .article-disclosure {
+
+        margin-top: 45px;
+
+        font-size: 7px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main class="article-page">
+
+
+    <!-- =====================================
+         ARTICLE HEADER
+    ====================================== -->
+
+    <header class="article-header">
+
+
+      <div class="article-label">
+        Nature / Perspective
+      </div>
+
+
+      <h1>
+        When the Landscape
+        Slows You Down
+      </h1>
+
+
+      <p class="article-intro">
+
+        Some places naturally change the pace of a day.
+        Open roads, distant horizons and quiet paths can
+        make us notice things that usually disappear
+        beneath the rush of everyday life.
+
+      </p>
+
+
+      <div class="article-meta">
+
+        <span>
+          Nature Journal
+        </span>
+
+        <span class="meta-dot"></span>
+
+        <span>
+          6 Min Read
+        </span>
+
+      </div>
+
+
+    </header>
+
+
+
+    <!-- =====================================
+         ARTICLE CONTENT
+    ====================================== -->
+
+    <article class="article-content">
+
+
+      <!-- =================================
+           SECTION 01
+      ================================== -->
+
+      <section class="article-section">
+
+
+        <h2>
+          When there is nothing to hurry toward
+        </h2>
+
+
+        <p>
+
+          There is a particular feeling that arrives when
+          the landscape stretches farther than the eye
+          expects. A long trail, a quiet valley or an
+          unfamiliar stretch of countryside can make the
+          usual rhythm of the day feel strangely distant.
+
+        </p>
+
+
+        <p>
+
+          At first, it may simply feel like there is less
+          happening. Then something changes. You begin to
+          notice the shape of the horizon, the movement of
+          grass in the wind or the way sunlight moves across
+          the ground.
+
+        </p>
+
+
+        <p>
+
+          Nothing dramatic has happened. The surroundings
+          have simply given your attention somewhere else
+          to go.
+
+        </p>
+
+
+      </section>
+
+
+
+      <!-- =================================
+           SECTION 02
+      ================================== -->
+
+      <section class="article-section">
+
+
+        <h2>
+          Distance changes what we notice
+        </h2>
+
+
+        <p>
+
+          In familiar surroundings, we tend to move with
+          purpose. We know where we are going, how long it
+          should take and what needs to happen next. A
+          landscape that feels unfamiliar removes some of
+          those expectations.
+
+        </p>
+
+
+        <p>
+
+          The result can be surprisingly simple: walking
+          becomes less about reaching a destination and
+          more about experiencing the space between where
+          you started and where you are going.
+
+        </p>
+
+
+        <p>
+
+          That space can hold more than we expect. A distant
+          line of hills may become something to follow with
+          your eyes. A quiet road may encourage you to walk
+          without checking the time. Even a short stop can
+          feel meaningful when there is enough room around
+          you to actually notice it.
+
+        </p>
+
+
+        <!-- =================================
+             CTA
+        ================================== -->
+
+        <div class="article-cta">
+
+
+          <div class="cta-label">
+            For the next escape
+          </div>
+
+
+          <h3>
+            Sometimes a change of scenery
+            is the best place to begin.
+          </h3>
+
+
+          <p>
+            If you're thinking about spending time somewhere
+            new, you can explore current travel options and
+            compare available stays through the travel
+            resource we've selected.
+          </p>
+
+
+          <a
+            href="naturepark.html"
+            class="cta-link"
+			target="_blank"
+        rel="noopener noreferrer"
+          >
+            Explore Travel Options
+          </a>
+
+
+          <div class="cta-note">
+            Opens a separate travel resource in the same tab.
+          </div>
+
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- =================================
+           SECTION 03
+      ================================== -->
+
+      <section class="article-section">
+
+
+        <h2>
+          Silence does not have to mean emptiness
+        </h2>
+
+
+        <p>
+
+          We often describe quiet places by what they lack:
+          fewer cars, fewer conversations, fewer notifications.
+          But silence in nature is rarely completely silent.
+
+        </p>
+
+
+        <p>
+
+          There might be birds somewhere beyond the path,
+          leaves moving above you or water passing over
+          stones. These sounds are subtle enough that they
+          can disappear when our attention is occupied.
+
+        </p>
+
+
+        <p>
+
+          Once the background noise of daily life becomes
+          quieter, these small sounds begin to form their own
+          kind of atmosphere.
+
+        </p>
+
+
+      </section>
+
+
+
+      <!-- =================================
+           PULL QUOTE
+      ================================== -->
+
+      <blockquote class="article-quote">
+
+        <p>
+          A slower landscape does not ask us to stop.
+          It simply gives us a reason to notice the journey.
+        </p>
+
+      </blockquote>
+
+
+
+      <!-- =================================
+           SECTION 04
+      ================================== -->
+
+      <section class="article-section">
+
+
+        <h2>
+          You do not need to go far
+        </h2>
+
+
+        <p>
+
+          The idea of slowing down through landscape does
+          not require a dramatic trip. A nearby trail, an
+          open park or a quiet road outside the busiest part
+          of town can create a similar shift.
+
+        </p>
+
+
+        <p>
+
+          What matters is not necessarily the distance
+          travelled. It is the difference between moving
+          through a place automatically and giving yourself
+          enough time to actually experience it.
+
+        </p>
+
+
+        <p>
+
+          Leave a little space in the schedule. Walk without
+          trying to fill every minute. Look farther away than
+          you normally would. Let the landscape become part
+          of the experience instead of simply being the
+          background.
+
+        </p>
+
+
+      </section>
+
+
+
+      <!-- =================================
+           ENDING
+      ================================== -->
+
+      <div class="article-ending">
+
+
+        <div class="article-ending-label">
+          A final thought
+        </div>
+
+
+        <p>
+
+          Sometimes changing the pace of a day begins with
+          nothing more complicated than giving yourself
+          somewhere quiet to walk.
+
+        </p>
+
+
+      </div>
+
+
+
+      <!-- =================================
+           DISCLOSURE
+      ================================== -->
+
+      <div class="article-disclosure">
+
+        This article is intended for general inspiration
+        and informational purposes. Travel availability,
+        pricing, accommodation details and other conditions
+        are determined by the respective provider.
+
+      </div>
+
+
+    </article>
+
+
+  </main>
+
+
+</body>
+</html>

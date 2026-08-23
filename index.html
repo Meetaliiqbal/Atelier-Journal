@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="A curated journal exploring food, fashion, travel, nature, decor and quotes."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <title>Atelier Journal — Curated Everyday Inspiration</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="header.js" defer></script>
+  <script src="footer.js" defer></script>
+
+  <style>
+
+    /* =========================================
+       RESET
+    ========================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #faf9f6;
+      color: #181917;
+      font-family: "Manrope", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================================
+       VARIABLES
+    ========================================= */
+
+    :root {
+      --bg: #faf9f6;
+      --dark: #181917;
+      --muted: #777873;
+      --line: #deddd8;
+      --light: #f1f0eb;
+
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "Manrope", Arial, sans-serif;
+    }
+
+
+    /* =========================================
+       GLOBAL
+    ========================================= */
+
+    .container {
+      width: min(1200px, 90%);
+      margin: 0 auto;
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .hero {
+      padding: 80px 0 110px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.72fr;
+      gap: 90px;
+      align-items: end;
+    }
+
+
+    .hero-text {
+      padding-bottom: 15px;
+    }
+
+    .hero-kicker {
+      margin-bottom: 25px;
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+
+      color: var(--muted);
+    }
+
+    .hero-title {
+      max-width: 850px;
+
+      font-family: var(--serif);
+      font-size: clamp(70px, 9vw, 126px);
+      font-weight: 500;
+      line-height: 0.88;
+      letter-spacing: -0.055em;
+    }
+
+    .hero-title em {
+      font-weight: 500;
+    }
+
+    .hero-description {
+      max-width: 510px;
+
+      margin-top: 38px;
+
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .hero-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+
+      margin-top: 32px;
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .hero-action span {
+      width: 38px;
+      height: 38px;
+
+      border: 1px solid var(--dark);
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: transform 0.25s ease;
+    }
+
+    .hero-action:hover span {
+      transform: translateY(4px);
+    }
+
+
+    /* =========================================
+       HERO ART
+    ========================================= */
+
+    .hero-art {
+      position: relative;
+
+      height: 550px;
+
+      background: #e8e5dd;
+    }
+
+    .hero-art-main {
+      position: absolute;
+
+      inset: 35px 35px 35px 35px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #d7d3c8 0%,
+          #eeeae1 48%,
+          #c5c1b6 100%
+        );
+    }
+
+    .hero-art-main::before {
+      content: "";
+
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      width: 210px;
+      height: 210px;
+
+      transform: translate(-50%, -50%);
+
+      border: 1px solid rgba(24, 25, 23, 0.3);
+      border-radius: 50%;
+    }
+
+    .hero-art-main::after {
+      content: "";
+
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      width: 80px;
+      height: 80px;
+
+      transform: translate(-50%, -50%);
+
+      background: #faf9f6;
+
+      border-radius: 50%;
+    }
+
+    .hero-art-number {
+      position: absolute;
+
+      top: 18px;
+      left: 18px;
+
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+    }
+
+    .hero-art-word {
+      position: absolute;
+
+      right: 18px;
+      bottom: 18px;
+
+      writing-mode: vertical-rl;
+
+      font-family: var(--serif);
+      font-size: 18px;
+      font-style: italic;
+    }
+
+
+    /* =========================================
+       INTRO
+    ========================================= */
+
+    .intro {
+      padding: 100px 0;
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.35fr 1fr;
+      gap: 80px;
+    }
+
+    .intro-index {
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .intro-content {
+      max-width: 850px;
+    }
+
+    .intro-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(44px, 5vw, 70px);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .intro-content p {
+      max-width: 610px;
+
+      margin-top: 28px;
+
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+
+    /* =========================================
+       COLLECTION
+    ========================================= */
+
+    .collection {
+      padding: 110px 0 125px;
+    }
+
+    .collection-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+
+      padding-bottom: 28px;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .collection-heading h2 {
+      margin-top: 10px;
+
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .collection-heading p {
+      max-width: 250px;
+
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================
+       CATEGORY GRID
+    ========================================= */
+
+    .category-grid {
+      margin-top: 20px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .category {
+      min-height: 340px;
+
+      padding: 25px;
+
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      background: var(--bg);
+
+      transition:
+        background 0.3s ease,
+        color 0.3s ease;
+    }
+
+    .category:hover {
+      background: var(--dark);
+      color: white;
+    }
+
+
+    .category-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .category-number {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+    }
+
+    .category-arrow {
+      font-size: 17px;
+
+      transition: transform 0.25s ease;
+    }
+
+    .category:hover .category-arrow {
+      transform: translate(4px, -4px);
+    }
+
+
+    .category-middle span {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+
+      color: var(--muted);
+
+      transition: color 0.3s ease;
+    }
+
+    .category:hover .category-middle span {
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .category-middle h3 {
+      margin-top: 7px;
+
+      font-family: var(--serif);
+      font-size: 52px;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+
+    .category-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+
+      padding-top: 20px;
+
+      border-top: 1px solid var(--line);
+
+      color: var(--muted);
+
+      font-size: 10px;
+    }
+
+    .category:hover .category-bottom {
+      border-color: rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+
+    /* =========================================
+       FEATURE
+    ========================================= */
+
+    .feature {
+      background: #eeece5;
+
+      padding: 110px 0;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .feature-small {
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .feature h2 {
+      max-width: 700px;
+
+      margin-top: 20px;
+
+      font-family: var(--serif);
+      font-size: clamp(50px, 6vw, 82px);
+      font-weight: 500;
+      line-height: 0.95;
+      letter-spacing: -0.045em;
+    }
+
+    .feature-copy {
+      max-width: 470px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .feature-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+
+      margin-top: 28px;
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .feature-link span {
+      font-size: 18px;
+    }
+
+
+    /* =========================================
+       FINAL
+    ========================================= */
+
+    .final {
+      padding: 130px 0;
+
+      text-align: center;
+    }
+
+    .final-label {
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .final h2 {
+      max-width: 800px;
+
+      margin: 20px auto 0;
+
+      font-family: var(--serif);
+      font-size: clamp(52px, 7vw, 92px);
+      font-weight: 500;
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .final p {
+      max-width: 460px;
+
+      margin: 25px auto 0;
+
+      color: var(--muted);
+
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================================
+       TABLET
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .hero-art {
+        height: 470px;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: 90%;
+      }
+
+      .hero {
+        padding: 60px 0 75px;
+      }
+
+      .hero-title {
+        font-size: clamp(56px, 17vw, 76px);
+      }
+
+      .hero-description {
+        font-size: 13px;
+      }
+
+      .hero-art {
+        height: 350px;
+      }
+
+      .hero-art-main {
+        inset: 25px;
+      }
+
+      .hero-art-main::before {
+        width: 160px;
+        height: 160px;
+      }
+
+      .hero-art-main::after {
+        width: 60px;
+        height: 60px;
+      }
+
+
+      .intro {
+        padding: 75px 0;
+      }
+
+      .intro-content h2 {
+        font-size: 44px;
+      }
+
+
+      .collection {
+        padding: 80px 0 90px;
+      }
+
+      .collection-heading {
+        display: block;
+      }
+
+      .collection-heading h2 {
+        font-size: 42px;
+      }
+
+      .collection-heading p {
+        margin-top: 18px;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category {
+        min-height: 310px;
+      }
+
+      .category-middle h3 {
+        font-size: 48px;
+      }
+
+
+      .feature {
+        padding: 80px 0;
+      }
+
+      .feature h2 {
+        font-size: 53px;
+      }
+
+
+      .final {
+        padding: 90px 0;
+      }
+
+      .final h2 {
+        font-size: 55px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <div class="hero-text">
+
+            <div class="hero-kicker">
+              A curated journal for everyday life
+            </div>
+
+            <h1 class="hero-title">
+              Things
+              <em>worth</em>
+              noticing.
+            </h1>
+
+            <p class="hero-description">
+              Ideas, inspiration and thoughtful discoveries
+              across food, fashion, travel, nature, decor
+              and quotes.
+            </p>
+
+            <a href="#collection" class="hero-action">
+              Discover the journal
+              <span>↓</span>
+            </a>
+
+          </div>
+
+
+          <div class="hero-art">
+
+            <div class="hero-art-main">
+
+              <span class="hero-art-number">
+                Journal / 01
+              </span>
+
+              <span class="hero-art-word">
+                everyday
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+      <div class="container">
+
+        <div class="intro-grid">
+
+          <div class="intro-index">
+            About
+          </div>
+
+          <div class="intro-content">
+
+            <h2>
+              A collection of ideas
+              for a more <em>curious</em> everyday.
+            </h2>
+
+            <p>
+              From the table to the wardrobe, from distant
+              places to quiet natural spaces, discover
+              carefully curated inspiration designed to
+              make ordinary moments a little more interesting.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- COLLECTION -->
+
+    <section class="collection" id="collection">
+
+      <div class="container">
+
+        <div class="collection-heading">
+
+          <div>
+
+            <div class="section-label">
+              The journal
+            </div>
+
+            <h2>
+              Explore the collection
+            </h2>
+
+          </div>
+
+          <p>
+            Six subjects. Endless inspiration.
+          </p>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+          <!-- FOOD -->
+
+          <a href="food.html" class="category">
+
+            <div class="category-top">
+
+              <span class="category-number">
+                01
+              </span>
+
+              <span class="category-arrow">
+                ↗
+              </span>
+
+            </div>
+
+            <div class="category-middle">
+
+              <span>
+                Taste &amp; table
+              </span>
+
+              <h3>
+                Food
+              </h3>
+
+            </div>
+
+            <div class="category-bottom">
+
+              <span>
+                Recipes &amp; ideas
+              </span>
+
+              <span>
+                Explore
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- FASHION -->
+
+          <a href="fashion.html" class="category">
+
+            <div class="category-top">
+
+              <span class="category-number">
+                02
+              </span>
+
+              <span class="category-arrow">
+                ↗
+              </span>
+
+            </div>
+
+            <div class="category-middle">
+
+              <span>
+                Style &amp; wardrobe
+              </span>
+
+              <h3>
+                Fashion
+              </h3>
+
+            </div>
+
+            <div class="category-bottom">
+
+              <span>
+                Style inspiration
+              </span>
+
+              <span>
+                Explore
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- TRAVEL -->
+
+          <a href="travel.html" class="category">
+
+            <div class="category-top">
+
+              <span class="category-number">
+                03
+              </span>
+
+              <span class="category-arrow">
+                ↗
+              </span>
+
+            </div>
+
+            <div class="category-middle">
+
+              <span>
+                Places &amp; journeys
+              </span>
+
+              <h3>
+                Travel
+              </h3>
+
+            </div>
+
+            <div class="category-bottom">
+
+              <span>
+                Destinations &amp; guides
+              </span>
+
+              <span>
+                Explore
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- NATURE -->
+
+          <a href="nature.html" class="category">
+
+            <div class="category-top">
+
+              <span class="category-number">
+                04
+              </span>
+
+              <span class="category-arrow">
+                ↗
+              </span>
+
+            </div>
+
+            <div class="category-middle">
+
+              <span>
+                Outside &amp; beyond
+              </span>
+
+              <h3>
+                Nature
+              </h3>
+
+            </div>
+
+            <div class="category-bottom">
+
+              <span>
+                Natural inspiration
+              </span>
+
+              <span>
+                Explore
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- DECOR -->
+
+          <a href="decor.html" class="category">
+
+            <div class="category-top">
+
+              <span class="category-number">
+                05
+              </span>
+
+              <span class="category-arrow">
+                ↗
+              </span>
+
+            </div>
+
+            <div class="category-middle">
+
+              <span>
+                Home &amp; spaces
+              </span>
+
+              <h3>
+                Decor
+              </h3>
+
+            </div>
+
+            <div class="category-bottom">
+
+              <span>
+                Interior inspiration
+              </span>
+
+              <span>
+                Explore
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- QUOTES -->
+
+          <a href="quotes.html" class="category">
+
+            <div class="category-top">
+
+              <span class="category-number">
+                06
+              </span>
+
+              <span class="category-arrow">
+                ↗
+              </span>
+
+            </div>
+
+            <div class="category-middle">
+
+              <span>
+                Words &amp; perspective
+              </span>
+
+              <h3>
+                Quotes
+              </h3>
+
+            </div>
+
+            <div class="category-bottom">
+
+              <span>
+                Thoughts &amp; words
+              </span>
+
+              <span>
+                Explore
+              </span>
+
+            </div>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURE -->
+
+    <section class="feature">
+
+      <div class="container">
+
+        <div class="feature-grid">
+
+          <div>
+
+            <div class="feature-small">
+              A different perspective
+            </div>
+
+            <h2>
+              Make room for
+              <em>better ideas.</em>
+            </h2>
+
+          </div>
+
+          <div>
+
+            <p class="feature-copy">
+              The most interesting ideas don't always arrive
+              loudly. Sometimes they appear in a recipe,
+              a destination, a beautifully arranged room,
+              an outfit or a simple sentence.
+            </p>
+
+            <a href="quotes.html" class="feature-link">
+              Continue exploring
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="final">
+
+      <div class="container">
+
+        <div class="final-label">
+          Until next time
+        </div>
+
+        <h2>
+          Stay curious.
+          <em>Notice more.</em>
+        </h2>
+
+        <p>
+          There is always something new worth discovering.
+        </p>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+</body>
+</html>

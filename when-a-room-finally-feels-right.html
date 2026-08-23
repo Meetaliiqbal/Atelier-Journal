@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="When does a room finally feel right? Explore how proportion, light, texture and personal objects shape the atmosphere of a comfortable home."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="referrer"
+    content="no-referrer"
+  >
+
+  <title>When a Room Finally Feels Right — Atelier Journal</title>
+
+
+  <!-- =========================================
+       GOOGLE FONTS
+  ========================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =========================================
+       HEADER / FOOTER
+  ========================================== -->
+
+  <script src="header.js" defer></script>
+
+  <script src="footer.js" defer></script>
+
+
+  <style>
+
+    /* =========================================
+       ROOT
+    ========================================== */
+
+    :root {
+
+      --bg: #f3f0eb;
+
+      --paper: #fbfaf7;
+
+      --ink: #272521;
+
+      --muted: #77736d;
+
+      --line: #ddd7cf;
+
+      --accent: #8a7563;
+
+      --dark: #4c4239;
+
+      --soft: #e8e0d7;
+
+      --serif: "Playfair Display", Georgia, serif;
+
+      --sans: "DM Sans", Arial, sans-serif;
+
+    }
+
+
+    /* =========================================
+       RESET
+    ========================================== */
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--ink);
+
+      font-family: var(--sans);
+
+      line-height: 1.7;
+
+      overflow-x: hidden;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+    /* =========================================
+       ARTICLE WRAPPER
+    ========================================== */
+
+    .article-page {
+
+      width: min(820px, 90%);
+
+      margin: 0 auto;
+
+      padding: 120px 0 110px;
+
+    }
+
+
+    /* =========================================
+       ARTICLE HEADER
+    ========================================== */
+
+    .article-header {
+
+      padding-bottom: 48px;
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .article-category {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .17em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-category::before {
+
+      content: "";
+
+      width: 28px;
+
+      height: 1px;
+
+      background: var(--accent);
+
+    }
+
+
+    .article-header h1 {
+
+      max-width: 780px;
+
+      margin-top: 25px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(48px, 7vw, 78px);
+
+      font-weight: 500;
+
+      line-height: .98;
+
+      letter-spacing: -.045em;
+
+    }
+
+
+    .article-intro {
+
+      max-width: 650px;
+
+      margin-top: 28px;
+
+      color: var(--muted);
+
+      font-size: 15px;
+
+      line-height: 1.9;
+
+    }
+
+
+    .article-meta {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 24px;
+
+      margin-top: 30px;
+
+      color: #969089;
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .13em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =========================================
+       ARTICLE BODY
+    ========================================== */
+
+    .article-body {
+
+      padding-top: 55px;
+
+    }
+
+
+    .article-section {
+
+      margin-bottom: 62px;
+
+    }
+
+
+    .article-section h2 {
+
+      margin-bottom: 20px;
+
+      font-family: var(--serif);
+
+      font-size: 34px;
+
+      font-weight: 500;
+
+      line-height: 1.15;
+
+      letter-spacing: -.025em;
+
+    }
+
+
+    .article-section p {
+
+      margin-bottom: 20px;
+
+      color: #57534e;
+
+      font-size: 15px;
+
+      line-height: 2;
+
+    }
+
+
+    .article-section p:last-child {
+
+      margin-bottom: 0;
+
+    }
+
+
+    .article-lead {
+
+      color: var(--ink) !important;
+
+      font-family: var(--serif);
+
+      font-size: 22px !important;
+
+      line-height: 1.55 !important;
+
+    }
+
+
+    /* =========================================
+       PULL QUOTE
+    ========================================== */
+
+    .pull-quote {
+
+      margin: 65px 0;
+
+      padding: 35px 0 35px 35px;
+
+      border-left: 2px solid var(--accent);
+
+    }
+
+
+    .pull-quote p {
+
+      margin: 0;
+
+      font-family: var(--serif);
+
+      color: var(--ink);
+
+      font-size: 28px;
+
+      line-height: 1.4;
+
+    }
+
+
+    /* =========================================
+       CTA
+    ========================================== */
+
+    .article-cta {
+
+      margin: 65px 0 70px;
+
+      padding: 34px;
+
+      background: var(--soft);
+
+      border: 1px solid var(--line);
+
+    }
+
+
+    .cta-label {
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .16em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-cta h3 {
+
+      max-width: 560px;
+
+      margin-top: 13px;
+
+      font-family: var(--serif);
+
+      font-size: 30px;
+
+      font-weight: 500;
+
+      line-height: 1.2;
+
+      letter-spacing: -.02em;
+
+    }
+
+
+    .article-cta p {
+
+      max-width: 590px;
+
+      margin-top: 13px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.85;
+
+    }
+
+
+    .cta-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin-top: 23px;
+
+      padding: 14px 21px;
+
+      background: var(--dark);
+
+      color: #fff;
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .13em;
+
+      text-transform: uppercase;
+
+      transition:
+        background .2s ease,
+        transform .2s ease;
+
+    }
+
+
+    .cta-link:hover {
+
+      background: var(--accent);
+
+      transform: translateY(-2px);
+
+    }
+
+
+    .cta-link span {
+
+      font-size: 15px;
+
+      line-height: 1;
+
+    }
+
+
+    .cta-note {
+
+      margin-top: 12px !important;
+
+      color: #8a847d !important;
+
+      font-size: 9px !important;
+
+      line-height: 1.6 !important;
+
+    }
+
+
+    /* =========================================
+       ARTICLE FOOTER NOTE
+    ========================================== */
+
+    .article-end {
+
+      padding-top: 38px;
+
+      border-top: 1px solid var(--line);
+
+    }
+
+
+    .article-end-label {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .15em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-end p {
+
+      max-width: 650px;
+
+      margin-top: 15px;
+
+      font-family: var(--serif);
+
+      font-size: 25px;
+
+      line-height: 1.4;
+
+    }
+
+
+    /* =========================================
+       RESPONSIVE
+    ========================================== */
+
+    @media (max-width: 650px) {
+
+      .article-page {
+
+        width: min(92%, 820px);
+
+        padding: 80px 0 75px;
+
+      }
+
+
+      .article-header {
+
+        padding-bottom: 35px;
+
+      }
+
+
+      .article-header h1 {
+
+        margin-top: 20px;
+
+        font-size: 48px;
+
+        line-height: 1.02;
+
+      }
+
+
+      .article-intro {
+
+        margin-top: 22px;
+
+        font-size: 14px;
+
+        line-height: 1.8;
+
+      }
+
+
+      .article-meta {
+
+        gap: 12px 18px;
+
+        line-height: 1.5;
+
+      }
+
+
+      .article-body {
+
+        padding-top: 40px;
+
+      }
+
+
+      .article-section {
+
+        margin-bottom: 48px;
+
+      }
+
+
+      .article-section h2 {
+
+        font-size: 30px;
+
+      }
+
+
+      .article-section p {
+
+        font-size: 14px;
+
+        line-height: 1.9;
+
+      }
+
+
+      .article-lead {
+
+        font-size: 20px !important;
+
+      }
+
+
+      .pull-quote {
+
+        margin: 48px 0;
+
+        padding: 25px 0 25px 22px;
+
+      }
+
+
+      .pull-quote p {
+
+        font-size: 23px;
+
+      }
+
+
+      .article-cta {
+
+        margin: 50px 0;
+
+        padding: 25px 21px;
+
+      }
+
+
+      .article-cta h3 {
+
+        font-size: 27px;
+
+      }
+
+
+      .cta-link {
+
+        width: 100%;
+
+        justify-content: center;
+
+      }
+
+
+      .article-end p {
+
+        font-size: 22px;
+
+      }
+
+    }
+
+
+    @media (max-width: 380px) {
+
+      .article-header h1 {
+
+        font-size: 42px;
+
+      }
+
+
+      .article-section h2 {
+
+        font-size: 27px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main class="article-page">
+
+
+    <!-- =====================================
+         ARTICLE HEADER
+    ====================================== -->
+
+    <header class="article-header">
+
+
+      <div class="article-category">
+        Home &amp; Decor
+      </div>
+
+
+      <h1>
+        When a Room
+        Finally Feels Right
+      </h1>
+
+
+      <p class="article-intro">
+
+        Some spaces feel comfortable before you can
+        explain why. Explore the subtle relationship
+        between proportion, light, texture and the
+        things we choose to keep around us.
+
+      </p>
+
+
+      <div class="article-meta">
+
+        <span>
+          Interior Notes
+        </span>
+
+        <span>
+          6 Min Read
+        </span>
+
+        <span>
+          Atelier Journal
+        </span>
+
+      </div>
+
+
+    </header>
+
+
+
+    <!-- =====================================
+         ARTICLE BODY
+    ====================================== -->
+
+    <article class="article-body">
+
+
+      <!-- =====================================
+           SECTION 01
+      ====================================== -->
+
+      <section class="article-section">
+
+
+        <h2>
+          Comfort is more than appearance
+        </h2>
+
+
+        <p class="article-lead">
+
+          A room can look beautiful in a photograph
+          and still feel strangely unfamiliar when
+          you spend time inside it.
+
+        </p>
+
+
+        <p>
+
+          That difference often comes down to details
+          that are easy to overlook. A sofa may be
+          perfectly styled, but if there is nowhere
+          comfortable to put a book or a cup, the room
+          may not naturally invite you to stay.
+
+        </p>
+
+
+        <p>
+
+          The same is true of a dining table that is
+          technically the right size but leaves little
+          space to move around it, or a chair placed
+          beside a window that receives beautiful light
+          but has nowhere nearby for a lamp or small
+          table.
+
+        </p>
+
+
+        <p>
+
+          Good interiors tend to work quietly in the
+          background. They support the way people move,
+          rest, talk, read and spend ordinary moments
+          without constantly calling attention to
+          themselves.
+
+        </p>
+
+
+      </section>
+
+
+
+      <!-- =====================================
+           SECTION 02
+      ====================================== -->
+
+      <section class="article-section">
+
+
+        <h2>
+          Start with the way the room is used
+        </h2>
+
+
+        <p>
+
+          Before choosing another decorative object,
+          it helps to observe what already happens
+          naturally in the room.
+
+        </p>
+
+
+        <p>
+
+          Where do people usually sit? Which corner
+          receives the best daylight? Is there a place
+          where everyone tends to leave their phone,
+          keys or books? Which part of the room feels
+          strangely unused?
+
+        </p>
+
+
+        <p>
+
+          These small observations can reveal more
+          about a space than a shopping list ever could.
+          They show where the room is already working
+          and where a simple adjustment might make
+          everyday life easier.
+
+        </p>
+
+
+        <p>
+
+          Sometimes the answer is not adding anything
+          at all. Moving a chair closer to a window,
+          changing the direction of a rug or giving
+          an empty wall some breathing room can change
+          the entire rhythm of a room.
+
+        </p>
+
+
+      </section>
+
+
+
+      <!-- =====================================
+           CTA
+      ====================================== -->
+
+      <aside class="article-cta">
+
+
+        <div class="cta-label">
+          Home &amp; Everyday Finds
+        </div>
+
+
+        <h3>
+          Looking for pieces that can
+          complement your space?
+        </h3>
+
+
+        <p>
+
+          If you are exploring furniture, lighting,
+          storage or smaller home details, you can
+          browse a wider selection of home products
+          and compare options directly on Amazon.
+
+        </p>
+
+
+        <a
+          href="decorpark.html"
+          class="cta-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          Explore Home Finds
+
+          <span>→</span>
+
+        </a>
+
+
+        <p class="cta-note">
+
+          This link leads to an external page. Product
+          availability, pricing and terms are determined
+          by the respective provider.
+
+        </p>
+
+
+      </aside>
+
+
+
+      <!-- =====================================
+           SECTION 03
+      ====================================== -->
+
+      <section class="article-section">
+
+
+        <h2>
+          Let light do some of the decorating
+        </h2>
+
+
+        <p>
+
+          Natural light is one of the strongest
+          characteristics a room already has. It changes
+          throughout the day, revealing different colors,
+          textures and corners as the hours pass.
+
+        </p>
+
+
+        <p>
+
+          Instead of treating lighting as something
+          added at the very end, consider how the existing
+          daylight interacts with the room. A pale wall
+          can make morning light feel softer, while
+          textured materials can create subtle shadows
+          that become more noticeable later in the day.
+
+        </p>
+
+
+        <p>
+
+          Artificial lighting matters too. A room with
+          one bright overhead source can feel completely
+          different from the same room with several
+          smaller sources placed around it.
+
+        </p>
+
+
+        <p>
+
+          The goal is not necessarily to make every
+          corner bright. A little contrast between
+          illuminated and quieter areas can give an
+          interior depth and make it feel more natural.
+
+        </p>
+
+
+      </section>
+
+
+
+      <!-- =====================================
+           PULL QUOTE
+      ====================================== -->
+
+      <div class="pull-quote">
+
+        <p>
+
+          “The most comfortable rooms are often the
+          ones that stop trying to prove that they
+          are beautifully designed.”
+
+        </p>
+
+      </div>
+
+
+
+      <!-- =====================================
+           SECTION 04
+      ====================================== -->
+
+      <section class="article-section">
+
+
+        <h2>
+          Texture makes a space feel lived in
+        </h2>
+
+
+        <p>
+
+          When a room contains only smooth surfaces,
+          it can sometimes feel visually flat. Texture
+          gives the eye something quieter to discover.
+
+        </p>
+
+
+        <p>
+
+          Linen beside wood, a woven basket near a
+          painted wall, a soft rug beneath a simple
+          table or ceramic objects against a plain shelf
+          can create variation without requiring a large
+          number of decorative pieces.
+
+        </p>
+
+
+        <p>
+
+          Texture also changes how a room feels beyond
+          what we see. Soft fabrics can make a seating
+          area feel inviting, while natural materials
+          often introduce a sense of warmth and weight.
+
+        </p>
+
+
+      </section>
+
+
+
+      <!-- =====================================
+           SECTION 05
+      ====================================== -->
+
+      <section class="article-section">
+
+
+        <h2>
+          Keep a little room for personality
+        </h2>
+
+
+        <p>
+
+          A home should not feel like a showroom.
+          The small things that have personal meaning
+          are often what make an interior memorable.
+
+        </p>
+
+
+        <p>
+
+          It might be a collection of old books,
+          a photograph from a trip, a piece of pottery,
+          a chair that has been in the family for years,
+          or simply an object that makes you smile
+          whenever you notice it.
+
+        </p>
+
+
+        <p>
+
+          These details do not have to follow a single
+          style. In fact, a little contrast can make
+          a room feel more authentic.
+
+        </p>
+
+
+        <p>
+
+          The aim is not to create a space that looks
+          perfect from every angle. It is to create
+          somewhere that gradually becomes familiar
+          because it reflects the people who actually
+          live there.
+
+        </p>
+
+
+      </section>
+
+
+
+      <!-- =====================================
+           CLOSING
+      ====================================== -->
+
+      <div class="article-end">
+
+
+        <div class="article-end-label">
+          Final thought
+        </div>
+
+
+        <p>
+
+          A room finally feels right when its beauty
+          becomes secondary to the feeling of being
+          completely at ease inside it.
+
+        </p>
+
+
+      </div>
+
+
+    </article>
+
+
+  </main>
+
+
+</body>
+</html>

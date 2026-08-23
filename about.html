@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Learn more about Atelier Journal, a curated journal exploring food, fashion, travel, nature, decor and quotes."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <title>About — Atelier Journal</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Injected Header & Footer -->
+  <script src="header.js" defer></script>
+  <script src="footer.js" defer></script>
+
+
+  <style>
+
+    /* =========================================
+       RESET
+    ========================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      background: #faf9f6;
+      color: #181917;
+
+      font-family: "Manrope", sans-serif;
+
+      line-height: 1.6;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    :root {
+      --bg: #faf9f6;
+      --dark: #181917;
+      --muted: #777873;
+      --line: #deddd8;
+      --soft: #eeece5;
+
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "Manrope", Arial, sans-serif;
+    }
+
+
+    /* =========================================
+       CONTAINER
+    ========================================= */
+
+    .about-container {
+      width: min(1200px, 90%);
+      margin: 0 auto;
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .about-hero {
+      padding: 105px 0 120px;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+
+    .about-hero-grid {
+      display: grid;
+
+      grid-template-columns: 0.28fr 1fr;
+
+      gap: 70px;
+    }
+
+
+    .about-number {
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 700;
+
+      letter-spacing: 0.16em;
+
+      text-transform: uppercase;
+    }
+
+
+    .about-hero-content {
+      max-width: 930px;
+    }
+
+
+    .about-kicker {
+      margin-bottom: 24px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 700;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+    }
+
+
+    .about-title {
+      font-family: var(--serif);
+
+      font-size: clamp(65px, 9vw, 120px);
+
+      font-weight: 500;
+
+      line-height: 0.88;
+
+      letter-spacing: -0.055em;
+    }
+
+
+    .about-title em {
+      font-weight: 500;
+    }
+
+
+    .about-intro {
+      max-width: 600px;
+
+      margin-top: 42px;
+
+      color: var(--muted);
+
+      font-size: 15px;
+
+      line-height: 1.9;
+    }
+
+
+    /* =========================================
+       STATEMENT
+    ========================================= */
+
+    .about-statement {
+      padding: 115px 0;
+    }
+
+
+    .statement-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 100px;
+
+      align-items: center;
+    }
+
+
+    .statement-visual {
+      position: relative;
+
+      min-height: 520px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #d8d4ca,
+          #f0eee7 48%,
+          #c7c3b8
+        );
+
+      overflow: hidden;
+    }
+
+
+    .statement-visual::before {
+      content: "";
+
+      position: absolute;
+
+      width: 280px;
+      height: 280px;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      border: 1px solid rgba(24, 25, 23, 0.25);
+
+      border-radius: 50%;
+    }
+
+
+    .statement-visual::after {
+      content: "";
+
+      position: absolute;
+
+      width: 90px;
+      height: 90px;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      background: var(--bg);
+
+      border-radius: 50%;
+    }
+
+
+    .visual-label {
+      position: absolute;
+
+      left: 25px;
+      top: 25px;
+
+      font-size: 9px;
+      font-weight: 700;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+    }
+
+
+    .visual-word {
+      position: absolute;
+
+      right: 25px;
+      bottom: 25px;
+
+      font-family: var(--serif);
+
+      font-size: 18px;
+
+      font-style: italic;
+    }
+
+
+    .statement-content {
+      max-width: 520px;
+    }
+
+
+    .section-label {
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 700;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+    }
+
+
+    .statement-content h2 {
+      margin-top: 18px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(48px, 5vw, 70px);
+
+      font-weight: 500;
+
+      line-height: 0.98;
+
+      letter-spacing: -0.045em;
+    }
+
+
+    .statement-content h2 em {
+      font-weight: 500;
+    }
+
+
+    .statement-content p {
+      margin-top: 28px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.9;
+    }
+
+
+    /* =========================================
+       PHILOSOPHY
+    ========================================= */
+
+    .philosophy {
+      padding: 110px 0;
+
+      background: var(--soft);
+    }
+
+
+    .philosophy-heading {
+      max-width: 850px;
+
+      margin-bottom: 65px;
+    }
+
+
+    .philosophy-heading h2 {
+      margin-top: 18px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(48px, 6vw, 80px);
+
+      font-weight: 500;
+
+      line-height: 0.95;
+
+      letter-spacing: -0.05em;
+    }
+
+
+    .philosophy-heading h2 em {
+      font-weight: 500;
+    }
+
+
+    .principles {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+
+    .principle {
+      min-height: 300px;
+
+      padding: 28px;
+
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+    }
+
+
+    .principle-number {
+      font-size: 9px;
+      font-weight: 700;
+
+      letter-spacing: 0.14em;
+
+      color: var(--muted);
+    }
+
+
+    .principle h3 {
+      margin-top: 50px;
+
+      font-family: var(--serif);
+
+      font-size: 38px;
+
+      font-weight: 500;
+
+      line-height: 1;
+    }
+
+
+    .principle p {
+      margin-top: 20px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================================
+       CATEGORIES
+    ========================================= */
+
+    .about-categories {
+      padding: 120px 0;
+    }
+
+
+    .categories-grid {
+      display: grid;
+
+      grid-template-columns: 0.35fr 1fr;
+
+      gap: 80px;
+    }
+
+
+    .categories-intro h2 {
+      margin-top: 18px;
+
+      font-family: var(--serif);
+
+      font-size: 48px;
+
+      font-weight: 500;
+
+      line-height: 1;
+
+      letter-spacing: -0.04em;
+    }
+
+
+    .categories-list {
+      border-top: 1px solid var(--line);
+    }
+
+
+    .category-row {
+      min-height: 90px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      border-bottom: 1px solid var(--line);
+
+      transition:
+        padding 0.25s ease,
+        background 0.25s ease;
+    }
+
+
+    .category-row:hover {
+      padding: 0 20px;
+
+      background: var(--soft);
+    }
+
+
+    .category-row-left {
+      display: flex;
+
+      align-items: center;
+
+      gap: 25px;
+    }
+
+
+    .category-row-number {
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.12em;
+    }
+
+
+    .category-row h3 {
+      font-family: var(--serif);
+
+      font-size: 29px;
+
+      font-weight: 500;
+    }
+
+
+    .category-row-description {
+      color: var(--muted);
+
+      font-size: 10px;
+
+      text-align: right;
+    }
+
+
+    .category-row-arrow {
+      font-size: 18px;
+
+      transition: transform 0.2s ease;
+    }
+
+
+    .category-row:hover .category-row-arrow {
+      transform: translate(4px, -4px);
+    }
+
+
+    /* =========================================
+       CLOSING
+    ========================================= */
+
+    .about-closing {
+      padding: 120px 0 140px;
+
+      border-top: 1px solid var(--line);
+
+      text-align: center;
+    }
+
+
+    .closing-label {
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 700;
+
+      letter-spacing: 0.16em;
+
+      text-transform: uppercase;
+    }
+
+
+    .about-closing h2 {
+      max-width: 850px;
+
+      margin: 20px auto 0;
+
+      font-family: var(--serif);
+
+      font-size: clamp(55px, 7vw, 95px);
+
+      font-weight: 500;
+
+      line-height: 0.94;
+
+      letter-spacing: -0.05em;
+    }
+
+
+    .about-closing h2 em {
+      font-weight: 500;
+    }
+
+
+    .closing-text {
+      max-width: 500px;
+
+      margin: 30px auto 0;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.8;
+    }
+
+
+    .closing-link {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      margin-top: 32px;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.13em;
+
+      text-transform: uppercase;
+    }
+
+
+    .closing-link span {
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid var(--dark);
+
+      border-radius: 50%;
+
+      font-size: 16px;
+
+      transition: transform 0.25s ease;
+    }
+
+
+    .closing-link:hover span {
+      transform: translateY(4px);
+    }
+
+
+    /* =========================================
+       TABLET
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+      .about-hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+      }
+
+
+      .statement-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+      }
+
+
+      .statement-visual {
+        min-height: 450px;
+      }
+
+
+      .principles {
+        grid-template-columns: 1fr 1fr;
+      }
+
+
+      .categories-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+      }
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 600px) {
+
+      .about-container {
+        width: 90%;
+      }
+
+
+      .about-hero {
+        padding: 70px 0 80px;
+      }
+
+
+      .about-title {
+        font-size: clamp(58px, 17vw, 78px);
+      }
+
+
+      .about-intro {
+        margin-top: 30px;
+
+        font-size: 13px;
+      }
+
+
+      .about-statement {
+        padding: 80px 0;
+      }
+
+
+      .statement-visual {
+        min-height: 350px;
+      }
+
+
+      .statement-visual::before {
+        width: 200px;
+        height: 200px;
+      }
+
+
+      .statement-visual::after {
+        width: 65px;
+        height: 65px;
+      }
+
+
+      .statement-content h2 {
+        font-size: 47px;
+      }
+
+
+      .philosophy {
+        padding: 80px 0;
+      }
+
+
+      .philosophy-heading {
+        margin-bottom: 45px;
+      }
+
+
+      .philosophy-heading h2 {
+        font-size: 48px;
+      }
+
+
+      .principles {
+        grid-template-columns: 1fr;
+      }
+
+
+      .principle {
+        min-height: 270px;
+      }
+
+
+      .about-categories {
+        padding: 80px 0;
+      }
+
+
+      .categories-intro h2 {
+        font-size: 43px;
+      }
+
+
+      .category-row {
+        min-height: 85px;
+      }
+
+
+      .category-row-left {
+        gap: 15px;
+      }
+
+
+      .category-row h3 {
+        font-size: 25px;
+      }
+
+
+      .category-row-description {
+        display: none;
+      }
+
+
+      .about-closing {
+        padding: 85px 0 100px;
+      }
+
+
+      .about-closing h2 {
+        font-size: 56px;
+      }
+
+    }
+
+
+    /* =========================================
+       VERY SMALL MOBILE
+    ========================================= */
+
+    @media (max-width: 380px) {
+
+      .about-title {
+        font-size: 55px;
+      }
+
+
+      .statement-content h2 {
+        font-size: 42px;
+      }
+
+
+      .about-closing h2 {
+        font-size: 49px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main>
+
+
+    <!-- =====================================
+         ABOUT HERO
+    ====================================== -->
+
+    <section class="about-hero">
+
+      <div class="about-container">
+
+        <div class="about-hero-grid">
+
+          <div class="about-number">
+            About / 01
+          </div>
+
+
+          <div class="about-hero-content">
+
+            <div class="about-kicker">
+              Welcome to Atelier Journal
+            </div>
+
+            <h1 class="about-title">
+              Curious
+              <em>about</em>
+              everyday.
+            </h1>
+
+            <p class="about-intro">
+              Atelier Journal is a curated space for ideas,
+              inspiration and discoveries across the things
+              that make everyday life interesting.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         OUR APPROACH
+    ====================================== -->
+
+    <section class="about-statement">
+
+      <div class="about-container">
+
+        <div class="statement-grid">
+
+
+          <div class="statement-visual">
+
+            <span class="visual-label">
+              Atelier / Journal
+            </span>
+
+            <span class="visual-word">
+              discover
+            </span>
+
+          </div>
+
+
+          <div class="statement-content">
+
+            <div class="section-label">
+              Our approach
+            </div>
+
+            <h2>
+              Inspiration
+              should feel
+              <em>personal.</em>
+            </h2>
+
+            <p>
+              We believe the most useful inspiration is the
+              kind that fits naturally into everyday life.
+              A simple meal worth trying, an outfit that
+              changes your perspective, a destination that
+              sparks curiosity, or a room that feels
+              effortlessly comfortable.
+            </p>
+
+            <p>
+              Atelier Journal brings these ideas together
+              in one thoughtful collection, keeping the
+              experience simple, useful and enjoyable.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PHILOSOPHY
+    ====================================== -->
+
+    <section class="philosophy">
+
+      <div class="about-container">
+
+        <div class="philosophy-heading">
+
+          <div class="section-label">
+            What guides us
+          </div>
+
+          <h2>
+            Less noise.
+            More <em>discovery.</em>
+          </h2>
+
+        </div>
+
+
+        <div class="principles">
+
+
+          <!-- PRINCIPLE 01 -->
+
+          <article class="principle">
+
+            <div class="principle-number">
+              01 / CURIOUS
+            </div>
+
+            <div>
+
+              <h3>
+                Stay curious.
+              </h3>
+
+              <p>
+                There is always another place to see,
+                recipe to taste, idea to explore or
+                perspective to consider.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRINCIPLE 02 -->
+
+          <article class="principle">
+
+            <div class="principle-number">
+              02 / SIMPLE
+            </div>
+
+            <div>
+
+              <h3>
+                Keep it simple.
+              </h3>
+
+              <p>
+                Good ideas do not need unnecessary
+                complexity. We focus on clear,
+                approachable inspiration.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRINCIPLE 03 -->
+
+          <article class="principle">
+
+            <div class="principle-number">
+              03 / EVERYDAY
+            </div>
+
+            <div>
+
+              <h3>
+                Notice more.
+              </h3>
+
+              <p>
+                Inspiration can be found in ordinary
+                moments when we slow down enough
+                to notice them.
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         SIX SUBJECTS
+    ====================================== -->
+
+    <section class="about-categories">
+
+      <div class="about-container">
+
+        <div class="categories-grid">
+
+
+          <div class="categories-intro">
+
+            <div class="section-label">
+              The collection
+            </div>
+
+            <h2>
+              Six ways
+              to explore.
+            </h2>
+
+          </div>
+
+
+          <div class="categories-list">
+
+
+            <!-- FOOD -->
+
+            <a
+              href="food.html"
+              class="category-row"
+            >
+
+              <div class="category-row-left">
+
+                <span class="category-row-number">
+                  01
+                </span>
+
+                <h3>
+                  Food
+                </h3>
+
+              </div>
+
+              <span class="category-row-description">
+                Recipes &amp; table inspiration
+              </span>
+
+              <span class="category-row-arrow">
+                ↗
+              </span>
+
+            </a>
+
+
+            <!-- FASHION -->
+
+            <a
+              href="fashion.html"
+              class="category-row"
+            >
+
+              <div class="category-row-left">
+
+                <span class="category-row-number">
+                  02
+                </span>
+
+                <h3>
+                  Fashion
+                </h3>
+
+              </div>
+
+              <span class="category-row-description">
+                Style &amp; wardrobe ideas
+              </span>
+
+              <span class="category-row-arrow">
+                ↗
+              </span>
+
+            </a>
+
+
+            <!-- TRAVEL -->
+
+            <a
+              href="travel.html"
+              class="category-row"
+            >
+
+              <div class="category-row-left">
+
+                <span class="category-row-number">
+                  03
+                </span>
+
+                <h3>
+                  Travel
+                </h3>
+
+              </div>
+
+              <span class="category-row-description">
+                Places &amp; journeys
+              </span>
+
+              <span class="category-row-arrow">
+                ↗
+              </span>
+
+            </a>
+
+
+            <!-- NATURE -->
+
+            <a
+              href="nature.html"
+              class="category-row"
+            >
+
+              <div class="category-row-left">
+
+                <span class="category-row-number">
+                  04
+                </span>
+
+                <h3>
+                  Nature
+                </h3>
+
+              </div>
+
+              <span class="category-row-description">
+                Natural spaces &amp; inspiration
+              </span>
+
+              <span class="category-row-arrow">
+                ↗
+              </span>
+
+            </a>
+
+
+            <!-- DECOR -->
+
+            <a
+              href="decor.html"
+              class="category-row"
+            >
+
+              <div class="category-row-left">
+
+                <span class="category-row-number">
+                  05
+                </span>
+
+                <h3>
+                  Decor
+                </h3>
+
+              </div>
+
+              <span class="category-row-description">
+                Interiors &amp; beautiful spaces
+              </span>
+
+              <span class="category-row-arrow">
+                ↗
+              </span>
+
+            </a>
+
+
+            <!-- QUOTES -->
+
+            <a
+              href="quotes.html"
+              class="category-row"
+            >
+
+              <div class="category-row-left">
+
+                <span class="category-row-number">
+                  06
+                </span>
+
+                <h3>
+                  Quotes
+                </h3>
+
+              </div>
+
+              <span class="category-row-description">
+                Words &amp; perspectives
+              </span>
+
+              <span class="category-row-arrow">
+                ↗
+              </span>
+
+            </a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         CLOSING
+    ====================================== -->
+
+    <section class="about-closing">
+
+      <div class="about-container">
+
+        <div class="closing-label">
+          Keep exploring
+        </div>
+
+        <h2>
+          There is always
+          something <em>worth noticing.</em>
+        </h2>
+
+        <p class="closing-text">
+          Browse the collection and discover ideas,
+          places, styles, spaces and words that might
+          add something new to your everyday.
+        </p>
+
+        <a
+          href="index.html#collection"
+          class="closing-link"
+        >
+          Explore the journal
+
+          <span>
+            ↓
+          </span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+</body>
+</html>

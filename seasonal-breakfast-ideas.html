@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="description"
+  content="A relaxed guide to building an easy breakfast table with toast, fruit, warm grains and fresh additions for slower mornings."
+>
+
+<meta name="robots" content="index, follow">
+
+<meta name="referrer" content="no-referrer">
+
+<title>A Breakfast Table Made for Unhurried Mornings</title>
+
+
+<!-- =====================================================
+     FONTS
+===================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+  rel="stylesheet"
+>
+
+
+<!-- =====================================================
+     HEADER & FOOTER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+<script src="footer.js" defer></script>
+
+
+<style>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root{
+
+  --bg:#f3f0eb;
+
+  --paper:#fbfaf7;
+
+  --paper-soft:#e9e3da;
+
+  --text:#272521;
+
+  --muted:#77736d;
+
+  --line:#ddd7cf;
+
+  --accent:#81715f;
+
+  --accent-dark:#4d4339;
+
+  --serif:"Playfair Display",Georgia,serif;
+
+  --sans:"DM Sans",Arial,sans-serif;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+
+  margin:0;
+
+  padding:0;
+
+  box-sizing:border-box;
+
+}
+
+
+html{
+
+  scroll-behavior:smooth;
+
+}
+
+
+body{
+
+  background:var(--bg);
+
+  color:var(--text);
+
+  font-family:var(--sans);
+
+  overflow-x:hidden;
+
+  -webkit-font-smoothing:antialiased;
+
+}
+
+
+a{
+
+  color:inherit;
+
+  text-decoration:none;
+
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page{
+
+  width:min(900px,92%);
+
+  margin:0 auto;
+
+  padding:65px 0 75px;
+
+}
+
+
+/* =====================================================
+   ARTICLE HEADER
+===================================================== */
+
+.article-header{
+
+  max-width:760px;
+
+  margin:0 auto 45px;
+
+  text-align:center;
+
+}
+
+
+.eyebrow{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:9px;
+
+  color:var(--accent);
+
+  font-size:9px;
+
+  font-weight:600;
+
+  letter-spacing:.2em;
+
+  text-transform:uppercase;
+
+}
+
+
+.eyebrow::before{
+
+  content:"";
+
+  width:25px;
+
+  height:1px;
+
+  background:var(--accent);
+
+}
+
+
+.article-header h1{
+
+  margin-top:18px;
+
+  font-family:var(--serif);
+
+  font-size:clamp(38px,6vw,60px);
+
+  font-weight:400;
+
+  line-height:1.1;
+
+  letter-spacing:-.035em;
+
+}
+
+
+.article-header h1 em{
+
+  color:var(--accent);
+
+  font-style:italic;
+
+}
+
+
+.article-intro{
+
+  max-width:680px;
+
+  margin:20px auto 0;
+
+  color:var(--muted);
+
+  font-size:15px;
+
+  line-height:1.85;
+
+}
+
+
+/* =====================================================
+   ARTICLE CARD
+===================================================== */
+
+.article-card{
+
+  background:var(--paper);
+
+  border:1px solid var(--line);
+
+  border-radius:7px;
+
+  padding:52px 58px;
+
+  box-shadow:
+
+    0 18px 45px rgba(45,38,31,.045);
+
+}
+
+
+/* =====================================================
+   ARTICLE SECTION
+===================================================== */
+
+.article-section{
+
+  margin-bottom:52px;
+
+}
+
+
+.article-section:last-child{
+
+  margin-bottom:0;
+
+}
+
+
+.article-section h2{
+
+  margin-bottom:19px;
+
+  font-family:var(--serif);
+
+  font-size:29px;
+
+  font-weight:400;
+
+  line-height:1.25;
+
+  letter-spacing:-.02em;
+
+}
+
+
+.article-section p{
+
+  margin-bottom:19px;
+
+  color:#45423d;
+
+  font-size:15px;
+
+  line-height:1.9;
+
+}
+
+
+.article-section p:last-child{
+
+  margin-bottom:0;
+
+}
+
+
+/* =====================================================
+   FEATURE NOTE
+===================================================== */
+
+.article-note{
+
+  margin:29px 0 0;
+
+  padding:20px 22px;
+
+  background:var(--paper-soft);
+
+  border-left:2px solid var(--accent);
+
+  color:#625d55;
+
+  font-family:var(--serif);
+
+  font-size:16px;
+
+  font-style:italic;
+
+  line-height:1.7;
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta-box{
+
+  margin:32px 0 5px;
+
+  padding:28px 29px;
+
+  background:var(--paper-soft);
+
+  border:1px solid var(--line);
+
+  border-radius:5px;
+
+}
+
+
+.cta-label{
+
+  display:block;
+
+  margin-bottom:9px;
+
+  color:var(--accent-dark);
+
+  font-family:var(--sans);
+
+  font-size:9px;
+
+  font-weight:600;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+
+}
+
+
+.cta-box h3{
+
+  margin-bottom:9px;
+
+  font-family:var(--serif);
+
+  font-size:23px;
+
+  font-weight:400;
+
+  line-height:1.3;
+
+}
+
+
+.cta-box p{
+
+  margin-bottom:17px;
+
+  color:var(--muted);
+
+  font-family:var(--sans);
+
+  font-size:11px;
+
+  line-height:1.75;
+
+}
+
+
+.cta-link{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:9px;
+
+  color:var(--accent-dark);
+
+  font-family:var(--sans);
+
+  font-size:10px;
+
+  font-weight:600;
+
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+
+  border-bottom:1px solid var(--accent-dark);
+
+  padding-bottom:3px;
+
+}
+
+
+.cta-link::after{
+
+  content:"→";
+
+  font-size:14px;
+
+}
+
+
+.cta-link:hover{
+
+  opacity:.7;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .page{
+
+    width:92%;
+
+    padding:40px 0 55px;
+
+  }
+
+
+  .article-header{
+
+    margin-bottom:30px;
+
+  }
+
+
+  .eyebrow{
+
+    font-size:7px;
+
+    letter-spacing:.17em;
+
+  }
+
+
+  .eyebrow::before{
+
+    width:19px;
+
+  }
+
+
+  .article-header h1{
+
+    margin-top:14px;
+
+    font-size:36px;
+
+    line-height:1.12;
+
+  }
+
+
+  .article-intro{
+
+    margin-top:14px;
+
+    font-size:11px;
+
+    line-height:1.8;
+
+  }
+
+
+  .article-card{
+
+    padding:30px 21px;
+
+    border-radius:6px;
+
+  }
+
+
+  .article-section{
+
+    margin-bottom:40px;
+
+  }
+
+
+  .article-section h2{
+
+    margin-bottom:15px;
+
+    font-size:25px;
+
+  }
+
+
+  .article-section p{
+
+    margin-bottom:17px;
+
+    font-size:13px;
+
+    line-height:1.85;
+
+  }
+
+
+  .article-note{
+
+    margin-top:24px;
+
+    padding:17px 18px;
+
+    font-size:14px;
+
+  }
+
+
+  .cta-box{
+
+    margin-top:26px;
+
+    padding:22px 19px;
+
+  }
+
+
+  .cta-label{
+
+    font-size:7px;
+
+  }
+
+
+  .cta-box h3{
+
+    font-size:21px;
+
+  }
+
+
+  .cta-box p{
+
+    font-size:9px;
+
+    line-height:1.75;
+
+  }
+
+
+  .cta-link{
+
+    font-size:8px;
+
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media(max-width:360px){
+
+  .article-header h1{
+
+    font-size:32px;
+
+  }
+
+
+  .article-card{
+
+    padding:27px 17px;
+
+  }
+
+
+  .article-section h2{
+
+    font-size:23px;
+
+  }
+
+
+  .article-section p{
+
+    font-size:12px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<div id="header-container"></div>
+
+
+<!-- =====================================================
+     MAIN ARTICLE
+===================================================== -->
+
+<main class="page">
+
+
+  <!-- ===================================================
+       ARTICLE HEADER
+  ==================================================== -->
+
+  <header class="article-header">
+
+    <div class="eyebrow">
+
+      Food &amp; Kitchen
+
+    </div>
+
+
+    <h1>
+
+      A Breakfast Table Made for
+
+      <em>Unhurried Mornings</em>
+
+    </h1>
+
+
+    <p class="article-intro">
+
+      Simple combinations of toast, fruit, warm grains
+      and fresh additions for mornings that deserve a
+      little more time.
+
+    </p>
+
+  </header>
+
+
+
+  <!-- ===================================================
+       ARTICLE
+  ==================================================== -->
+
+  <article class="article-card">
+
+
+    <!-- =================================================
+         SECTION 1
+    ================================================== -->
+
+    <section class="article-section">
+
+      <h2>
+
+        Begin With Something Familiar
+
+      </h2>
+
+
+      <p>
+
+        A slow breakfast does not need an elaborate menu.
+        Sometimes the best place to begin is with something
+        familiar: a slice of toast, a warm bowl of oats,
+        fresh fruit or a cup of something comforting.
+
+      </p>
+
+
+      <p>
+
+        These simple foods create a dependable foundation
+        because they can be changed without becoming
+        complicated. Toast can be paired with eggs, yogurt,
+        nut butter or a little fruit. Warm grains can take
+        on cinnamon, berries, seeds or a spoonful of yogurt.
+
+      </p>
+
+
+      <p>
+
+        The point is not to create a perfect breakfast.
+        It is to make a few ordinary ingredients feel
+        considered. A small plate of fruit beside warm
+        toast can be enough to turn a rushed morning into
+        something that feels more deliberate.
+
+      </p>
+
+
+      <div class="article-note">
+
+        A good breakfast can be simple enough to prepare
+        without thinking too much about it.
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SECTION 2
+    ================================================== -->
+
+    <section class="article-section">
+
+      <h2>
+
+        Build the Table in Little Layers
+
+      </h2>
+
+
+      <p>
+
+        Rather than preparing one large dish, think about
+        breakfast as a collection of small additions. A warm
+        grain can sit beside something fresh. Crisp toast can
+        provide texture while fruit adds color and brightness.
+
+      </p>
+
+
+      <p>
+
+        This makes the table feel generous without requiring
+        a long list of ingredients. You can use whatever is
+        already available and let each part play a small role.
+        Even a few berries, sliced banana or a handful of nuts
+        can change the character of an otherwise familiar meal.
+
+      </p>
+
+
+      <p>
+
+        Drinks can become part of the rhythm too. Coffee,
+        tea, juice or simply a glass of water can give the
+        breakfast a natural pause. There is no need to rush
+        through every part of the morning at once.
+
+      </p>
+
+
+      <!-- =================================================
+           CTA
+      ================================================== -->
+
+      <div class="cta-box">
+
+        <span class="cta-label">
+
+          A Convenient Option
+
+        </span>
+
+
+        <h3>
+
+          Not in the mood to prepare breakfast?
+
+        </h3>
+
+
+        <p>
+
+          Some mornings are better spent keeping things
+          simple. If you would rather skip the preparation,
+          you can browse available restaurants and food
+          options through the external page below. Selection,
+          availability, delivery times and fees may vary by
+          location and account.
+
+        </p>
+
+
+        <a
+        class="cta-link"
+        href="foodpark.html"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+          Explore Available Food Options
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SECTION 3
+    ================================================== -->
+
+    <section class="article-section">
+
+      <h2>
+
+        Keep Fresh Ingredients Within Reach
+
+      </h2>
+
+
+      <p>
+
+        Fresh additions are one of the easiest ways to make
+        a basic breakfast feel different from one morning to
+        the next. Seasonal fruit, fresh herbs, sliced
+        vegetables or a spoonful of yogurt can introduce
+        contrast without creating extra work.
+
+      </p>
+
+
+      <p>
+
+        It also helps to keep a few flexible ingredients
+        available rather than planning every breakfast in
+        detail. Apples can be sliced beside toast one day
+        and added to warm grains the next. Bananas can be
+        combined with oats, yogurt or nut butter depending
+        on what sounds appealing.
+
+      </p>
+
+
+      <p>
+
+        This kind of flexibility makes the breakfast table
+        easier to maintain. You are not following a strict
+        formula; you are simply working with a handful of
+        ingredients that can move comfortably between meals.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SECTION 4
+    ================================================== -->
+
+    <section class="article-section">
+
+      <h2>
+
+        Give Warm Foods Their Moment
+
+      </h2>
+
+
+      <p>
+
+        Warm grains have a particular place in a slower
+        breakfast. Oats, rice porridge and other simple
+        grain-based dishes can be prepared with very little
+        fuss and adjusted according to the morning.
+
+      </p>
+
+
+      <p>
+
+        A little cinnamon can make them feel warmer, while
+        fruit provides freshness. Seeds and nuts add texture,
+        and yogurt can bring a cool contrast. Even small
+        changes can make the same basic breakfast feel
+        different throughout the week.
+
+      </p>
+
+
+      <p>
+
+        The important part is allowing the food to be enjoyed
+        while it is still warm. A breakfast that is eaten
+        slowly often feels more satisfying than one consumed
+        between notifications and unfinished tasks.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SECTION 5
+    ================================================== -->
+
+    <section class="article-section">
+
+      <h2>
+
+        Let the Morning Stay Flexible
+
+      </h2>
+
+
+      <p>
+
+        Not every morning needs the same breakfast. Some days
+        call for something warm and filling. Others might
+        suit fruit, toast and a quiet drink. The table can
+        change according to the season, the available
+        ingredients and the amount of time you have.
+
+      </p>
+
+
+      <p>
+
+        That flexibility is what makes a simple breakfast
+        routine sustainable. There is less pressure to prepare
+        something elaborate and more freedom to make small
+        choices based on the moment.
+
+      </p>
+
+
+      <p>
+
+        Once a few familiar combinations become part of the
+        routine, breakfast starts to feel less like another
+        decision and more like a comfortable part of the day.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SECTION 6
+    ================================================== -->
+
+    <section class="article-section">
+
+      <h2>
+
+        Make Room for a Slower Start
+
+      </h2>
+
+
+      <p>
+
+        A breakfast table does not need to be crowded to feel
+        inviting. Toast, fruit, warm grains and one or two
+        fresh additions can create enough variety for a
+        satisfying start.
+
+      </p>
+
+
+      <p>
+
+        What matters most is the rhythm around the food.
+        Sitting down, taking a few minutes and allowing the
+        morning to begin without immediately rushing into
+        the next task can change how the meal feels.
+
+      </p>
+
+
+      <p>
+
+        Keep the ingredients familiar, let the combinations
+        change naturally and leave enough room for the
+        occasional morning when someone else does the
+        preparation.
+
+      </p>
+
+
+      <p>
+
+        Sometimes an unhurried breakfast is not about adding
+        more to the table. It is simply about giving yourself
+        enough time to enjoy what is already there.
+
+      </p>
+
+    </section>
+
+
+  </article>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<div id="footer-container"></div>
+
+
+</body>
+</html>

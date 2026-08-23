@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Some experiences become clearer after they end. Explore why distance can change the meaning of ordinary moments, relationships, places and memories."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="referrer"
+    content="no-referrer"
+  >
+
+  <title>The Things We Understand Only After They End</title>
+
+
+  <!-- =========================================
+       FONTS
+  ========================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =========================================
+       SHARED HEADER / FOOTER
+  ========================================== -->
+
+  <script src="header.js" defer></script>
+
+  <script src="footer.js" defer></script>
+
+
+  <style>
+
+    /* =================================================
+       ROOT
+    ================================================= */
+
+    :root {
+
+      --page-bg: #f4f1eb;
+
+      --paper: #fbf9f5;
+
+      --paper-soft: #ebe5dc;
+
+      --paper-warm: #e6ddd1;
+
+      --text: #2d2a26;
+
+      --muted: #777067;
+
+      --border: #d8d0c5;
+
+      --accent: #96785e;
+
+      --accent-dark: #705843;
+
+      --serif: "Playfair Display", Georgia, serif;
+
+      --sans: "DM Sans", Arial, sans-serif;
+
+    }
+
+
+    /* =================================================
+       RESET
+    ================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--page-bg);
+
+      color: var(--text);
+
+      font-family: var(--sans);
+
+      line-height: 1.75;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =================================================
+       ARTICLE HEADER
+    ================================================= */
+
+    .article-hero {
+
+      width: min(980px, 90%);
+
+      margin: 0 auto;
+
+      padding: 100px 0 75px;
+
+      text-align: center;
+
+    }
+
+
+    .article-label {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .18em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-label::before,
+    .article-label::after {
+
+      content: "";
+
+      width: 32px;
+
+      height: 1px;
+
+      background: var(--accent);
+
+    }
+
+
+    .article-hero h1 {
+
+      max-width: 900px;
+
+      margin: 28px auto 0;
+
+      font-family: var(--serif);
+
+      font-size: clamp(48px, 7vw, 88px);
+
+      font-weight: 400;
+
+      line-height: 1.02;
+
+      letter-spacing: -.045em;
+
+    }
+
+
+    .article-subtitle {
+
+      max-width: 650px;
+
+      margin: 30px auto 0;
+
+      color: var(--muted);
+
+      font-family: var(--serif);
+
+      font-size: 20px;
+
+      line-height: 1.6;
+
+    }
+
+
+    .article-meta {
+
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 18px;
+
+      margin-top: 35px;
+
+      color: #938a80;
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .13em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =================================================
+       ARTICLE WRAPPER
+    ================================================= */
+
+    .article-layout {
+
+      width: min(1080px, 90%);
+
+      margin: 0 auto;
+
+      padding-bottom: 110px;
+
+    }
+
+
+    /* =================================================
+       INTRO QUOTE
+    ================================================= */
+
+    .opening-thought {
+
+      display: grid;
+
+      grid-template-columns: 100px 1fr;
+
+      gap: 35px;
+
+      margin-bottom: 70px;
+
+      padding: 45px 0;
+
+      border-top: 1px solid var(--border);
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+    .opening-mark {
+
+      color: var(--accent);
+
+      font-family: var(--serif);
+
+      font-size: 90px;
+
+      line-height: .7;
+
+    }
+
+
+    .opening-thought p {
+
+      max-width: 720px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(24px, 3vw, 35px);
+
+      line-height: 1.35;
+
+      letter-spacing: -.025em;
+
+    }
+
+
+    /* =================================================
+       ARTICLE BODY
+    ================================================= */
+
+    .article-body {
+
+      width: min(740px, 100%);
+
+      margin: 0 auto;
+
+    }
+
+
+    .article-body h2 {
+
+      margin: 62px 0 20px;
+
+      font-family: var(--serif);
+
+      font-size: 34px;
+
+      font-weight: 500;
+
+      line-height: 1.2;
+
+      letter-spacing: -.025em;
+
+    }
+
+
+    .article-body h2:first-child {
+
+      margin-top: 0;
+
+    }
+
+
+    .article-body p {
+
+      margin-bottom: 24px;
+
+      color: #514d47;
+
+      font-size: 15px;
+
+      line-height: 2;
+
+    }
+
+
+    .article-body .lead {
+
+      color: var(--text);
+
+      font-family: var(--serif);
+
+      font-size: 22px;
+
+      line-height: 1.65;
+
+    }
+
+
+    /* =================================================
+       PULL QUOTE
+    ================================================= */
+
+    .pull-quote {
+
+      margin: 55px 0;
+
+      padding: 35px 35px 35px 38px;
+
+      background: var(--paper-soft);
+
+      border-left: 3px solid var(--accent);
+
+    }
+
+
+    .pull-quote p {
+
+      margin: 0;
+
+      color: var(--text);
+
+      font-family: var(--serif);
+
+      font-size: 27px;
+
+      line-height: 1.45;
+
+    }
+
+
+    /* =================================================
+       LIST
+    ================================================= */
+
+    .article-body ul {
+
+      margin: 25px 0 35px;
+
+      padding-left: 24px;
+
+    }
+
+
+    .article-body li {
+
+      margin-bottom: 13px;
+
+      padding-left: 6px;
+
+      color: #514d47;
+
+      font-size: 15px;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =================================================
+       CTA
+    ================================================= */
+
+    .article-cta {
+
+      margin: 65px 0;
+
+      padding: 38px;
+
+      background: var(--paper);
+
+      border: 1px solid var(--border);
+
+    }
+
+
+    .cta-label {
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .17em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-cta h3 {
+
+      max-width: 540px;
+
+      margin-top: 12px;
+
+      font-family: var(--serif);
+
+      font-size: 30px;
+
+      font-weight: 500;
+
+      line-height: 1.25;
+
+    }
+
+
+    .article-cta p {
+
+      max-width: 620px;
+
+      margin-top: 13px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.85;
+
+    }
+
+
+    .cta-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      margin-top: 22px;
+
+      padding-bottom: 6px;
+
+      border-bottom: 1px solid var(--accent);
+
+      color: var(--text);
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: .12em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .cta-link::after {
+
+      content: "→";
+
+      color: var(--accent);
+
+      font-size: 14px;
+
+    }
+
+
+    /* =================================================
+       FINAL SECTION
+    ================================================= */
+
+    .article-ending {
+
+      margin-top: 65px;
+
+      padding-top: 42px;
+
+      border-top: 1px solid var(--border);
+
+    }
+
+
+    .article-ending h2 {
+
+      margin-top: 0;
+
+    }
+
+
+    /* =================================================
+       RESPONSIVE
+    ================================================= */
+
+    @media (max-width: 700px) {
+
+      .article-hero {
+
+        padding: 72px 0 55px;
+
+      }
+
+
+      .article-hero h1 {
+
+        font-size: 48px;
+
+      }
+
+
+      .article-subtitle {
+
+        font-size: 18px;
+
+      }
+
+
+      .opening-thought {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        padding: 35px 0;
+
+      }
+
+
+      .opening-mark {
+
+        font-size: 65px;
+
+      }
+
+
+      .opening-thought p {
+
+        font-size: 25px;
+
+      }
+
+
+      .article-body h2 {
+
+        font-size: 30px;
+
+      }
+
+
+      .article-body p {
+
+        font-size: 14px;
+
+        line-height: 1.9;
+
+      }
+
+
+      .pull-quote {
+
+        padding: 27px;
+
+      }
+
+
+      .pull-quote p {
+
+        font-size: 23px;
+
+      }
+
+
+      .article-cta {
+
+        padding: 27px;
+
+        margin: 50px 0;
+
+      }
+
+
+      .article-cta h3 {
+
+        font-size: 27px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main>
+
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <header class="article-hero">
+
+      <div class="article-label">
+        Reflections · Memory
+      </div>
+
+
+      <h1>
+        The Things We Understand
+        Only After They End
+      </h1>
+
+
+      <p class="article-subtitle">
+        Distance has a strange way of making ordinary
+        moments clearer. Some experiences only reveal
+        their importance once we are far enough away
+        to see them differently.
+      </p>
+
+
+      <div class="article-meta">
+
+        <span>
+          7 min read
+        </span>
+
+        <span>
+          Quiet Reflections
+        </span>
+
+        <span>
+          Everyday Life
+        </span>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         ARTICLE
+    ================================================== -->
+
+    <article class="article-layout">
+
+
+      <!-- OPENING THOUGHT -->
+
+      <div class="opening-thought">
+
+        <div class="opening-mark">
+          “
+        </div>
+
+
+        <p>
+          We often understand the meaning of a moment
+          only after we have moved beyond it.
+        </p>
+
+      </div>
+
+
+
+      <div class="article-body">
+
+
+        <!-- INTRO -->
+
+        <p class="lead">
+          While we are inside an experience, it can be
+          difficult to see its shape. A familiar morning
+          feels like just another morning. A conversation
+          seems ordinary. A particular street is simply
+          somewhere we pass on the way home.
+        </p>
+
+
+        <p>
+          Then something changes.
+        </p>
+
+
+        <p>
+          The routine ends. The place becomes unfamiliar.
+          A person moves into a different chapter of life.
+          A season that once seemed endless quietly becomes
+          a memory.
+        </p>
+
+
+        <p>
+          It is often then that the small details begin to
+          return with unusual clarity.
+        </p>
+
+
+
+        <!-- SECTION 1 -->
+
+        <h2>
+          We rarely recognize an ending while it is happening
+        </h2>
+
+
+        <p>
+          Most endings do not arrive with a clear announcement.
+          There is rarely a particular morning when we know,
+          with certainty, that we are experiencing something
+          for the last time.
+        </p>
+
+
+        <p>
+          The last conversation may sound completely ordinary.
+          The last walk through a familiar neighborhood may
+          feel exactly like every other walk. Even the final
+          day of a routine can pass without asking us to pay
+          special attention.
+        </p>
+
+
+        <p>
+          That is one of the strange things about time.
+          We usually understand an ending retrospectively.
+          Only later do we connect the small details and
+          realize that a chapter had already been closing.
+        </p>
+
+
+
+        <!-- SECTION 2 -->
+
+        <h2>
+          Distance changes what we notice
+        </h2>
+
+
+        <p>
+          Being close to something can make its details
+          invisible. Familiarity creates a kind of background
+          noise. We stop noticing the sounds, habits and
+          patterns that once seemed distinctive.
+        </p>
+
+
+        <p>
+          Distance interrupts that familiarity.
+        </p>
+
+
+        <p>
+          When we return to an old place after several years,
+          we may notice things we never consciously remembered.
+          The shape of a window. The sound of a particular
+          street. The way afternoon light used to fall across
+          a room.
+        </p>
+
+
+        <p>
+          None of these details necessarily seemed important
+          at the time. Yet they become part of what makes the
+          memory feel real.
+        </p>
+
+
+        <div class="pull-quote">
+
+          <p>
+            Sometimes distance does not change the past.
+            It simply gives us enough space to finally see it.
+          </p>
+
+        </div>
+
+<!-- CTA -->
+
+        <aside class="article-cta">
+
+          <div class="cta-label">
+            Something Else to Explore
+          </div>
+
+
+          <h3>
+            Take a moment to explore
+            today's available offer.
+          </h3>
+
+
+          <p>
+            If you're curious, you can take a look at the
+            offer and review the available details before
+            deciding whether it is relevant to you.
+          </p>
+
+
+          <a
+            href="quotespark.html"
+            class="cta-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View offer details
+          </a>
+
+        </aside>
+
+        <!-- SECTION 3 -->
+
+        <h2>
+          Ordinary moments become precious in hindsight
+        </h2>
+
+
+        <p>
+          We tend to remember major occasions because they
+          are easy to label. Birthdays, journeys, celebrations
+          and important milestones naturally stand out.
+        </p>
+
+
+        <p>
+          But memory has another way of working.
+        </p>
+
+
+        <p>
+          Years later, an ordinary afternoon can suddenly
+          become more meaningful than an event we once
+          considered important. A meal around a familiar
+          table. A quiet drive. Someone laughing in another
+          room. A routine conversation that we never thought
+          we would miss.
+        </p>
+
+
+        <p>
+          These moments were not necessarily extraordinary.
+          Their value came from the fact that we were living
+          them without knowing they would eventually become
+          memories.
+        </p>
+
+
+
+        <!-- SECTION 4 -->
+
+        <h2>
+          People can become clearer with time
+        </h2>
+
+
+        <p>
+          The same thing happens with relationships.
+        </p>
+
+
+        <p>
+          When we are close to someone, we naturally focus
+          on the present details of the relationship. We may
+          notice disagreements, habits or differences more
+          than the larger role that person plays in our life.
+        </p>
+
+
+        <p>
+          After some distance, the picture can become more
+          balanced.
+        </p>
+
+
+        <p>
+          We may remember the things we learned from them,
+          the places we discovered together, the conversations
+          that changed our thinking or simply the comfort of
+          having someone familiar nearby.
+        </p>
+
+
+        <p>
+          This does not mean every relationship needs to be
+          romanticized after it ends. Some endings are necessary.
+          Some distances are healthy. But time can help us
+          understand a relationship without being completely
+          inside its emotions.
+        </p>
+
+
+
+        
+
+
+
+        <!-- SECTION 5 -->
+
+        <h2>
+          Why endings can make us more grateful
+        </h2>
+
+
+        <p>
+          An ending creates contrast.
+        </p>
+
+
+        <p>
+          When something is always available, it is easy to
+          assume it will remain that way. Once it changes,
+          we suddenly understand how much space it occupied
+          in our everyday life.
+        </p>
+
+
+        <p>
+          This can happen with places, routines, friendships,
+          jobs, neighborhoods and even particular versions
+          of ourselves.
+        </p>
+
+
+        <p>
+          The realization does not need to become regret.
+          Instead, it can become appreciation.
+        </p>
+
+
+        <p>
+          We can look back and think: I did not know how
+          meaningful that ordinary period was while I was
+          living it, but I am glad I experienced it.
+        </p>
+
+
+
+        <!-- SECTION 6 -->
+
+        <h2>
+          There is something useful about looking back
+        </h2>
+
+
+        <p>
+          Looking back does not always mean wanting the past
+          back. Sometimes it simply means understanding it
+          better.
+        </p>
+
+
+        <p>
+          Old experiences can show us what mattered before
+          we had the vocabulary to describe it. They can
+          reveal patterns in the choices we made, the people
+          we trusted and the environments in which we felt
+          most like ourselves.
+        </p>
+
+
+        <p>
+          A memory can therefore be more than nostalgia.
+          It can be information.
+        </p>
+
+
+        <p>
+          It can tell us what we value now.
+        </p>
+
+
+
+        <!-- SECTION 7 -->
+
+        <h2>
+          The present will eventually become a memory too
+        </h2>
+
+
+        <p>
+          Perhaps the most useful realization is also the
+          simplest: this moment will not stay exactly as it is.
+        </p>
+
+
+        <p>
+          Today's routine may eventually become something we
+          remember. The people around us may move into new
+          chapters. Familiar places may change. Even the
+          version of ourselves experiencing this particular
+          season will continue to evolve.
+        </p>
+
+
+        <p>
+          That does not mean we should turn every ordinary
+          moment into something precious or force ourselves
+          to constantly appreciate life.
+        </p>
+
+
+        <p>
+          It simply suggests paying a little more attention.
+        </p>
+
+
+        <ul>
+
+          <li>
+            Notice the places that make you feel at home.
+          </li>
+
+          <li>
+            Pay attention to conversations you would normally
+            rush through.
+          </li>
+
+          <li>
+            Keep small memories without needing them to have
+            a dramatic story.
+          </li>
+
+          <li>
+            Let ordinary days be ordinary while still being
+            present for them.
+          </li>
+
+        </ul>
+
+
+
+        <!-- ENDING -->
+
+        <div class="article-ending">
+
+          <h2>
+            What remains after the moment is gone
+          </h2>
+
+
+          <p>
+            We cannot know which ordinary moments will become
+            important memories. That is part of what makes
+            life interesting.
+          </p>
+
+
+          <p>
+            Perhaps the goal is not to recognize every ending
+            before it arrives. Perhaps it is simply to live
+            with enough attention that, when distance finally
+            gives us another perspective, we can look back
+            without wishing we had noticed everything.
+          </p>
+
+
+          <p>
+            Some moments become meaningful because they were
+            extraordinary.
+          </p>
+
+
+          <p>
+            Others become meaningful because we once thought
+            they were ordinary.
+          </p>
+
+
+          <p>
+            And sometimes, only after they end, do we finally
+            understand why they mattered.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </article>
+
+
+  </main>
+
+
+</body>
+</html>

@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Explore nature stories, quiet landscapes, changing seasons, outdoor rituals, natural beauty and thoughtful ways to experience the world outside."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <title>Nature — Atelier Journal</title>
+
+
+  <!-- =========================================
+       GOOGLE FONTS
+  ========================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =========================================
+       HEADER / FOOTER
+  ========================================== -->
+
+  <script src="header.js" defer></script>
+
+  <script src="footer.js" defer></script>
+
+
+  <style>
+
+    /* =========================================
+       ROOT
+    ========================================== */
+
+    :root {
+
+      --bg: #f3f5ef;
+
+      --paper: #fafbf7;
+
+      --ink: #20261f;
+
+      --muted: #747b70;
+
+      --line: #d8ddd2;
+
+      --accent: #61725b;
+
+      --deep: #344334;
+
+      --soft: #e6ebe1;
+
+      --serif: "Playfair Display", Georgia, serif;
+
+      --sans: "DM Sans", Arial, sans-serif;
+
+    }
+
+
+    /* =========================================
+       RESET
+    ========================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--ink);
+
+      font-family: var(--sans);
+
+      line-height: 1.6;
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================== */
+
+    .nature-hero {
+
+      width: min(1180px, 90%);
+
+      margin: 0 auto;
+
+      padding: 105px 0 90px;
+
+    }
+
+
+    .nature-eyebrow {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.18em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .nature-eyebrow::before {
+
+      content: "";
+
+      width: 38px;
+
+      height: 1px;
+
+      background: var(--accent);
+
+    }
+
+
+    .nature-hero h1 {
+
+      max-width: 1050px;
+
+      margin-top: 25px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(72px, 10vw, 138px);
+
+      font-weight: 500;
+
+      line-height: 0.83;
+
+      letter-spacing: -0.065em;
+
+    }
+
+
+    .nature-hero h1 em {
+
+      font-weight: 500;
+
+    }
+
+
+    .nature-hero-bottom {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1.2fr;
+
+      gap: 80px;
+
+      margin-top: 55px;
+
+    }
+
+
+    .nature-manifesto {
+
+      max-width: 300px;
+
+      color: var(--deep);
+
+      font-family: var(--serif);
+
+      font-size: 22px;
+
+      line-height: 1.35;
+
+    }
+
+
+    .nature-description {
+
+      max-width: 600px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.95;
+
+    }
+
+
+    /* =========================================
+       DIVIDER
+    ========================================== */
+
+    .nature-divider {
+
+      width: min(1180px, 90%);
+
+      height: 1px;
+
+      margin: 0 auto;
+
+      background: var(--line);
+
+    }
+
+
+    /* =========================================
+       CONTENT
+    ========================================== */
+
+    .nature-content {
+
+      width: min(1180px, 90%);
+
+      margin: 0 auto;
+
+      padding: 80px 0 120px;
+
+    }
+
+
+    .nature-heading {
+
+      display: flex;
+
+      align-items: end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 35px;
+
+    }
+
+
+    .nature-heading h2 {
+
+      font-family: var(--serif);
+
+      font-size: 43px;
+
+      font-weight: 500;
+
+      line-height: 1;
+
+      letter-spacing: -0.035em;
+
+    }
+
+
+    .nature-heading span {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =========================================
+       ARTICLE GRID
+    ========================================== */
+
+    .nature-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(12, 1fr);
+
+      gap: 16px;
+
+    }
+
+
+    /* =========================================
+       CARD
+    ========================================== */
+
+    .nature-card {
+
+      position: relative;
+
+      min-height: 390px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      padding: 28px;
+
+      overflow: hidden;
+
+      background: var(--paper);
+
+      border: 1px solid var(--line);
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+
+    }
+
+
+    .nature-card::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 120px;
+
+      height: 120px;
+
+      right: -65px;
+
+      bottom: -65px;
+
+      border: 1px solid #cfd7ca;
+
+      border-radius: 50%;
+
+      transition:
+        transform 0.4s ease,
+        opacity 0.3s ease;
+
+    }
+
+
+    .nature-card:hover {
+
+      transform: translateY(-5px);
+
+      border-color: #bcc7b8;
+
+      background: #ffffff;
+
+    }
+
+
+    .nature-card:hover::after {
+
+      transform: scale(1.7);
+
+    }
+
+
+    /* =========================================
+       GRID POSITIONS
+    ========================================== */
+
+    .nature-card:nth-child(1) {
+
+      grid-column: span 7;
+
+      background: var(--soft);
+
+    }
+
+
+    .nature-card:nth-child(2) {
+
+      grid-column: span 5;
+
+    }
+
+
+    .nature-card:nth-child(3),
+    .nature-card:nth-child(4),
+    .nature-card:nth-child(5) {
+
+      grid-column: span 4;
+
+    }
+
+
+    .nature-card:nth-child(6) {
+
+      grid-column: span 5;
+
+      background: #e1e7dd;
+
+    }
+
+
+    .nature-card:nth-child(7) {
+
+      grid-column: span 7;
+
+    }
+
+
+    .nature-card:nth-child(8),
+    .nature-card:nth-child(9) {
+
+      grid-column: span 6;
+
+    }
+
+
+    .nature-card:nth-child(10),
+    .nature-card:nth-child(11),
+    .nature-card:nth-child(12) {
+
+      grid-column: span 4;
+
+    }
+
+
+    /* =========================================
+       CARD TOP
+    ========================================== */
+
+    .nature-card-top {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+    }
+
+
+    .nature-number {
+
+      color: #929a8d;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.12em;
+
+    }
+
+
+    .nature-category {
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.13em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =========================================
+       CARD BODY
+    ========================================== */
+
+    .nature-card-body {
+
+      margin-top: auto;
+
+      padding-top: 75px;
+
+    }
+
+
+    .nature-card h3 {
+
+      position: relative;
+
+      z-index: 1;
+
+      max-width: 440px;
+
+      font-family: var(--serif);
+
+      font-size: 29px;
+
+      font-weight: 500;
+
+      line-height: 1.08;
+
+      letter-spacing: -0.025em;
+
+    }
+
+
+    .nature-card p {
+
+      position: relative;
+
+      z-index: 1;
+
+      max-width: 480px;
+
+      margin-top: 16px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.85;
+
+    }
+
+
+    .nature-read {
+
+      position: relative;
+
+      z-index: 1;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-top: 23px;
+
+      color: var(--ink);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.13em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .nature-read::after {
+
+      content: "→";
+
+      font-size: 14px;
+
+      transition: transform 0.2s ease;
+
+    }
+
+
+    .nature-card:hover .nature-read::after {
+
+      transform: translateX(5px);
+
+    }
+
+
+    /* =========================================
+       FEATURED
+    ========================================== */
+
+    .nature-card:nth-child(1) h3 {
+
+      max-width: 700px;
+
+      font-size: 47px;
+
+    }
+
+
+    .nature-card:nth-child(1) p {
+
+      max-width: 650px;
+
+    }
+
+
+    .nature-card:nth-child(7) h3 {
+
+      max-width: 650px;
+
+      font-size: 43px;
+
+    }
+
+
+    /* =========================================
+       CLOSING NOTE
+    ========================================== */
+
+    .nature-note {
+
+      display: grid;
+
+      grid-template-columns: 180px 1fr;
+
+      gap: 60px;
+
+      margin-top: 85px;
+
+      padding: 40px 0;
+
+      border-top: 1px solid var(--line);
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .nature-note-label {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .nature-note-text {
+
+      max-width: 720px;
+
+      font-family: var(--serif);
+
+      font-size: 29px;
+
+      line-height: 1.32;
+
+      letter-spacing: -0.025em;
+
+    }
+
+
+    /* =========================================
+       TABLET
+    ========================================== */
+
+    @media (max-width: 950px) {
+
+      .nature-hero-bottom {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+      }
+
+
+      .nature-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+
+      .nature-card:nth-child(n) {
+
+        grid-column: span 1;
+
+      }
+
+
+      .nature-card:nth-child(1),
+      .nature-card:nth-child(7) {
+
+        grid-column: span 2;
+
+      }
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================== */
+
+    @media (max-width: 650px) {
+
+      .nature-hero {
+
+        padding: 75px 0 65px;
+
+      }
+
+
+      .nature-hero h1 {
+
+        margin-top: 25px;
+
+        font-size: 65px;
+
+      }
+
+
+      .nature-hero-bottom {
+
+        margin-top: 40px;
+
+      }
+
+
+      .nature-manifesto {
+
+        font-size: 20px;
+
+      }
+
+
+      .nature-description {
+
+        font-size: 13px;
+
+      }
+
+
+      .nature-content {
+
+        padding: 60px 0 80px;
+
+      }
+
+
+      .nature-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+      }
+
+
+      .nature-heading h2 {
+
+        font-size: 36px;
+
+      }
+
+
+      .nature-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+      }
+
+
+      .nature-card:nth-child(n),
+      .nature-card:nth-child(1),
+      .nature-card:nth-child(7) {
+
+        grid-column: span 1;
+
+        min-height: 350px;
+
+      }
+
+
+      .nature-card {
+
+        padding: 25px;
+
+      }
+
+
+      .nature-card:nth-child(1) h3,
+      .nature-card:nth-child(7) h3 {
+
+        font-size: 36px;
+
+      }
+
+
+      .nature-card h3 {
+
+        font-size: 28px;
+
+      }
+
+
+      .nature-note {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 65px;
+
+      }
+
+
+      .nature-note-text {
+
+        font-size: 23px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main>
+
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <section class="nature-hero">
+
+
+      <div class="nature-eyebrow">
+        Nature Journal
+      </div>
+
+
+      <h1>
+        A little closer
+        <em>to the wild.</em>
+      </h1>
+
+
+      <div class="nature-hero-bottom">
+
+
+        <div class="nature-manifesto">
+
+          The outdoors does not
+          need to be dramatic
+          to be memorable.
+
+        </div>
+
+
+        <p class="nature-description">
+
+          Stories about quiet trails, changing weather,
+          overlooked landscapes and the small details
+          that make time outside feel different.
+          A collection for anyone drawn to slower walks,
+          open skies and moments of simple observation.
+
+        </p>
+
+
+      </div>
+
+    </section>
+
+
+    <div class="nature-divider"></div>
+
+
+
+    <!-- =====================================
+         ARTICLES
+    ====================================== -->
+
+    <section class="nature-content">
+
+
+      <div class="nature-heading">
+
+        <h2>
+          Into the open
+        </h2>
+
+        <span>
+          12 stories / Nature
+        </span>
+
+      </div>
+
+
+
+      <div class="nature-grid">
+
+
+        <!-- =================================
+             01
+        ================================== -->
+
+        <a
+          href="when-the-landscape-slows-you-down.html"
+          class="nature-card"
+        >
+
+          <div class="nature-card-top">
+
+            <span class="nature-number">
+              01
+            </span>
+
+            <span class="nature-category">
+              Perspective
+            </span>
+
+          </div>
+
+
+          <div class="nature-card-body">
+
+            <h3>
+              When the Landscape
+              Slows You Down
+            </h3>
+
+            <p>
+              Some places naturally change the pace of a
+              day. Explore how open landscapes can make us
+              notice distance, movement and silence again.
+            </p>
+
+            <span class="nature-read">
+              Read story
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             02
+        ================================== -->
+
+        <a
+          href="the-sound-of-trees-after-rain.html"
+          class="nature-card"
+        >
+
+          <div class="nature-card-top">
+
+            <span class="nature-number">
+              02
+            </span>
+
+            <span class="nature-category">
+              Forest
+            </span>
+
+          </div>
+
+
+          <div class="nature-card-body">
+
+            <h3>
+              The Sound of Trees
+              After the Rain
+            </h3>
+
+            <p>
+              Wet leaves, dripping branches and cooler air
+              create a completely different atmosphere in
+              the woods after a passing shower.
+            </p>
+
+            <span class="nature-read">
+              Read story
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             03
+        ================================== -->
+
+        <a
+          href="small-signs-of-a-new-season.html"
+          class="nature-card"
+        >
+
+          <div class="nature-card-top">
+
+            <span class="nature-number">
+              03
+            </span>
+
+            <span class="nature-category">
+              Seasons
+            </span>
+
+          </div>
+
+
+          <div class="nature-card-body">
+
+            <h3>
+              The Small Signs
+              That a Season Has Changed
+            </h3>
+
+            <p>
+              A different morning light, cooler evenings
+              or the first unfamiliar birds can quietly
+              signal that the landscape is changing again.
+            </p>
+
+            <span class="nature-read">
+              Read story
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             04
+        ================================== -->
+
+        <a
+          href="one-afternoon-outside.html"
+          class="nature-card"
+        >
+
+          <div class="nature-card-top">
+
+            <span class="nature-number">
+              04
+            </span>
+
+            <span class="nature-category">
+              Day Outdoors
+            </span>
+
+          </div>
+
+
+          <div class="nature-card-body">
+
+            <h3>
+              How to Let One
+              Afternoon Feel Longer
+            </h3>
+
+            <p>
+              Leave the schedule behind for a while and
+              build a simple outdoor afternoon around walking,
+              sitting, observing and wandering.
+            </p>
+
+            <span class="nature-read">
+              Read story
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             05
+        ================================== -->
+
+        <a
+          href="the-life-hidden-in-a-garden.html"
+          class="nature-card"
+        >
+
+          <div class="nature-card-top">
+
+            <span class="nature-number">
+              05
+            </span>
+
+            <span class="nature-category">
+              Garden
+            </span>
+
+          </div>
+
+
+          <div class="nature-card-body">
+
+            <h3>
+              The Quiet Life
+              Hidden in a Garden
+            </h3>
+
+            <p>
+              Even a familiar garden can reveal something
+              new when you stop looking at it as decoration
+              and start noticing its small movements.
+            </p>
+
+            <span class="nature-read">
+              Read story
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             06
+        ================================== -->
+
+        <a
+          href="why-high-places-feel-different.html"
+          class="nature-card"
+        >
+
+          <div class="nature-card-top">
+
+            <span class="nature-number">
+              06
+            </span>
+
+            <span class="nature-category">
+              Landscapes
+            </span>
+
+          </div>
+
+
+          <div class="nature-card-body">
+
+            <h3>
+              Why High Places
+              Change Our Sense of Scale
+            </h3>
+
+            <p>
+              From distant horizons to tiny roads below,
+              elevated landscapes can make familiar things
+              look completely different.
+            </p>
+
+            <span class="nature-read">
+              Read story
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             07
+        ================================== -->
+
+        <a
+          href="the-details-we-miss-outside.html"
+          class="nature-card"
+        >
+
+          <div class="nature-card-top">
+
+            <span class="nature-number">
+              07
+            </span>
+
+            <span class="nature-category">
+              Observation
+            </span>
+
+          </div>
+
+
+          <div class="nature-card-body">
+
+            <h3>
+              The Details We Miss
+              When We Walk Too Quickly
+            </h3>
+
+            <p>
+              Bark patterns, tiny flowers, changing shadows
+              and unusual stones are easy to overlook when
+              the destination becomes more important than
+              the journey.
+            </p>
+
+            <span class="nature-read">
+              Read story
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             08
+        ================================== -->
+
+        <a
+          href="where-the-shoreline-meets-the-sky.html"
+          class="nature-card"
+        >
+
+          <div class="nature-card-top">
+
+            <span class="nature-number">
+              08
+            </span>
+
+            <span class="nature-category">
+              Coastline
+            </span>
+
+          </div>
+
+
+          <div class="nature-card-body">
+
+            <h3>
+              Where the Shoreline
+              Meets the Sky
+            </h3>
+
+            <p>
+              The meeting point between land, water and
+              sky has a quiet simplicity that makes coastal
+              walks feel almost meditative.
+            </p>
+
+            <span class="nature-read">
+              Read story
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             09
+        ================================== -->
+
+        <a
+          href="a-chair-under-the-open-sky.html"
+          class="nature-card"
+        >
+
+          <div class="nature-card-top">
+
+            <span class="nature-number">
+              09
+            </span>
+
+            <span class="nature-category">
+              Outdoor Ritual
+            </span>
+
+          </div>
+
+
+          <div class="nature-card-body">
+
+            <h3>
+              The Simple Pleasure
+              of Sitting Outside
+            </h3>
+
+            <p>
+              You do not always need an activity. Sometimes
+              a quiet seat beneath an open sky is enough to
+              make an ordinary hour feel worthwhile.
+            </p>
+
+            <span class="nature-read">
+              Read story
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             10
+        ================================== -->
+
+        <a
+          href="watching-weather-change.html"
+          class="nature-card"
+        >
+
+          <div class="nature-card-top">
+
+            <span class="nature-number">
+              10
+            </span>
+
+            <span class="nature-category">
+              Weather
+            </span>
+
+          </div>
+
+
+          <div class="nature-card-body">
+
+            <h3>
+              Watching the Weather
+              Change Across the Sky
+            </h3>
+
+            <p>
+              Clouds rarely stay still. Spending a few
+              minutes watching them move can make the
+              changing atmosphere feel almost cinematic.
+            </p>
+
+            <span class="nature-read">
+              Read story
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             11
+        ================================== -->
+
+        <a
+          href="bringing-outdoor-textures-inside.html"
+          class="nature-card"
+        >
+
+          <div class="nature-card-top">
+
+            <span class="nature-number">
+              11
+            </span>
+
+            <span class="nature-category">
+              Natural Details
+            </span>
+
+          </div>
+
+
+          <div class="nature-card-body">
+
+            <h3>
+              The Outdoor Details
+              Worth Bringing Indoors
+            </h3>
+
+            <p>
+              Natural textures, imperfect forms and
+              seasonal elements can add a quieter sense
+              of character to everyday surroundings.
+            </p>
+
+            <span class="nature-read">
+              Read story
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             12
+        ================================== -->
+
+        <a
+          href="a-new-way-to-step-outside.html"
+          class="nature-card"
+        >
+
+          <div class="nature-card-top">
+
+            <span class="nature-number">
+              12
+            </span>
+
+            <span class="nature-category">
+              Everyday Nature
+            </span>
+
+          </div>
+
+
+          <div class="nature-card-body">
+
+            <h3>
+              A Different Way
+              to Step Outside
+            </h3>
+
+            <p>
+              Instead of treating outdoor time as another
+              task, try approaching it without an agenda
+              and see what naturally catches your attention.
+            </p>
+
+            <span class="nature-read">
+              Read story
+            </span>
+
+          </div>
+
+        </a>
+
+
+      </div>
+
+
+
+      <!-- =====================================
+           CLOSING NOTE
+      ====================================== -->
+
+      <div class="nature-note">
+
+        <div class="nature-note-label">
+          A thought on nature
+        </div>
+
+
+        <div class="nature-note-text">
+          Sometimes the most memorable part of going
+          outside is not where you went, but what you
+          finally had time to notice.
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+</body>
+</html>

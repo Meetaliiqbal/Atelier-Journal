@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Explore thoughtful fashion stories, wardrobe ideas, personal style guides and timeless dressing inspiration."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <title>Fashion — Atelier Journal</title>
+
+
+  <!-- =========================================
+       GOOGLE FONTS
+  ========================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =========================================
+       HEADER / FOOTER
+  ========================================== -->
+
+  <script src="header.js" defer></script>
+
+  <script src="footer.js" defer></script>
+
+
+  <style>
+
+    /* =========================================
+       ROOT
+    ========================================= */
+
+    :root {
+
+      --bg: #f5f1ec;
+
+      --paper: #fbf9f6;
+
+      --ink: #252321;
+
+      --muted: #77716b;
+
+      --line: #ddd5cd;
+
+      --accent: #765f52;
+
+      --dark-accent: #4d4038;
+
+      --serif: "Playfair Display", Georgia, serif;
+
+      --sans: "DM Sans", Arial, sans-serif;
+
+    }
+
+
+    /* =========================================
+       RESET
+    ========================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--ink);
+
+      font-family: var(--sans);
+
+      line-height: 1.6;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .fashion-hero {
+
+      width: min(1180px, 90%);
+
+      margin: 0 auto;
+
+      padding: 105px 0 90px;
+
+    }
+
+
+    .fashion-topline {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      padding-bottom: 18px;
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .fashion-kicker {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.18em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .fashion-season {
+
+      color: #9a918a;
+
+      font-size: 9px;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .fashion-hero h1 {
+
+      max-width: 1000px;
+
+      margin-top: 38px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(70px, 10vw, 135px);
+
+      font-weight: 500;
+
+      line-height: 0.84;
+
+      letter-spacing: -0.065em;
+
+    }
+
+
+    .fashion-hero h1 em {
+
+      font-weight: 500;
+
+    }
+
+
+    .fashion-intro {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 70px;
+
+      margin-top: 50px;
+
+    }
+
+
+    .fashion-intro-line {
+
+      width: 100%;
+
+      height: 1px;
+
+      margin-top: 10px;
+
+      background: var(--dark-accent);
+
+    }
+
+
+    .fashion-intro-text {
+
+      max-width: 560px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
+    }
+
+
+    /* =========================================
+       CONTENT
+    ========================================= */
+
+    .fashion-content {
+
+      width: min(1180px, 90%);
+
+      margin: 0 auto;
+
+      padding: 15px 0 120px;
+
+    }
+
+
+    .fashion-heading {
+
+      display: flex;
+
+      align-items: end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 35px;
+
+    }
+
+
+    .fashion-heading h2 {
+
+      font-family: var(--serif);
+
+      font-size: 42px;
+
+      font-weight: 500;
+
+      line-height: 1;
+
+      letter-spacing: -0.03em;
+
+    }
+
+
+    .fashion-heading-meta {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =========================================
+       ARTICLE GRID
+    ========================================= */
+
+    .fashion-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+
+    }
+
+
+    /* =========================================
+       CARD
+    ========================================= */
+
+    .fashion-card {
+
+      position: relative;
+
+      min-height: 405px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      padding: 28px;
+
+      overflow: hidden;
+
+      background: var(--paper);
+
+      border: 1px solid var(--line);
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+
+    }
+
+
+    .fashion-card::before {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      width: 0;
+
+      height: 2px;
+
+      background: var(--dark-accent);
+
+      transition: width 0.35s ease;
+
+    }
+
+
+    .fashion-card:hover {
+
+      transform: translateY(-5px);
+
+      background: #fffdfa;
+
+      border-color: #c9bfb6;
+
+    }
+
+
+    .fashion-card:hover::before {
+
+      width: 100%;
+
+    }
+
+
+    .fashion-card-top {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+    }
+
+
+    .fashion-number {
+
+      color: #aaa29b;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.12em;
+
+    }
+
+
+    .fashion-type {
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.13em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .fashion-card-body {
+
+      margin-top: auto;
+
+      padding-top: 85px;
+
+    }
+
+
+    .fashion-card h3 {
+
+      max-width: 330px;
+
+      font-family: var(--serif);
+
+      font-size: 29px;
+
+      font-weight: 500;
+
+      line-height: 1.08;
+
+      letter-spacing: -0.025em;
+
+    }
+
+
+    .fashion-card p {
+
+      max-width: 340px;
+
+      margin-top: 16px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.8;
+
+    }
+
+
+    .fashion-read {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-top: 24px;
+
+      color: var(--ink);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.13em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .fashion-read::after {
+
+      content: "↗";
+
+      font-size: 14px;
+
+      transition: transform 0.2s ease;
+
+    }
+
+
+    .fashion-card:hover .fashion-read::after {
+
+      transform: translate(3px, -3px);
+
+    }
+
+
+    /* =========================================
+       FEATURED CARD
+    ========================================= */
+
+    .fashion-card.featured {
+
+      grid-column: span 2;
+
+      min-height: 405px;
+
+      background: #e5ddd5;
+
+    }
+
+
+    .fashion-card.featured:hover {
+
+      background: #e1d8cf;
+
+    }
+
+
+    .fashion-card.featured h3 {
+
+      max-width: 700px;
+
+      font-size: 46px;
+
+    }
+
+
+    .fashion-card.featured p {
+
+      max-width: 620px;
+
+    }
+
+
+    /* =========================================
+       STYLE NOTE
+    ========================================= */
+
+    .fashion-note {
+
+      display: grid;
+
+      grid-template-columns: 180px 1fr;
+
+      gap: 55px;
+
+      padding: 40px 0;
+
+      margin-top: 85px;
+
+      border-top: 1px solid var(--line);
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .fashion-note-label {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .fashion-note-text {
+
+      max-width: 700px;
+
+      font-family: var(--serif);
+
+      font-size: 28px;
+
+      line-height: 1.3;
+
+      letter-spacing: -0.02em;
+
+    }
+
+
+    /* =========================================
+       TABLET
+    ========================================= */
+
+    @media (max-width: 950px) {
+
+      .fashion-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+
+      .fashion-card.featured {
+
+        grid-column: span 2;
+
+      }
+
+
+      .fashion-intro {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+      }
+
+
+      .fashion-intro-line {
+
+        display: none;
+
+      }
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 650px) {
+
+      .fashion-hero {
+
+        padding: 75px 0 65px;
+
+      }
+
+
+      .fashion-topline {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+      }
+
+
+      .fashion-hero h1 {
+
+        margin-top: 30px;
+
+        font-size: 65px;
+
+      }
+
+
+      .fashion-intro {
+
+        margin-top: 35px;
+
+      }
+
+
+      .fashion-intro-text {
+
+        font-size: 13px;
+
+      }
+
+
+      .fashion-content {
+
+        padding: 0 0 80px;
+
+      }
+
+
+      .fashion-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+      }
+
+
+      .fashion-heading h2 {
+
+        font-size: 36px;
+
+      }
+
+
+      .fashion-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+      }
+
+
+      .fashion-card {
+
+        min-height: 350px;
+
+        padding: 25px;
+
+      }
+
+
+      .fashion-card.featured {
+
+        grid-column: span 1;
+
+      }
+
+
+      .fashion-card.featured h3 {
+
+        font-size: 36px;
+
+      }
+
+
+      .fashion-card h3 {
+
+        font-size: 28px;
+
+      }
+
+
+      .fashion-note {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 65px;
+
+      }
+
+
+      .fashion-note-text {
+
+        font-size: 23px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main>
+
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <section class="fashion-hero">
+
+
+      <div class="fashion-topline">
+
+        <div class="fashion-kicker">
+          Fashion Journal
+        </div>
+
+        <div class="fashion-season">
+          Style / Wardrobe / Everyday
+        </div>
+
+      </div>
+
+
+      <h1>
+        Personal style,
+        <em>beautifully lived.</em>
+      </h1>
+
+
+      <div class="fashion-intro">
+
+        <div class="fashion-intro-line"></div>
+
+
+        <p class="fashion-intro-text">
+          Thoughtful ideas for getting dressed, discovering
+          silhouettes that feel natural, refining everyday
+          outfits and creating a wardrobe with personality,
+          comfort and room to evolve.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         ARTICLES
+    ====================================== -->
+
+    <section class="fashion-content">
+
+
+      <div class="fashion-heading">
+
+        <h2>
+          Style stories
+        </h2>
+
+        <div class="fashion-heading-meta">
+          12 articles / Explore
+        </div>
+
+      </div>
+
+
+
+      <div class="fashion-grid">
+
+
+        <!-- 01 -->
+
+        <a
+          href="capsule-wardrobe.html"
+          class="fashion-card featured"
+        >
+
+          <div class="fashion-card-top">
+
+            <span class="fashion-number">
+              01
+            </span>
+
+            <span class="fashion-type">
+              Wardrobe
+            </span>
+
+          </div>
+
+
+          <div class="fashion-card-body">
+
+            <h3>
+              Building a Capsule Wardrobe
+              That Still Feels Like You
+            </h3>
+
+            <p>
+              A practical approach to choosing versatile
+              pieces while keeping your wardrobe personal,
+              comfortable and expressive.
+            </p>
+
+            <span class="fashion-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- 02 -->
+
+        <a
+          href="quiet-luxury-everyday-style.html"
+          class="fashion-card"
+        >
+
+          <div class="fashion-card-top">
+
+            <span class="fashion-number">
+              02
+            </span>
+
+            <span class="fashion-type">
+              Personal Style
+            </span>
+
+          </div>
+
+
+          <div class="fashion-card-body">
+
+            <h3>
+              When Simplicity Starts
+              Looking More Refined
+            </h3>
+
+            <p>
+              Explore the quiet impact of clean proportions,
+              subtle textures and thoughtful combinations
+              in everyday dressing.
+            </p>
+
+            <span class="fashion-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- 03 -->
+
+        <a
+          href="neutral-outfit-ideas.html"
+          class="fashion-card"
+        >
+
+          <div class="fashion-card-top">
+
+            <span class="fashion-number">
+              03
+            </span>
+
+            <span class="fashion-type">
+              Outfit Ideas
+            </span>
+
+          </div>
+
+
+          <div class="fashion-card-body">
+
+            <h3>
+              The Unexpected Character
+              of Neutral Dressing
+            </h3>
+
+            <p>
+              Discover how cream, stone, black, brown and
+              other understated shades can create outfits
+              with depth rather than dullness.
+            </p>
+
+            <span class="fashion-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- 04 -->
+
+        <a
+          href="everyday-denim-guide.html"
+          class="fashion-card"
+        >
+
+          <div class="fashion-card-top">
+
+            <span class="fashion-number">
+              04
+            </span>
+
+            <span class="fashion-type">
+              Essentials
+            </span>
+
+          </div>
+
+
+          <div class="fashion-card-body">
+
+            <h3>
+              Finding the Denim
+              You Keep Reaching For
+            </h3>
+
+            <p>
+              From relaxed cuts to cleaner silhouettes,
+              find a denim shape that works with your
+              actual routine and personal preferences.
+            </p>
+
+            <span class="fashion-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- 05 -->
+
+        <a
+          href="layering-for-changing-weather.html"
+          class="fashion-card"
+        >
+
+          <div class="fashion-card-top">
+
+            <span class="fashion-number">
+              05
+            </span>
+
+            <span class="fashion-type">
+              Layering
+            </span>
+
+          </div>
+
+
+          <div class="fashion-card-body">
+
+            <h3>
+              Dressing in Layers
+              When the Weather Cannot Decide
+            </h3>
+
+            <p>
+              Build flexible outfits with light layers that
+              can be added, removed and rearranged throughout
+              the day.
+            </p>
+
+            <span class="fashion-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- 06 -->
+
+        <a
+          href="closet-edit-guide.html"
+          class="fashion-card"
+        >
+
+          <div class="fashion-card-top">
+
+            <span class="fashion-number">
+              06
+            </span>
+
+            <span class="fashion-type">
+              Wardrobe
+            </span>
+
+          </div>
+
+
+          <div class="fashion-card-body">
+
+            <h3>
+              The Closet Edit:
+              Keeping What Earns Its Place
+            </h3>
+
+            <p>
+              A thoughtful way to reconsider unworn pieces
+              and make everyday choices feel less crowded
+              and more intentional.
+            </p>
+
+            <span class="fashion-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- 07 -->
+
+        <a
+          href="statement-accessories-simple-outfits.html"
+          class="fashion-card"
+        >
+
+          <div class="fashion-card-top">
+
+            <span class="fashion-number">
+              07
+            </span>
+
+            <span class="fashion-type">
+              Accessories
+            </span>
+
+          </div>
+
+
+          <div class="fashion-card-body">
+
+            <h3>
+              Small Accessories,
+              Noticeable Difference
+            </h3>
+
+            <p>
+              Discover how bags, jewelry, shoes and other
+              small details can give familiar outfits a
+              completely different feeling.
+            </p>
+
+            <span class="fashion-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- 08 -->
+
+        <a
+          href="comfortable-polished-outfits.html"
+          class="fashion-card"
+        >
+
+          <div class="fashion-card-top">
+
+            <span class="fashion-number">
+              08
+            </span>
+
+            <span class="fashion-type">
+              Everyday Style
+            </span>
+
+          </div>
+
+
+          <div class="fashion-card-body">
+
+            <h3>
+              The Balance Between
+              Ease and Looking Put Together
+            </h3>
+
+            <p>
+              Comfortable dressing can still feel considered
+              when silhouettes, fabrics and proportions work
+              together naturally.
+            </p>
+
+            <span class="fashion-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- 09 -->
+
+        <a
+          href="color-palette-personal-style.html"
+          class="fashion-card"
+        >
+
+          <div class="fashion-card-top">
+
+            <span class="fashion-number">
+              09
+            </span>
+
+            <span class="fashion-type">
+              Color
+            </span>
+
+          </div>
+
+
+          <div class="fashion-card-body">
+
+            <h3>
+              Creating a Wardrobe
+              Around Colors You Love
+            </h3>
+
+            <p>
+              A personal color palette can make mixing
+              outfits easier while leaving plenty of space
+              for contrast and individuality.
+            </p>
+
+            <span class="fashion-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- 10 -->
+
+        <a
+          href="transitional-season-outfits.html"
+          class="fashion-card"
+        >
+
+          <div class="fashion-card-top">
+
+            <span class="fashion-number">
+              10
+            </span>
+
+            <span class="fashion-type">
+              Seasonal Style
+            </span>
+
+          </div>
+
+
+          <div class="fashion-card-body">
+
+            <h3>
+              What to Wear When
+              One Season Meets Another
+            </h3>
+
+            <p>
+              Flexible outfit ideas for those in-between
+              days when temperatures shift from morning
+              to evening.
+            </p>
+
+            <span class="fashion-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- 11 -->
+
+        <a
+          href="timeless-fashion-pieces.html"
+          class="fashion-card"
+        >
+
+          <div class="fashion-card-top">
+
+            <span class="fashion-number">
+              11
+            </span>
+
+            <span class="fashion-type">
+              Essentials
+            </span>
+
+          </div>
+
+
+          <div class="fashion-card-body">
+
+            <h3>
+              The Everyday Pieces
+              That Keep Proving Useful
+            </h3>
+
+            <p>
+              Consider the wardrobe foundations that continue
+              to earn their place because they work across
+              outfits, seasons and changing routines.
+            </p>
+
+            <span class="fashion-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- 12 -->
+
+        <a
+          href="developing-personal-style.html"
+          class="fashion-card"
+        >
+
+          <div class="fashion-card-top">
+
+            <span class="fashion-number">
+              12
+            </span>
+
+            <span class="fashion-type">
+              Personal Style
+            </span>
+
+          </div>
+
+
+          <div class="fashion-card-body">
+
+            <h3>
+              Finding Your Own Style
+              Beyond the Next Trend
+            </h3>
+
+            <p>
+              Learn to recognize the shapes, colors and
+              combinations that consistently feel right
+              instead of rebuilding your wardrobe every season.
+            </p>
+
+            <span class="fashion-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+      </div>
+
+
+
+      <!-- =====================================
+           NOTE
+      ====================================== -->
+
+      <div class="fashion-note">
+
+        <div class="fashion-note-label">
+          A thought on style
+        </div>
+
+
+        <div class="fashion-note-text">
+          Personal style is not about having an endless
+          choice of clothes. It is about recognizing the
+          pieces, proportions and details that feel naturally
+          yours.
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+</body>
+</html>

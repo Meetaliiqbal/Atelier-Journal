@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Explore thoughtful home decor ideas, calm interiors, personal spaces, timeless styling and modern design inspiration."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta name="referrer" content="no-referrer">
+
+  <title>Decor — Atelier Journal</title>
+
+
+  <!-- =========================================
+       GOOGLE FONTS
+  ========================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =========================================
+       HEADER / FOOTER
+  ========================================== -->
+
+  <script src="header.js" defer></script>
+
+  <script src="footer.js" defer></script>
+
+
+  <style>
+
+    /* =========================================
+       ROOT
+    ========================================== */
+
+    :root {
+
+      --bg: #f3f0eb;
+
+      --paper: #fbfaf7;
+
+      --ink: #272521;
+
+      --muted: #77736d;
+
+      --line: #ddd7cf;
+
+      --accent: #8a7563;
+
+      --dark: #4c4239;
+
+      --soft: #e8e0d7;
+
+      --serif: "Playfair Display", Georgia, serif;
+
+      --sans: "DM Sans", Arial, sans-serif;
+
+    }
+
+
+    /* =========================================
+       RESET
+    ========================================== */
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      background: var(--bg);
+
+      color: var(--ink);
+
+      font-family: var(--sans);
+
+      line-height: 1.6;
+
+      overflow-x: hidden;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================== */
+
+    .decor-hero {
+
+      width: min(1180px, 90%);
+
+      margin: 0 auto;
+
+      padding: 105px 0 90px;
+
+    }
+
+
+    .decor-top {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 25px;
+
+      padding-bottom: 18px;
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .decor-label {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.18em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .decor-label::before {
+
+      content: "";
+
+      display: inline-block;
+
+      width: 30px;
+
+      height: 1px;
+
+      margin-right: 12px;
+
+      vertical-align: middle;
+
+      background: var(--accent);
+
+    }
+
+
+    .decor-edition {
+
+      color: #969089;
+
+      font-size: 9px;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .decor-hero h1 {
+
+      max-width: 1050px;
+
+      margin-top: 42px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(70px, 10vw, 136px);
+
+      font-weight: 500;
+
+      line-height: 0.83;
+
+      letter-spacing: -0.065em;
+
+    }
+
+
+    .decor-hero h1 em {
+
+      font-weight: 500;
+
+    }
+
+
+    .decor-hero-bottom {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1.15fr;
+
+      gap: 80px;
+
+      margin-top: 55px;
+
+    }
+
+
+    .decor-statement {
+
+      max-width: 330px;
+
+      font-family: var(--serif);
+
+      font-size: 23px;
+
+      line-height: 1.35;
+
+    }
+
+
+    .decor-description {
+
+      max-width: 600px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.95;
+
+    }
+
+
+    /* =========================================
+       CONTENT
+    ========================================== */
+
+    .decor-content {
+
+      width: min(1180px, 90%);
+
+      margin: 0 auto;
+
+      padding: 20px 0 120px;
+
+    }
+
+
+    .decor-section-head {
+
+      display: flex;
+
+      align-items: end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 35px;
+
+    }
+
+
+    .decor-section-head h2 {
+
+      font-family: var(--serif);
+
+      font-size: 43px;
+
+      font-weight: 500;
+
+      line-height: 1;
+
+      letter-spacing: -0.035em;
+
+    }
+
+
+    .decor-count {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =========================================
+       ARTICLE GRID
+    ========================================== */
+
+    .decor-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(12, 1fr);
+
+      gap: 16px;
+
+    }
+
+
+    /* =========================================
+       CARD
+    ========================================== */
+
+    .decor-card {
+
+      position: relative;
+
+      min-height: 395px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      padding: 28px;
+
+      overflow: hidden;
+
+      background: var(--paper);
+
+      border: 1px solid var(--line);
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+
+    }
+
+
+    .decor-card::before {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+
+      right: 0;
+
+      width: 75px;
+
+      height: 75px;
+
+      border-left: 1px solid var(--line);
+
+      border-bottom: 1px solid var(--line);
+
+      transition:
+        width 0.35s ease,
+        height 0.35s ease;
+
+    }
+
+
+    .decor-card:hover {
+
+      transform: translateY(-5px);
+
+      background: #fffdfa;
+
+      border-color: #c9c0b7;
+
+    }
+
+
+    .decor-card:hover::before {
+
+      width: 105px;
+
+      height: 105px;
+
+    }
+
+
+    /* =========================================
+       GRID POSITIONS
+    ========================================== */
+
+    .decor-card:nth-child(1) {
+
+      grid-column: span 8;
+
+      background: var(--soft);
+
+    }
+
+
+    .decor-card:nth-child(2) {
+
+      grid-column: span 4;
+
+    }
+
+
+    .decor-card:nth-child(3),
+
+    .decor-card:nth-child(4),
+
+    .decor-card:nth-child(5) {
+
+      grid-column: span 4;
+
+    }
+
+
+    .decor-card:nth-child(6) {
+
+      grid-column: span 7;
+
+    }
+
+
+    .decor-card:nth-child(7) {
+
+      grid-column: span 5;
+
+      background: #e7e0d8;
+
+    }
+
+
+    .decor-card:nth-child(8),
+
+    .decor-card:nth-child(9) {
+
+      grid-column: span 6;
+
+    }
+
+
+    .decor-card:nth-child(10),
+
+    .decor-card:nth-child(11),
+
+    .decor-card:nth-child(12) {
+
+      grid-column: span 4;
+
+    }
+
+
+    /* =========================================
+       CARD TOP
+    ========================================== */
+
+    .decor-card-top {
+
+      position: relative;
+
+      z-index: 2;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+    }
+
+
+    .decor-number {
+
+      color: #9a948c;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.12em;
+
+    }
+
+
+    .decor-category {
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.13em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =========================================
+       CARD BODY
+    ========================================== */
+
+    .decor-card-body {
+
+      position: relative;
+
+      z-index: 2;
+
+      margin-top: auto;
+
+      padding-top: 75px;
+
+    }
+
+
+    .decor-card h3 {
+
+      max-width: 460px;
+
+      font-family: var(--serif);
+
+      font-size: 29px;
+
+      font-weight: 500;
+
+      line-height: 1.08;
+
+      letter-spacing: -0.025em;
+
+    }
+
+
+    .decor-card p {
+
+      max-width: 500px;
+
+      margin-top: 16px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.85;
+
+    }
+
+
+    .decor-read {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-top: 23px;
+
+      color: var(--ink);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.13em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .decor-read::after {
+
+      content: "↗";
+
+      font-size: 14px;
+
+      transition: transform 0.2s ease;
+
+    }
+
+
+    .decor-card:hover .decor-read::after {
+
+      transform: translate(4px, -3px);
+
+    }
+
+
+    /* =========================================
+       FEATURED CARDS
+    ========================================== */
+
+    .decor-card:nth-child(1) h3 {
+
+      max-width: 700px;
+
+      font-size: 48px;
+
+    }
+
+
+    .decor-card:nth-child(1) p {
+
+      max-width: 650px;
+
+    }
+
+
+    .decor-card:nth-child(6) h3 {
+
+      max-width: 650px;
+
+      font-size: 43px;
+
+    }
+
+
+    /* =========================================
+       DESIGN NOTE
+    ========================================== */
+
+    .decor-note {
+
+      display: grid;
+
+      grid-template-columns: 180px 1fr;
+
+      gap: 60px;
+
+      margin-top: 85px;
+
+      padding: 40px 0;
+
+      border-top: 1px solid var(--line);
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .decor-note-label {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .decor-note-text {
+
+      max-width: 730px;
+
+      font-family: var(--serif);
+
+      font-size: 29px;
+
+      line-height: 1.32;
+
+      letter-spacing: -0.025em;
+
+    }
+
+
+    /* =========================================
+       TABLET
+    ========================================== */
+
+    @media (max-width: 950px) {
+
+      .decor-hero-bottom {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+      }
+
+
+      .decor-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+
+      .decor-card:nth-child(n) {
+
+        grid-column: span 1;
+
+      }
+
+
+      .decor-card:nth-child(1),
+
+      .decor-card:nth-child(6) {
+
+        grid-column: span 2;
+
+      }
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================== */
+
+    @media (max-width: 650px) {
+
+      .decor-hero {
+
+        padding: 75px 0 65px;
+
+      }
+
+
+      .decor-top {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+      }
+
+
+      .decor-hero h1 {
+
+        margin-top: 30px;
+
+        font-size: 65px;
+
+      }
+
+
+      .decor-hero-bottom {
+
+        margin-top: 40px;
+
+      }
+
+
+      .decor-statement {
+
+        font-size: 20px;
+
+      }
+
+
+      .decor-description {
+
+        font-size: 13px;
+
+      }
+
+
+      .decor-content {
+
+        padding: 0 0 80px;
+
+      }
+
+
+      .decor-section-head {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+      }
+
+
+      .decor-section-head h2 {
+
+        font-size: 36px;
+
+      }
+
+
+      .decor-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+      }
+
+
+      .decor-card:nth-child(n),
+
+      .decor-card:nth-child(1),
+
+      .decor-card:nth-child(6) {
+
+        grid-column: span 1;
+
+        min-height: 350px;
+
+      }
+
+
+      .decor-card {
+
+        padding: 25px;
+
+      }
+
+
+      .decor-card:nth-child(1) h3,
+
+      .decor-card:nth-child(6) h3 {
+
+        font-size: 36px;
+
+      }
+
+
+      .decor-card h3 {
+
+        font-size: 28px;
+
+      }
+
+
+      .decor-note {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 65px;
+
+      }
+
+
+      .decor-note-text {
+
+        font-size: 23px;
+
+      }
+
+    }
+
+
+    /* =========================================
+       SMALL MOBILE
+    ========================================== */
+
+    @media (max-width: 380px) {
+
+      .decor-hero h1 {
+
+        font-size: 56px;
+
+      }
+
+
+      .decor-card:nth-child(1) h3,
+
+      .decor-card:nth-child(6) h3 {
+
+        font-size: 32px;
+
+      }
+
+
+      .decor-card h3 {
+
+        font-size: 26px;
+
+      }
+
+
+      .decor-card {
+
+        min-height: 335px;
+
+        padding: 22px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main>
+
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <section class="decor-hero">
+
+
+      <div class="decor-top">
+
+        <div class="decor-label">
+          Home &amp; Decor
+        </div>
+
+        <div class="decor-edition">
+          Interiors / Objects / Atmosphere
+        </div>
+
+      </div>
+
+
+      <h1>
+        Spaces that
+        <em>feel like home.</em>
+      </h1>
+
+
+      <div class="decor-hero-bottom">
+
+
+        <div class="decor-statement">
+
+          Good interiors are not
+          about having more.
+          They are about choosing well.
+
+        </div>
+
+
+        <p class="decor-description">
+
+          Thoughtful ideas for creating spaces that feel
+          personal, comfortable and quietly considered.
+          From the way evening light moves across a room
+          to the objects we keep close, these stories look
+          at the details that give a home its character.
+
+        </p>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         CONTENT
+    ====================================== -->
+
+    <section class="decor-content">
+
+
+      <div class="decor-section-head">
+
+        <h2>
+          Interior stories
+        </h2>
+
+        <div class="decor-count">
+          12 articles / Decor
+        </div>
+
+      </div>
+
+
+
+      <div class="decor-grid">
+
+
+        <!-- =================================
+             01
+        ================================== -->
+
+        <a
+          href="when-a-room-finally-feels-right.html"
+          class="decor-card"
+        >
+
+          <div class="decor-card-top">
+
+            <span class="decor-number">
+              01
+            </span>
+
+            <span class="decor-category">
+              Atmosphere
+            </span>
+
+          </div>
+
+
+          <div class="decor-card-body">
+
+            <h3>
+              When a Room
+              Finally Feels Right
+            </h3>
+
+            <p>
+              Some spaces feel comfortable before you can
+              explain why. Explore the subtle relationship
+              between proportion, light, texture and the
+              things we choose to keep around us.
+            </p>
+
+            <span class="decor-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             02
+        ================================== -->
+
+        <a
+          href="the-art-of-leaving-some-space.html"
+          class="decor-card"
+        >
+
+          <div class="decor-card-top">
+
+            <span class="decor-number">
+              02
+            </span>
+
+            <span class="decor-category">
+              Space
+            </span>
+
+          </div>
+
+
+          <div class="decor-card-body">
+
+            <h3>
+              The Art of
+              Leaving Some Space
+            </h3>
+
+            <p>
+              Empty corners are not necessarily unfinished
+              corners. Sometimes breathing room gives the
+              rest of an interior the chance to become
+              more noticeable.
+            </p>
+
+            <span class="decor-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             03
+        ================================== -->
+
+        <a
+          href="rooms-built-around-real-life.html"
+          class="decor-card"
+        >
+
+          <div class="decor-card-top">
+
+            <span class="decor-number">
+              03
+            </span>
+
+            <span class="decor-category">
+              Everyday Living
+            </span>
+
+          </div>
+
+
+          <div class="decor-card-body">
+
+            <h3>
+              Rooms Built
+              Around Real Life
+            </h3>
+
+            <p>
+              The most inviting homes are rarely perfect.
+              They are designed around morning routines,
+              unfinished books, shared meals and the
+              ordinary rhythm of a day.
+            </p>
+
+            <span class="decor-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             04
+        ================================== -->
+
+        <a
+          href="why-old-things-belong-in-new-spaces.html"
+          class="decor-card"
+        >
+
+          <div class="decor-card-top">
+
+            <span class="decor-number">
+              04
+            </span>
+
+            <span class="decor-category">
+              Character
+            </span>
+
+          </div>
+
+
+          <div class="decor-card-body">
+
+            <h3>
+              Why Old Things
+              Belong in New Spaces
+            </h3>
+
+            <p>
+              A room becomes more personal when everything
+              does not look as though it arrived on the same
+              afternoon. Mixing eras can create depth,
+              warmth and unexpected character.
+            </p>
+
+            <span class="decor-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             05
+        ================================== -->
+
+        <a
+          href="the-window-seat-effect.html"
+          class="decor-card"
+        >
+
+          <div class="decor-card-top">
+
+            <span class="decor-number">
+              05
+            </span>
+
+            <span class="decor-category">
+              Quiet Corners
+            </span>
+
+          </div>
+
+
+          <div class="decor-card-body">
+
+            <h3>
+              The Window-Seat
+              Effect
+            </h3>
+
+            <p>
+              A small reading corner can change how an entire
+              room is experienced. Discover how natural light,
+              a comfortable seat and a little intention can
+              create a favorite place.
+            </p>
+
+            <span class="decor-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             06
+        ================================== -->
+
+        <a
+          href="the-colors-we-choose-to-live-with.html"
+          class="decor-card"
+        >
+
+          <div class="decor-card-top">
+
+            <span class="decor-number">
+              06
+            </span>
+
+            <span class="decor-category">
+              Color
+            </span>
+
+          </div>
+
+
+          <div class="decor-card-body">
+
+            <h3>
+              The Colors
+              We Choose to Live With
+            </h3>
+
+            <p>
+              Color affects a room long after the first
+              impression. Look beyond trends and consider
+              the quieter relationship between walls,
+              daylight, furniture and mood.
+            </p>
+
+            <span class="decor-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             07
+        ================================== -->
+
+        <a
+          href="a-home-after-sunset.html"
+          class="decor-card"
+        >
+
+          <div class="decor-card-top">
+
+            <span class="decor-number">
+              07
+            </span>
+
+            <span class="decor-category">
+              Evening
+            </span>
+
+          </div>
+
+
+          <div class="decor-card-body">
+
+            <h3>
+              A Home
+              After Sunset
+            </h3>
+
+            <p>
+              The atmosphere of an interior changes
+              completely when daylight disappears.
+              Explore warmer lighting, shadows and the
+              small details that make evenings feel slower.
+            </p>
+
+            <span class="decor-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             08
+        ================================== -->
+
+        <a
+          href="the-beauty-of-imperfect-interiors.html"
+          class="decor-card"
+        >
+
+          <div class="decor-card-top">
+
+            <span class="decor-number">
+              08
+            </span>
+
+            <span class="decor-category">
+              Character
+            </span>
+
+          </div>
+
+
+          <div class="decor-card-body">
+
+            <h3>
+              The Beauty
+              of Imperfect Interiors
+            </h3>
+
+            <p>
+              Scratched wood, uneven pottery and furniture
+              that has gathered a few marks can make a space
+              feel more human. Not everything beautiful
+              needs to look untouched.
+            </p>
+
+            <span class="decor-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             09
+        ================================== -->
+
+        <a
+          href="decorating-for-the-senses.html"
+          class="decor-card"
+        >
+
+          <div class="decor-card-top">
+
+            <span class="decor-number">
+              09
+            </span>
+
+            <span class="decor-category">
+              Sensory Design
+            </span>
+
+          </div>
+
+
+          <div class="decor-card-body">
+
+            <h3>
+              Decorating
+              for the Senses
+            </h3>
+
+            <p>
+              Interiors are more than something to look at.
+              Texture, scent, sound and natural materials
+              all contribute to the feeling we carry
+              through a room.
+            </p>
+
+            <span class="decor-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             10
+        ================================== -->
+
+        <a
+          href="the-room-that-does-less.html"
+          class="decor-card"
+        >
+
+          <div class="decor-card-top">
+
+            <span class="decor-number">
+              10
+            </span>
+
+            <span class="decor-category">
+              Restraint
+            </span>
+
+          </div>
+
+
+          <div class="decor-card-body">
+
+            <h3>
+              The Room
+              That Does Less
+            </h3>
+
+            <p>
+              A thoughtful interior does not have to keep
+              asking for attention. Sometimes a limited
+              palette and a few strong choices create a
+              much quieter kind of beauty.
+            </p>
+
+            <span class="decor-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             11
+        ================================== -->
+
+        <a
+          href="how-to-make-a-home-feel-collected.html"
+          class="decor-card"
+        >
+
+          <div class="decor-card-top">
+
+            <span class="decor-number">
+              11
+            </span>
+
+            <span class="decor-category">
+              Styling
+            </span>
+
+          </div>
+
+
+          <div class="decor-card-body">
+
+            <h3>
+              How to Make
+              a Home Feel Collected
+            </h3>
+
+            <p>
+              A collected interior grows over time. Learn
+              how books, artwork, inherited pieces and
+              everyday objects can work together without
+              making a room feel crowded.
+            </p>
+
+            <span class="decor-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             12
+        ================================== -->
+
+        <a
+          href="the-comfort-of-a-lived-in-home.html"
+          class="decor-card"
+        >
+
+          <div class="decor-card-top">
+
+            <span class="decor-number">
+              12
+            </span>
+
+            <span class="decor-category">
+              Home
+            </span>
+
+          </div>
+
+
+          <div class="decor-card-body">
+
+            <h3>
+              The Comfort
+              of a Lived-In Home
+            </h3>
+
+            <p>
+              The most memorable spaces often show signs
+              of life. Discover why comfort, familiarity
+              and personal rituals can matter more than
+              keeping everything perfectly styled.
+            </p>
+
+            <span class="decor-read">
+              Read article
+            </span>
+
+          </div>
+
+        </a>
+
+
+      </div>
+
+
+
+      <!-- =====================================
+           CLOSING NOTE
+      ====================================== -->
+
+      <div class="decor-note">
+
+
+        <div class="decor-note-label">
+          A thought on interiors
+        </div>
+
+
+        <div class="decor-note-text">
+
+          A beautiful home does not need to impress
+          everyone. It only needs to feel right to
+          the people who live there.
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+</body>
+</html>

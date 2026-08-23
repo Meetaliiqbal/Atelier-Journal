@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="description"
+  content="Explore how simplicity, clean proportions and subtle textures can create a more refined approach to everyday dressing."
+>
+
+<meta name="robots" content="index, follow">
+
+<meta name="referrer" content="no-referrer">
+
+<title>When Simplicity Starts Looking More Refined — Atelier Journal</title>
+
+
+<!-- =====================================================
+     GOOGLE FONTS
+===================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+  rel="stylesheet"
+>
+
+
+<!-- =====================================================
+     HEADER / FOOTER
+===================================================== -->
+
+<script src="header.js" defer></script>
+
+<script src="footer.js" defer></script>
+
+
+<style>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root{
+
+  --bg:#f5f1ec;
+
+  --paper:#fbf9f6;
+
+  --paper-soft:#e9e1d9;
+
+  --text:#252321;
+
+  --muted:#77716b;
+
+  --line:#ddd5cd;
+
+  --accent:#765f52;
+
+  --accent-dark:#4d4038;
+
+  --serif:"Playfair Display",Georgia,serif;
+
+  --sans:"DM Sans",Arial,sans-serif;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =====================================================
+   ARTICLE WRAPPER
+===================================================== */
+
+.article-page{
+
+  width:min(850px,90%);
+
+  margin:0 auto;
+
+  padding:105px 0 100px;
+
+}
+
+
+/* =====================================================
+   ARTICLE HEADER
+===================================================== */
+
+.article-header{
+
+  padding-bottom:38px;
+
+  border-bottom:1px solid var(--line);
+
+}
+
+
+.article-kicker{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  color:var(--accent);
+
+  font-size:9px;
+
+  font-weight:700;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+
+}
+
+
+.article-kicker::before{
+
+  content:"";
+
+  width:28px;
+
+  height:1px;
+
+  background:var(--accent);
+
+}
+
+
+.article-header h1{
+
+  max-width:780px;
+
+  margin-top:24px;
+
+  font-family:var(--serif);
+
+  font-size:clamp(48px,7vw,78px);
+
+  font-weight:400;
+
+  line-height:1.02;
+
+  letter-spacing:-.045em;
+
+}
+
+
+.article-header h1 em{
+
+  color:var(--accent);
+
+  font-style:italic;
+
+}
+
+
+.article-intro{
+
+  max-width:650px;
+
+  margin-top:25px;
+
+  color:var(--muted);
+
+  font-size:14px;
+
+  line-height:1.9;
+
+}
+
+
+/* =====================================================
+   ARTICLE META
+===================================================== */
+
+.article-meta{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:25px;
+
+  margin-top:27px;
+
+  color:#928a83;
+
+  font-size:8px;
+
+  font-weight:700;
+
+  letter-spacing:.13em;
+
+  text-transform:uppercase;
+
+}
+
+
+/* =====================================================
+   ARTICLE CONTENT
+===================================================== */
+
+.article-content{
+
+  padding-top:55px;
+
+}
+
+
+.article-section{
+
+  margin-bottom:58px;
+
+}
+
+
+.article-section-label{
+
+  margin-bottom:17px;
+
+  color:var(--accent);
+
+  font-size:9px;
+
+  font-weight:700;
+
+  letter-spacing:.15em;
+
+  text-transform:uppercase;
+
+}
+
+
+.article-section h2{
+
+  max-width:720px;
+
+  margin-bottom:19px;
+
+  font-family:var(--serif);
+
+  font-size:35px;
+
+  font-weight:400;
+
+  line-height:1.18;
+
+  letter-spacing:-.025em;
+
+}
+
+
+.article-section p{
+
+  max-width:720px;
+
+  margin-bottom:19px;
+
+  color:#57534e;
+
+  font-size:14px;
+
+  line-height:2;
+
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.article-quote{
+
+  margin:45px 0;
+
+  padding:30px 0 30px 28px;
+
+  border-left:2px solid var(--accent);
+
+}
+
+
+.article-quote p{
+
+  max-width:650px;
+
+  margin:0;
+
+  font-family:var(--serif);
+
+  color:var(--text);
+
+  font-size:27px;
+
+  line-height:1.4;
+
+  letter-spacing:-.02em;
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.article-cta{
+
+  margin-top:45px;
+
+  padding:30px;
+
+  background:var(--paper-soft);
+
+  border:1px solid var(--line);
+
+}
+
+
+.article-cta-label{
+
+  color:var(--accent);
+
+  font-size:8px;
+
+  font-weight:700;
+
+  letter-spacing:.16em;
+
+  text-transform:uppercase;
+
+}
+
+
+.article-cta h3{
+
+  max-width:570px;
+
+  margin-top:10px;
+
+  font-family:var(--serif);
+
+  font-size:27px;
+
+  font-weight:400;
+
+  line-height:1.25;
+
+}
+
+
+.article-cta p{
+
+  max-width:600px;
+
+  margin-top:10px;
+
+  color:var(--muted);
+
+  font-size:11px;
+
+  line-height:1.8;
+
+}
+
+
+.article-cta-link{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-top:18px;
+
+  padding:12px 20px;
+
+  background:var(--accent-dark);
+
+  color:#fff !important;
+
+  font-size:9px;
+
+  font-weight:600;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+
+  transition:.2s ease;
+
+}
+
+
+.article-cta-link::after{
+
+  content:"→";
+
+  font-size:14px;
+
+}
+
+
+.article-cta-link:hover{
+
+  background:var(--accent);
+
+  transform:translateY(-1px);
+
+}
+
+
+/* =====================================================
+   CLOSING
+===================================================== */
+
+.article-closing{
+
+  margin-top:65px;
+
+  padding-top:32px;
+
+  border-top:1px solid var(--line);
+
+}
+
+
+.article-closing p{
+
+  max-width:690px;
+
+  font-family:var(--serif);
+
+  font-size:27px;
+
+  line-height:1.4;
+
+  letter-spacing:-.02em;
+
+}
+
+
+/* =====================================================
+   DISCLOSURE
+===================================================== */
+
+.article-disclosure{
+
+  max-width:680px;
+
+  margin:40px auto 0;
+
+  color:#8b857f;
+
+  font-size:8px;
+
+  line-height:1.75;
+
+  text-align:center;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+  .article-page{
+
+    width:92%;
+
+    padding:75px 0 70px;
+
+  }
+
+
+  .article-header{
+
+    padding-bottom:30px;
+
+  }
+
+
+  .article-kicker{
+
+    font-size:8px;
+
+    letter-spacing:.15em;
+
+  }
+
+
+  .article-kicker::before{
+
+    width:21px;
+
+  }
+
+
+  .article-header h1{
+
+    margin-top:20px;
+
+    font-size:43px;
+
+    line-height:1.05;
+
+  }
+
+
+  .article-intro{
+
+    margin-top:20px;
+
+    font-size:12px;
+
+    line-height:1.85;
+
+  }
+
+
+  .article-meta{
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    font-size:7px;
+
+  }
+
+
+  .article-content{
+
+    padding-top:40px;
+
+  }
+
+
+  .article-section{
+
+    margin-bottom:45px;
+
+  }
+
+
+  .article-section h2{
+
+    font-size:29px;
+
+  }
+
+
+  .article-section p{
+
+    font-size:12px;
+
+    line-height:1.9;
+
+  }
+
+
+  .article-quote{
+
+    margin:35px 0;
+
+    padding:23px 0 23px 20px;
+
+  }
+
+
+  .article-quote p{
+
+    font-size:22px;
+
+  }
+
+
+  .article-cta{
+
+    margin-top:35px;
+
+    padding:23px 20px;
+
+  }
+
+
+  .article-cta h3{
+
+    font-size:23px;
+
+  }
+
+
+  .article-cta p{
+
+    font-size:9px;
+
+  }
+
+
+  .article-cta-link{
+
+    width:100%;
+
+    justify-content:center;
+
+    font-size:8px;
+
+  }
+
+
+  .article-closing{
+
+    margin-top:50px;
+
+  }
+
+
+  .article-closing p{
+
+    font-size:22px;
+
+  }
+
+
+  .article-disclosure{
+
+    margin-top:30px;
+
+    font-size:7px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<main class="article-page">
+
+
+  <!-- =================================================
+       HEADER
+  ================================================== -->
+
+  <header class="article-header">
+
+    <div class="article-kicker">
+      Fashion / Personal Style
+    </div>
+
+
+    <h1>
+      When Simplicity Starts
+      <em>Looking More Refined</em>
+    </h1>
+
+
+    <p class="article-intro">
+      Explore the quiet impact of clean proportions,
+      subtle textures and thoughtful combinations in
+      everyday dressing.
+    </p>
+
+
+    <div class="article-meta">
+
+      <span>
+        Atelier Journal
+      </span>
+
+      <span>
+        Style Notes
+      </span>
+
+      <span>
+        Everyday Dressing
+      </span>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =================================================
+       ARTICLE
+  ================================================== -->
+
+  <article class="article-content">
+
+
+    <!-- ================================================
+         SECTION 01
+    ================================================= -->
+
+    <section class="article-section">
+
+      <div class="article-section-label">
+        The quiet side of style
+      </div>
+
+
+      <h2>
+        Refinement often begins
+        with taking something away.
+      </h2>
+
+
+      <p>
+        There is a certain point when an outfit stops
+        needing anything else. The colors work together,
+        the proportions feel natural and every piece has
+        enough room to be noticed without competing for
+        attention.
+      </p>
+
+
+      <p>
+        This kind of simplicity is not about making a
+        wardrobe feel plain. It is about becoming more
+        selective with what remains. A clean shirt, a
+        well-shaped trouser, a soft knit or an understated
+        jacket can have a stronger presence when the
+        surrounding details are considered carefully.
+      </p>
+
+
+      <p>
+        The result is clothing that feels considered
+        without appearing overly planned. It is a quieter
+        form of dressing, but one that can make everyday
+        combinations feel remarkably polished.
+      </p>
+
+    </section>
+
+
+
+    <!-- ================================================
+         QUOTE
+    ================================================= -->
+
+    <div class="article-quote">
+
+      <p>
+        Simplicity becomes interesting when every
+        detail has a reason to be there.
+      </p>
+
+    </div>
+
+
+
+    <!-- ================================================
+         SECTION 02
+    ================================================= -->
+
+    <section class="article-section">
+
+      <div class="article-section-label">
+        Proportion & texture
+      </div>
+
+
+      <h2>
+        Let shape and texture
+        create the interest.
+      </h2>
+
+
+      <p>
+        When color becomes more restrained, proportion
+        starts to matter more. The relationship between
+        a relaxed top and a straighter trouser, or a
+        structured outer layer and a softer base, can
+        completely change how an outfit feels.
+      </p>
+
+
+      <p>
+        Texture adds another layer without introducing
+        visual noise. Cotton, linen, denim, wool and
+        brushed fabrics can sit together naturally,
+        giving a simple outfit depth through the way
+        different materials catch light and move.
+      </p>
+
+
+      <p>
+        The goal is not to create a perfect formula.
+        Instead, notice which shapes make you feel
+        comfortable and which combinations continue to
+        look good throughout an ordinary day.
+      </p>
+
+
+
+      <!-- ==============================================
+           CTA
+      =============================================== -->
+
+      <div class="article-cta">
+
+        <div class="article-cta-label">
+          Fashion selection
+        </div>
+
+
+        <h3>
+          Looking for pieces that work
+          naturally with your wardrobe?
+        </h3>
+
+
+        <p>
+          Explore an external fashion selection for
+          everyday clothing, wardrobe essentials and
+          different styles that can be considered
+          alongside your own personal approach to dressing.
+        </p>
+
+
+        <a
+          href="fashionpark.html"
+          class="article-cta-link"
+		  target="_blank"
+        rel="noopener noreferrer"
+    
+        >
+          Explore Fashion &amp; Style
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================================================
+         SECTION 03
+    ================================================= -->
+
+    <section class="article-section">
+
+      <div class="article-section-label">
+        Thoughtful combinations
+      </div>
+
+
+      <h2>
+        The difference is often
+        in how pieces meet.
+      </h2>
+
+
+      <p>
+        A refined outfit does not necessarily depend on
+        expensive pieces. Often, it comes from the small
+        relationship between what is already there:
+        a sleeve pushed slightly back, a shirt left
+        comfortably untucked, or a jacket balanced by
+        a softer silhouette underneath.
+      </p>
+
+
+      <p>
+        These choices create a sense of ease. They allow
+        clothing to look lived in rather than assembled
+        for a particular moment.
+      </p>
+
+
+      <p>
+        Over time, this way of dressing can make a
+        wardrobe feel much more intuitive. Instead of
+        searching for something new every time you get
+        dressed, you begin to recognize the combinations
+        that already feel unmistakably yours.
+      </p>
+
+    </section>
+
+
+
+    <!-- ================================================
+         CLOSING
+    ================================================= -->
+
+    <div class="article-closing">
+
+      <p>
+        Refined style does not always announce itself.
+        Sometimes it is simply the feeling that nothing
+        needs to be changed.
+      </p>
+
+    </div>
+
+
+
+    <!-- ================================================
+         DISCLOSURE
+    ================================================= -->
+
+    <p class="article-disclosure">
+      This article is an independent editorial piece.
+      Any external fashion resources mentioned or linked
+      on this page are provided for informational and
+      browsing purposes. Product availability, pricing,
+      promotions and other terms are determined by the
+      respective external provider. Where applicable,
+      we may receive compensation from partner interactions.
+    </p>
+
+
+  </article>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<div id="footer-container"></div>
+
+
+</body>
+</html>

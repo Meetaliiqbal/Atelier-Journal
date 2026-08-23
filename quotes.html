@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Thoughtful reflections on memory, solitude, change, relationships, quiet living, personal growth and the meaning we find in ordinary moments."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <title>Quotes & Reflections</title>
+
+
+  <!-- =================================================
+       FONTS
+  ================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =================================================
+       HEADER / FOOTER
+  ================================================== -->
+
+  <script src="header.js" defer></script>
+
+  <script src="footer.js" defer></script>
+
+
+  <style>
+
+    /* =================================================
+       ROOT
+    ================================================= */
+
+    :root {
+
+      --page-bg: #f4f1eb;
+
+      --card-bg: #fbf9f5;
+
+      --card-alt: #ebe5dc;
+
+      --card-warm: #e6ddd1;
+
+      --text: #2d2a26;
+
+      --muted: #777067;
+
+      --border: #d8d0c5;
+
+      --accent: #96785e;
+
+      --accent-dark: #705843;
+
+      --serif: "Playfair Display", Georgia, serif;
+
+      --sans: "DM Sans", Arial, sans-serif;
+
+    }
+
+
+    /* =================================================
+       RESET
+    ================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--page-bg);
+
+      color: var(--text);
+
+      font-family: var(--sans);
+
+      line-height: 1.6;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =================================================
+       HERO
+    ================================================= */
+
+    .quotes-hero {
+
+      width: min(1180px, 90%);
+
+      margin: 0 auto;
+
+      padding: 105px 0 90px;
+
+    }
+
+
+    .hero-label {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 13px;
+
+      color: var(--accent);
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: .18em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .hero-label::before {
+
+      content: "";
+
+      width: 40px;
+
+      height: 1px;
+
+      background: var(--accent);
+
+    }
+
+
+    .quotes-hero h1 {
+
+      max-width: 1050px;
+
+      margin-top: 27px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(66px, 9.8vw, 135px);
+
+      font-weight: 400;
+
+      line-height: .86;
+
+      letter-spacing: -.065em;
+
+    }
+
+
+    .quotes-hero h1 em {
+
+      color: var(--accent-dark);
+
+      font-weight: 400;
+
+    }
+
+
+    .hero-details {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1.25fr;
+
+      gap: 90px;
+
+      margin-top: 60px;
+
+      padding-top: 28px;
+
+      border-top: 1px solid var(--border);
+
+    }
+
+
+    .hero-lead {
+
+      max-width: 360px;
+
+      font-family: var(--serif);
+
+      font-size: 22px;
+
+      line-height: 1.45;
+
+    }
+
+
+    .hero-copy {
+
+      max-width: 600px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.95;
+
+    }
+
+
+    /* =================================================
+       ARTICLE SECTION
+    ================================================= */
+
+    .quotes-content {
+
+      width: min(1180px, 90%);
+
+      margin: 0 auto;
+
+      padding-bottom: 120px;
+
+    }
+
+
+    .section-heading {
+
+      display: flex;
+
+      align-items: flex-end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 34px;
+
+    }
+
+
+    .section-heading h2 {
+
+      font-family: var(--serif);
+
+      font-size: 44px;
+
+      font-weight: 500;
+
+      line-height: 1;
+
+      letter-spacing: -.035em;
+
+    }
+
+
+    .article-count {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .16em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =================================================
+       ARTICLE GRID
+    ================================================= */
+
+    .quotes-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(12, 1fr);
+
+      gap: 16px;
+
+    }
+
+
+    /* =================================================
+       ARTICLE CARD
+    ================================================= */
+
+    .quote-card {
+
+      position: relative;
+
+      min-height: 390px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      padding: 31px;
+
+      overflow: hidden;
+
+      background: var(--card-bg);
+
+      border: 1px solid var(--border);
+
+      transition:
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease;
+
+    }
+
+
+    .quote-card:hover {
+
+      transform: translateY(-5px);
+
+      background: #fffdf9;
+
+      border-color: #c5bbae;
+
+    }
+
+
+    /* =================================================
+       CARD BACKGROUND VARIATIONS
+    ================================================= */
+
+    .quote-card:nth-child(1),
+    .quote-card:nth-child(7) {
+
+      background: var(--card-alt);
+
+    }
+
+
+    .quote-card:nth-child(4),
+    .quote-card:nth-child(10) {
+
+      background: #f8f4ee;
+
+    }
+
+
+    .quote-card:nth-child(12) {
+
+      background: var(--card-warm);
+
+    }
+
+
+    /* =================================================
+       GRID SIZES
+    ================================================= */
+
+    .quote-card:nth-child(1) {
+
+      grid-column: span 7;
+
+    }
+
+
+    .quote-card:nth-child(2) {
+
+      grid-column: span 5;
+
+    }
+
+
+    .quote-card:nth-child(3),
+
+    .quote-card:nth-child(4),
+
+    .quote-card:nth-child(5) {
+
+      grid-column: span 4;
+
+    }
+
+
+    .quote-card:nth-child(6) {
+
+      grid-column: span 5;
+
+    }
+
+
+    .quote-card:nth-child(7) {
+
+      grid-column: span 7;
+
+    }
+
+
+    .quote-card:nth-child(8),
+
+    .quote-card:nth-child(9) {
+
+      grid-column: span 6;
+
+    }
+
+
+    .quote-card:nth-child(10),
+
+    .quote-card:nth-child(11),
+
+    .quote-card:nth-child(12) {
+
+      grid-column: span 4;
+
+    }
+
+
+    /* =================================================
+       DECORATIVE QUOTE MARK
+    ================================================= */
+
+    .quote-symbol {
+
+      position: absolute;
+
+      top: -4px;
+
+      right: 20px;
+
+      color: #dfd7cc;
+
+      font-family: var(--serif);
+
+      font-size: 125px;
+
+      line-height: 1;
+
+      pointer-events: none;
+
+    }
+
+
+    /* =================================================
+       CARD TOP
+    ================================================= */
+
+    .card-top {
+
+      position: relative;
+
+      z-index: 2;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+    }
+
+
+    .card-number {
+
+      color: #9a9187;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      letter-spacing: .12em;
+
+    }
+
+
+    .card-category {
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .13em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =================================================
+       CARD CONTENT
+    ================================================= */
+
+    .card-content {
+
+      position: relative;
+
+      z-index: 2;
+
+      margin-top: auto;
+
+      padding-top: 75px;
+
+    }
+
+
+    .card-content h3 {
+
+      max-width: 500px;
+
+      font-family: var(--serif);
+
+      font-size: 29px;
+
+      font-weight: 500;
+
+      line-height: 1.12;
+
+      letter-spacing: -.025em;
+
+    }
+
+
+    .card-content p {
+
+      max-width: 490px;
+
+      margin-top: 16px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.85;
+
+    }
+
+
+    .read-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-top: 23px;
+
+      color: var(--text);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .14em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .read-link::after {
+
+      content: "→";
+
+      color: var(--accent);
+
+      font-size: 14px;
+
+      transition: transform .2s ease;
+
+    }
+
+
+    .quote-card:hover .read-link::after {
+
+      transform: translateX(5px);
+
+    }
+
+
+    /* =================================================
+       FEATURED CARDS
+    ================================================= */
+
+    .quote-card:nth-child(1) .card-content h3 {
+
+      max-width: 700px;
+
+      font-size: 48px;
+
+    }
+
+
+    .quote-card:nth-child(7) .card-content h3 {
+
+      max-width: 680px;
+
+      font-size: 43px;
+
+    }
+
+
+    /* =================================================
+       FINAL NOTE
+    ================================================= */
+
+    .closing-note {
+
+      display: grid;
+
+      grid-template-columns: 180px 1fr;
+
+      gap: 60px;
+
+      margin-top: 85px;
+
+      padding: 42px 0;
+
+      border-top: 1px solid var(--border);
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+    .note-label {
+
+      color: var(--accent);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      letter-spacing: .15em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .note-text {
+
+      max-width: 790px;
+
+      font-family: var(--serif);
+
+      font-size: 30px;
+
+      line-height: 1.35;
+
+      letter-spacing: -.025em;
+
+    }
+
+
+    /* =================================================
+       TABLET
+    ================================================= */
+
+    @media (max-width: 950px) {
+
+      .hero-details {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+      }
+
+
+      .quotes-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+
+      .quote-card:nth-child(n) {
+
+        grid-column: span 1;
+
+      }
+
+
+      .quote-card:nth-child(1),
+
+      .quote-card:nth-child(7) {
+
+        grid-column: span 2;
+
+      }
+
+    }
+
+
+    /* =================================================
+       MOBILE
+    ================================================= */
+
+    @media (max-width: 650px) {
+
+      .quotes-hero {
+
+        padding: 72px 0 62px;
+
+      }
+
+
+      .quotes-hero h1 {
+
+        margin-top: 24px;
+
+        font-size: 65px;
+
+      }
+
+
+      .hero-details {
+
+        margin-top: 42px;
+
+        gap: 24px;
+
+      }
+
+
+      .hero-lead {
+
+        font-size: 20px;
+
+      }
+
+
+      .hero-copy {
+
+        font-size: 13px;
+
+      }
+
+
+      .quotes-content {
+
+        padding-bottom: 80px;
+
+      }
+
+
+      .section-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+      }
+
+
+      .section-heading h2 {
+
+        font-size: 36px;
+
+      }
+
+
+      .quotes-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+      }
+
+
+      .quote-card:nth-child(n),
+
+      .quote-card:nth-child(1),
+
+      .quote-card:nth-child(7) {
+
+        grid-column: span 1;
+
+        min-height: 350px;
+
+      }
+
+
+      .quote-card {
+
+        padding: 25px;
+
+      }
+
+
+      .quote-card:nth-child(1) .card-content h3,
+
+      .quote-card:nth-child(7) .card-content h3 {
+
+        font-size: 36px;
+
+      }
+
+
+      .card-content h3 {
+
+        font-size: 28px;
+
+      }
+
+
+      .quote-symbol {
+
+        font-size: 100px;
+
+      }
+
+
+      .closing-note {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 65px;
+
+      }
+
+
+      .note-text {
+
+        font-size: 23px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main>
+
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="quotes-hero">
+
+
+      <div class="hero-label">
+        Words Worth Keeping
+      </div>
+
+
+      <h1>
+        Thoughts that
+        <em>stay.</em>
+      </h1>
+
+
+      <div class="hero-details">
+
+
+        <div class="hero-lead">
+
+          Reflections on the quiet
+          moments, questions and
+          experiences that shape us.
+
+        </div>
+
+
+        <p class="hero-copy">
+
+          Not every meaningful thought arrives as a
+          grand lesson. Sometimes it appears in an
+          ordinary afternoon, an unexpected goodbye,
+          an old memory or a decision we have been
+          quietly thinking about for months.
+
+          <br><br>
+
+          Explore reflections about change, relationships,
+          memory, solitude, perspective and the small
+          details that give everyday life its meaning.
+
+        </p>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ARTICLES
+    ================================================== -->
+
+    <section class="quotes-content">
+
+
+      <div class="section-heading">
+
+        <h2>
+          Quotes & reflections
+        </h2>
+
+
+        <div class="article-count">
+          12 stories
+        </div>
+
+      </div>
+
+
+
+      <div class="quotes-grid">
+
+
+        <!-- =================================================
+             ARTICLE 01
+        ================================================== -->
+
+        <a
+          href="things-we-understand-only-after-they-end.html"
+          class="quote-card"
+        >
+
+          <span class="quote-symbol">
+            “
+          </span>
+
+
+          <div class="card-top">
+
+            <span class="card-number">
+              01
+            </span>
+
+            <span class="card-category">
+              Memory
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <h3>
+              The Things We Understand
+              Only After They End
+            </h3>
+
+            <p>
+              Distance has a strange way of making ordinary
+              moments clearer. Some experiences only reveal
+              their importance once we are far enough away
+              to see them differently.
+            </p>
+
+            <span class="read-link">
+              Read reflection
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             ARTICLE 02
+        ================================================== -->
+
+        <a
+          href="you-dont-need-an-answer-for-everything.html"
+          class="quote-card"
+        >
+
+          <div class="card-top">
+
+            <span class="card-number">
+              02
+            </span>
+
+            <span class="card-category">
+              Perspective
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <h3>
+              You Don't Need an
+              Answer for Everything
+            </h3>
+
+            <p>
+              There is freedom in admitting that some
+              questions need time. Uncertainty can be
+              uncomfortable without being something
+              we need to immediately solve.
+            </p>
+
+            <span class="read-link">
+              Read reflection
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             ARTICLE 03
+        ================================================== -->
+
+        <a
+          href="quiet-life-can-still-be-a-full-life.html"
+          class="quote-card"
+        >
+
+          <span class="quote-symbol">
+            “
+          </span>
+
+
+          <div class="card-top">
+
+            <span class="card-number">
+              03
+            </span>
+
+            <span class="card-category">
+              Simple Living
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <h3>
+              A Quiet Life Can
+              Still Be a Full Life
+            </h3>
+
+            <p>
+              A meaningful life does not always need
+              constant excitement. There can be richness
+              in routines, familiar places and days that
+              move at a gentler pace.
+            </p>
+
+            <span class="read-link">
+              Read reflection
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             ARTICLE 04
+        ================================================== -->
+
+        <a
+          href="what-we-learn-from-people-who-dont-stay.html"
+          class="quote-card"
+        >
+
+          <div class="card-top">
+
+            <span class="card-number">
+              04
+            </span>
+
+            <span class="card-category">
+              Relationships
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <h3>
+              What We Learn From
+              People Who Don't Stay
+            </h3>
+
+            <p>
+              Not every relationship is meant to last forever.
+              Some people become important because of what
+              they teach us during the time they are present.
+            </p>
+
+            <span class="read-link">
+              Read reflection
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             ARTICLE 05
+        ================================================== -->
+
+        <a
+          href="no-perfect-time-to-start-again.html"
+          class="quote-card"
+        >
+
+          <div class="card-top">
+
+            <span class="card-number">
+              05
+            </span>
+
+            <span class="card-category">
+              New Beginnings
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <h3>
+              There Is No Perfect
+              Time to Start Again
+            </h3>
+
+            <p>
+              Starting over rarely happens under perfect
+              circumstances. Sometimes beginning again
+              simply means deciding that the past no longer
+              gets to make every future decision.
+            </p>
+
+            <span class="read-link">
+              Read reflection
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             ARTICLE 06
+        ================================================== -->
+
+        <a
+          href="difference-between-being-alone-and-feeling-alone.html"
+          class="quote-card"
+        >
+
+          <div class="card-top">
+
+            <span class="card-number">
+              06
+            </span>
+
+            <span class="card-category">
+              Solitude
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <h3>
+              The Difference Between
+              Being Alone and Feeling Alone
+            </h3>
+
+            <p>
+              Solitude can be peaceful while loneliness
+              can exist in a crowded room. Understanding
+              the difference can change how we think
+              about connection.
+            </p>
+
+            <span class="read-link">
+              Read reflection
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             ARTICLE 07
+        ================================================== -->
+
+        <a
+          href="some-seasons-are-meant-to-be-slow.html"
+          class="quote-card"
+        >
+
+          <span class="quote-symbol">
+            “
+          </span>
+
+
+          <div class="card-top">
+
+            <span class="card-number">
+              07
+            </span>
+
+            <span class="card-category">
+              Seasons
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <h3>
+              Some Seasons Are
+              Meant to Be Slow
+            </h3>
+
+            <p>
+              There are periods when progress is difficult
+              to see. That does not necessarily mean nothing
+              is happening. Some forms of growth are quiet
+              before they become visible.
+            </p>
+
+            <span class="read-link">
+              Read reflection
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             ARTICLE 08
+        ================================================== -->
+
+        <a
+          href="when-you-stop-trying-to-be-understood-by-everyone.html"
+          class="quote-card"
+        >
+
+          <span class="quote-symbol">
+            “
+          </span>
+
+
+          <div class="card-top">
+
+            <span class="card-number">
+              08
+            </span>
+
+            <span class="card-category">
+              Self-Knowledge
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <h3>
+              When You Stop Trying
+              to Be Understood by Everyone
+            </h3>
+
+            <p>
+              Not every choice needs universal approval.
+              There is a quiet confidence that comes from
+              understanding your own reasons even when
+              someone else sees things differently.
+            </p>
+
+            <span class="read-link">
+              Read reflection
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             ARTICLE 09
+        ================================================== -->
+
+        <a
+          href="beauty-of-becoming-less-certain.html"
+          class="quote-card"
+        >
+
+          <div class="card-top">
+
+            <span class="card-number">
+              09
+            </span>
+
+            <span class="card-category">
+              Curiosity
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <h3>
+              The Beauty of Becoming
+              Less Certain
+            </h3>
+
+            <p>
+              Growing older does not always mean having
+              more definite answers. Sometimes maturity
+              means becoming comfortable with questions
+              that remain open.
+            </p>
+
+            <span class="read-link">
+              Read reflection
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             ARTICLE 10
+        ================================================== -->
+
+        <a
+          href="not-every-goodbye-needs-a-last-conversation.html"
+          class="quote-card"
+        >
+
+          <div class="card-top">
+
+            <span class="card-number">
+              10
+            </span>
+
+            <span class="card-category">
+              Closure
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <h3>
+              Not Every Goodbye Needs
+              a Last Conversation
+            </h3>
+
+            <p>
+              Closure does not always arrive through one
+              final discussion. Sometimes acceptance grows
+              slowly after we stop waiting for the perfect
+              ending.
+            </p>
+
+            <span class="read-link">
+              Read reflection
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             ARTICLE 11
+        ================================================== -->
+
+        <a
+          href="what-happens-when-you-finally-choose-yourself.html"
+          class="quote-card"
+        >
+
+          <span class="quote-symbol">
+            “
+          </span>
+
+
+          <div class="card-top">
+
+            <span class="card-number">
+              11
+            </span>
+
+            <span class="card-category">
+              Boundaries
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <h3>
+              What Happens When
+              You Finally Choose Yourself
+            </h3>
+
+            <p>
+              Choosing yourself is not always about dramatic
+              decisions. Sometimes it looks like protecting
+              your time, respecting your limits and becoming
+              honest about what you need.
+            </p>
+
+            <span class="read-link">
+              Read reflection
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             ARTICLE 12
+        ================================================== -->
+
+        <a
+          href="memories-we-keep-for-reasons-we-cant-explain.html"
+          class="quote-card"
+        >
+
+          <div class="card-top">
+
+            <span class="card-number">
+              12
+            </span>
+
+            <span class="card-category">
+              Memories
+            </span>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <h3>
+              The Memories We Keep
+              for Reasons We Can't Explain
+            </h3>
+
+            <p>
+              A certain song, street or afternoon can remain
+              with us for years without any obvious reason.
+              Memory does not always preserve what was
+              important on paper.
+            </p>
+
+            <span class="read-link">
+              Read reflection
+            </span>
+
+          </div>
+
+        </a>
+
+
+      </div>
+
+
+
+      <!-- =================================================
+           CLOSING NOTE
+      ================================================== -->
+
+      <div class="closing-note">
+
+        <div class="note-label">
+          A quiet thought
+        </div>
+
+
+        <div class="note-text">
+
+          Some moments look ordinary while we are living
+          them. Years later, we discover they were part of
+          the story we were becoming.
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+</body>
+</html>
