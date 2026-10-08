@@ -11,7 +11,7 @@
 
   <meta
     name="description"
-    content="When does a room finally feel right? Explore how proportion, light, texture and personal objects shape the atmosphere of a comfortable home."
+    content="A small reading corner can change how an entire room is experienced. Discover how natural light, a comfortable seat and a little intention can create a favorite place."
   >
 
   <meta
@@ -24,12 +24,8 @@
     content="no-referrer"
   >
 
-  <title>When a Room Finally Feels Right — Atelier Journal</title>
+  <title>The Window-Seat Effect — Atelier Journal</title>
 
-
-  <!-- =========================================
-       GOOGLE FONTS
-  ========================================== -->
 
   <link
     rel="preconnect"
@@ -48,10 +44,6 @@
   >
 
 
-  <!-- =========================================
-       HEADER / FOOTER
-  ========================================== -->
-
   <script src="header.js" defer></script>
 
   <script src="footer.js" defer></script>
@@ -59,624 +51,325 @@
 
   <style>
 
-    /* =========================================
-       ROOT
-    ========================================== */
-
     :root {
-
       --bg: #f3f0eb;
-
       --paper: #fbfaf7;
-
       --ink: #272521;
-
       --muted: #77736d;
-
       --line: #ddd7cf;
-
       --accent: #8a7563;
-
       --dark: #4c4239;
-
       --soft: #e8e0d7;
-
       --serif: "Playfair Display", Georgia, serif;
-
       --sans: "DM Sans", Arial, sans-serif;
-
     }
-
-
-    /* =========================================
-       RESET
-    ========================================== */
 
     * {
-
       margin: 0;
-
       padding: 0;
-
       box-sizing: border-box;
-
     }
-
 
     html {
-
       scroll-behavior: smooth;
-
     }
-
 
     body {
-
       background: var(--bg);
-
       color: var(--ink);
-
       font-family: var(--sans);
-
       line-height: 1.7;
-
       overflow-x: hidden;
-
       -webkit-font-smoothing: antialiased;
-
     }
-
 
     a {
-
       color: inherit;
-
       text-decoration: none;
-
     }
-
-
-    /* =========================================
-       ARTICLE WRAPPER
-    ========================================== */
 
     .article-page {
-
       width: min(820px, 90%);
-
       margin: 0 auto;
-
       padding: 120px 0 110px;
-
     }
-
-
-    /* =========================================
-       ARTICLE HEADER
-    ========================================== */
 
     .article-header {
-
       padding-bottom: 48px;
-
       border-bottom: 1px solid var(--line);
-
     }
-
 
     .article-category {
-
       display: inline-flex;
-
       align-items: center;
-
       gap: 10px;
-
       color: var(--accent);
-
       font-size: 9px;
-
       font-weight: 700;
-
       letter-spacing: .17em;
-
       text-transform: uppercase;
-
     }
-
 
     .article-category::before {
-
       content: "";
-
       width: 28px;
-
       height: 1px;
-
       background: var(--accent);
-
     }
-
 
     .article-header h1 {
-
       max-width: 780px;
-
       margin-top: 25px;
-
       font-family: var(--serif);
-
       font-size: clamp(48px, 7vw, 78px);
-
       font-weight: 500;
-
       line-height: .98;
-
       letter-spacing: -.045em;
-
     }
-
 
     .article-intro {
-
       max-width: 650px;
-
       margin-top: 28px;
-
       color: var(--muted);
-
       font-size: 15px;
-
       line-height: 1.9;
-
     }
-
 
     .article-meta {
-
       display: flex;
-
       flex-wrap: wrap;
-
       gap: 24px;
-
       margin-top: 30px;
-
       color: #969089;
-
       font-size: 9px;
-
       font-weight: 700;
-
       letter-spacing: .13em;
-
       text-transform: uppercase;
-
     }
-
-
-    /* =========================================
-       ARTICLE BODY
-    ========================================== */
 
     .article-body {
-
       padding-top: 55px;
-
     }
-
 
     .article-section {
-
       margin-bottom: 62px;
-
     }
-
 
     .article-section h2 {
-
       margin-bottom: 20px;
-
       font-family: var(--serif);
-
       font-size: 34px;
-
       font-weight: 500;
-
       line-height: 1.15;
-
       letter-spacing: -.025em;
-
     }
-
 
     .article-section p {
-
       margin-bottom: 20px;
-
       color: #57534e;
-
       font-size: 15px;
-
       line-height: 2;
-
     }
-
 
     .article-section p:last-child {
-
       margin-bottom: 0;
-
     }
-
 
     .article-lead {
-
       color: var(--ink) !important;
-
       font-family: var(--serif);
-
       font-size: 22px !important;
-
       line-height: 1.55 !important;
-
     }
-
-
-    /* =========================================
-       PULL QUOTE
-    ========================================== */
 
     .pull-quote {
-
       margin: 65px 0;
-
       padding: 35px 0 35px 35px;
-
       border-left: 2px solid var(--accent);
-
     }
-
 
     .pull-quote p {
-
       margin: 0;
-
       font-family: var(--serif);
-
       color: var(--ink);
-
       font-size: 28px;
-
       line-height: 1.4;
-
     }
-
-
-    /* =========================================
-       CTA
-    ========================================== */
 
     .article-cta {
-
       margin: 65px 0 70px;
-
       padding: 34px;
-
       background: var(--soft);
-
       border: 1px solid var(--line);
-
     }
-
 
     .cta-label {
-
       color: var(--accent);
-
       font-size: 9px;
-
       font-weight: 700;
-
       letter-spacing: .16em;
-
       text-transform: uppercase;
-
     }
-
 
     .article-cta h3 {
-
       max-width: 560px;
-
       margin-top: 13px;
-
       font-family: var(--serif);
-
       font-size: 30px;
-
       font-weight: 500;
-
       line-height: 1.2;
-
       letter-spacing: -.02em;
-
     }
-
 
     .article-cta p {
-
       max-width: 590px;
-
       margin-top: 13px;
-
       color: var(--muted);
-
       font-size: 12px;
-
       line-height: 1.85;
-
     }
 
-
     .cta-link {
-
       display: inline-flex;
-
       align-items: center;
-
       gap: 12px;
-
       margin-top: 23px;
-
       padding: 14px 21px;
-
       background: var(--dark);
-
       color: #fff;
-
       font-size: 9px;
-
       font-weight: 700;
-
       letter-spacing: .13em;
-
       text-transform: uppercase;
-
       transition:
         background .2s ease,
         transform .2s ease;
-
     }
-
 
     .cta-link:hover {
-
       background: var(--accent);
-
       transform: translateY(-2px);
-
     }
-
 
     .cta-link span {
-
       font-size: 15px;
-
       line-height: 1;
-
     }
-
 
     .cta-note {
-
       margin-top: 12px !important;
-
       color: #8a847d !important;
-
       font-size: 9px !important;
-
       line-height: 1.6 !important;
-
     }
-
-
-    /* =========================================
-       ARTICLE FOOTER NOTE
-    ========================================== */
 
     .article-end {
-
       padding-top: 38px;
-
       border-top: 1px solid var(--line);
-
     }
-
 
     .article-end-label {
-
       color: var(--muted);
-
       font-size: 9px;
-
       font-weight: 700;
-
       letter-spacing: .15em;
-
       text-transform: uppercase;
-
     }
-
 
     .article-end p {
-
       max-width: 650px;
-
       margin-top: 15px;
-
       font-family: var(--serif);
-
       font-size: 25px;
-
       line-height: 1.4;
-
     }
-
-
-    /* =========================================
-       RESPONSIVE
-    ========================================== */
 
     @media (max-width: 650px) {
 
       .article-page {
-
         width: min(92%, 820px);
-
         padding: 80px 0 75px;
-
       }
-
 
       .article-header {
-
         padding-bottom: 35px;
-
       }
-
 
       .article-header h1 {
-
         margin-top: 20px;
-
         font-size: 48px;
-
         line-height: 1.02;
-
       }
-
 
       .article-intro {
-
         margin-top: 22px;
-
         font-size: 14px;
-
         line-height: 1.8;
-
       }
-
 
       .article-meta {
-
         gap: 12px 18px;
-
         line-height: 1.5;
-
       }
-
 
       .article-body {
-
         padding-top: 40px;
-
       }
-
 
       .article-section {
-
         margin-bottom: 48px;
-
       }
-
 
       .article-section h2 {
-
         font-size: 30px;
-
       }
-
 
       .article-section p {
-
         font-size: 14px;
-
         line-height: 1.9;
-
       }
-
 
       .article-lead {
-
         font-size: 20px !important;
-
       }
-
 
       .pull-quote {
-
         margin: 48px 0;
-
         padding: 25px 0 25px 22px;
-
       }
-
 
       .pull-quote p {
-
         font-size: 23px;
-
       }
-
 
       .article-cta {
-
         margin: 50px 0;
-
         padding: 25px 21px;
-
       }
-
 
       .article-cta h3 {
-
         font-size: 27px;
-
       }
-
 
       .cta-link {
-
         width: 100%;
-
         justify-content: center;
-
       }
 
-
       .article-end p {
-
         font-size: 22px;
-
       }
 
     }
 
-
     @media (max-width: 380px) {
 
       .article-header h1 {
-
         font-size: 42px;
-
       }
 
-
       .article-section h2 {
-
         font-size: 27px;
-
       }
 
     }
@@ -692,139 +385,84 @@
   <main class="article-page">
 
 
-    <!-- =====================================
-         ARTICLE HEADER
-    ====================================== -->
-
     <header class="article-header">
-
 
       <div class="article-category">
         Home &amp; Decor
       </div>
 
-
       <h1>
-        When a Room
-        Finally Feels Right
+        The Window-Seat
+        Effect
       </h1>
 
-
       <p class="article-intro">
-
-        Some spaces feel comfortable before you can
-        explain why. Explore the subtle relationship
-        between proportion, light, texture and the
-        things we choose to keep around us.
-
+        A small reading corner can change how an entire
+        room is experienced. Discover how natural light,
+        a comfortable seat and a little intention can
+        create a favorite place.
       </p>
 
-
       <div class="article-meta">
-
-        <span>
-          Interior Notes
-        </span>
-
-        <span>
-          6 Min Read
-        </span>
-
-        <span>
-          Atelier Journal
-        </span>
-
+        <span>Interior Notes</span>
+        <span>6 Min Read</span>
+        <span>Atelier Journal</span>
       </div>
-
 
     </header>
 
 
-
-    <!-- =====================================
-         ARTICLE BODY
-    ====================================== -->
-
     <article class="article-body">
 
 
-      <!-- =====================================
-           SECTION 01
-      ====================================== -->
-
       <section class="article-section">
 
-
         <h2>
-          Comfort is more than appearance
+          The corner that changes the room
         </h2>
 
-
         <p class="article-lead">
-
-          A room can look beautiful in a photograph
-          and still feel strangely unfamiliar when
-          you spend time inside it.
-
+          Some of the most memorable places in a home
+          are not large rooms at all. They are small
+          corners that invite you to slow down.
         </p>
-
 
         <p>
-
-          That difference often comes down to details
-          that are easy to overlook. A sofa may be
-          perfectly styled, but if there is nowhere
-          comfortable to put a book or a cup, the room
-          may not naturally invite you to stay.
-
+          A seat beside a window naturally creates a
+          different relationship with the outside world.
+          Changing daylight becomes part of the space,
+          and even an ordinary morning can feel slightly
+          more connected to what is happening beyond
+          the glass.
         </p>
-
 
         <p>
-
-          The same is true of a dining table that is
-          technically the right size but leaves little
-          space to move around it, or a chair placed
-          beside a window that receives beautiful light
-          but has nowhere nearby for a lamp or small
-          table.
-
+          The appeal does not depend on having a large
+          room or a dramatic view. A comfortable chair,
+          a little space and enough light can be enough
+          to create a place worth returning to.
         </p>
-
 
         <p>
-
-          Good interiors tend to work quietly in the
-          background. They support the way people move,
-          rest, talk, read and spend ordinary moments
-          without constantly calling attention to
-          themselves.
-
+          Once a corner becomes associated with reading,
+          coffee, quiet conversation or simply looking
+          outside, it can take on a character of its own.
         </p>
-
 
       </section>
 
 
-
-      <!-- =====================================
-           SECTION 02
-      ====================================== -->
-
       <section class="article-section">
 
-
         <h2>
-          Start with the way the room is used
+          Begin with the light
         </h2>
 
-
         <p>
-
-          Before choosing another decorative object,
-          it helps to observe what already happens
-          naturally in the room.
-
+          Natural light is usually the first thing that
+          makes a window area feel special. It shifts
+          throughout the day and changes the atmosphere
+          without requiring anything to be switched on.
         </p>
 
 
@@ -885,71 +523,47 @@
 
 
 
-
         <p>
-
-          Where do people usually sit? Which corner
-          receives the best daylight? Is there a place
-          where everyone tends to leave their phone,
-          keys or books? Which part of the room feels
-          strangely unused?
-
+          Observe when the window receives its most
+          comfortable light. Morning light may suit a
+          breakfast corner, while softer afternoon light
+          might make the same spot more appealing for
+          reading.
         </p>
 
-
         <p>
-
-          These small observations can reveal more
-          about a space than a shopping list ever could.
-          They show where the room is already working
-          and where a simple adjustment might make
-          everyday life easier.
-
+          Curtains and blinds can also affect how the
+          area feels. The goal is not always maximum
+          brightness. Sometimes filtered daylight creates
+          a calmer environment.
         </p>
 
-
         <p>
-
-          Sometimes the answer is not adding anything
-          at all. Moving a chair closer to a window,
-          changing the direction of a rug or giving
-          an empty wall some breathing room can change
-          the entire rhythm of a room.
-
+          Once the natural conditions are understood,
+          the rest of the corner can be arranged around
+          them rather than against them.
         </p>
-
 
       </section>
 
 
-
-      <!-- =====================================
-           CTA
-      ====================================== -->
-
       <aside class="article-cta">
-
 
         <div class="cta-label">
           Home &amp; Everyday Finds
         </div>
 
-
         <h3>
-          Looking for pieces that can
-          complement your space?
+          Create a quieter corner
+          worth returning to.
         </h3>
 
-
         <p>
-
-          If you are exploring furniture, lighting,
-          storage or smaller home details, you can
-          browse a wider selection of home products
-          and compare options directly on Amazon.
-
+          Browse seating, lighting, side tables and
+          smaller home details that can help turn an
+          unused corner into a more comfortable part
+          of everyday life.
         </p>
-
 
         <a
           href="decorpark.html"
@@ -957,231 +571,148 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-
-          Explore Home Finds
-
+          Find Home Pieces
           <span>→</span>
-
         </a>
 
-
         <p class="cta-note">
-
           This link leads to an external page. Product
           availability, pricing and terms are determined
           by the respective provider.
-
         </p>
-
 
       </aside>
 
 
-
-      <!-- =====================================
-           SECTION 03
-      ====================================== -->
-
       <section class="article-section">
 
-
         <h2>
-          Let light do some of the decorating
+          Choose comfort before decoration
         </h2>
 
-
         <p>
-
-          Natural light is one of the strongest
-          characteristics a room already has. It changes
-          throughout the day, revealing different colors,
-          textures and corners as the hours pass.
-
+          The seat is the foundation of the corner.
+          If it is uncomfortable, even the prettiest
+          arrangement will struggle to become part of
+          everyday life.
         </p>
 
-
         <p>
-
-          Instead of treating lighting as something
-          added at the very end, consider how the existing
-          daylight interacts with the room. A pale wall
-          can make morning light feel softer, while
-          textured materials can create subtle shadows
-          that become more noticeable later in the day.
-
+          Think about how the space will actually be
+          used. A deep chair may be ideal for settling
+          in with a book, while a more upright seat can
+          work better for shorter periods of reading
+          or conversation.
         </p>
 
-
         <p>
-
-          Artificial lighting matters too. A room with
-          one bright overhead source can feel completely
-          different from the same room with several
-          smaller sources placed around it.
-
+          A small table nearby can make the area easier
+          to use, giving you somewhere for a cup, a book
+          or a lamp without forcing you to leave the seat.
         </p>
 
-
         <p>
-
-          The goal is not necessarily to make every
-          corner bright. A little contrast between
-          illuminated and quieter areas can give an
-          interior depth and make it feel more natural.
-
+          These practical details are what turn a
+          decorative corner into a genuinely useful one.
         </p>
-
 
       </section>
 
 
-
-      <!-- =====================================
-           PULL QUOTE
-      ====================================== -->
-
       <div class="pull-quote">
 
         <p>
-
-          “The most comfortable rooms are often the
-          ones that stop trying to prove that they
-          are beautifully designed.”
-
+          “A favorite corner is not created by size.
+          It is created by the feeling that you want
+          to stay there.”
         </p>
 
       </div>
 
 
-
-      <!-- =====================================
-           SECTION 04
-      ====================================== -->
-
       <section class="article-section">
 
-
         <h2>
-          Texture makes a space feel lived in
+          Keep the surroundings quiet
         </h2>
 
-
         <p>
-
-          When a room contains only smooth surfaces,
-          it can sometimes feel visually flat. Texture
-          gives the eye something quieter to discover.
-
+          A window seat does not need a large collection
+          of accessories. Too many objects can compete
+          with the simple pleasure of the light and
+          the view.
         </p>
 
-
         <p>
-
-          Linen beside wood, a woven basket near a
-          painted wall, a soft rug beneath a simple
-          table or ceramic objects against a plain shelf
-          can create variation without requiring a large
-          number of decorative pieces.
-
+          One soft textile, a small table, a useful lamp
+          or a few carefully chosen books may be enough.
+          Keeping some open space around the seat helps
+          the corner retain its sense of calm.
         </p>
 
-
         <p>
-
-          Texture also changes how a room feels beyond
-          what we see. Soft fabrics can make a seating
-          area feel inviting, while natural materials
-          often introduce a sense of warmth and weight.
-
+          The window itself is already providing a
+          changing visual element. There is no need to
+          constantly add more.
         </p>
-
 
       </section>
 
 
-
-      <!-- =====================================
-           SECTION 05
-      ====================================== -->
-
       <section class="article-section">
 
-
         <h2>
-          Keep a little room for personality
+          Let the corner become part of your routine
         </h2>
 
-
         <p>
-
-          A home should not feel like a showroom.
-          The small things that have personal meaning
-          are often what make an interior memorable.
-
+          The most successful quiet spaces are usually
+          connected to a habit. Reading for fifteen
+          minutes, having tea in the afternoon or
+          watching the weather change can give the
+          corner a natural purpose.
         </p>
 
-
         <p>
-
-          It might be a collection of old books,
-          a photograph from a trip, a piece of pottery,
-          a chair that has been in the family for years,
-          or simply an object that makes you smile
-          whenever you notice it.
-
+          Over time, the space begins to carry memories.
+          A particular chair becomes associated with
+          certain books. Morning light becomes familiar.
+          A rainy afternoon feels different when viewed
+          from the same comfortable place.
         </p>
 
-
         <p>
-
-          These details do not have to follow a single
-          style. In fact, a little contrast can make
-          a room feel more authentic.
-
+          This is where decoration becomes something
+          more personal. The room is no longer simply
+          arranged around an idea. It has become part
+          of the way you live.
         </p>
 
-
         <p>
-
-          The aim is not to create a space that looks
-          perfect from every angle. It is to create
-          somewhere that gradually becomes familiar
-          because it reflects the people who actually
-          live there.
-
+          A small corner can therefore influence the
+          atmosphere of an entire home simply by giving
+          everyday life somewhere peaceful to pause.
         </p>
-
 
       </section>
 
-
-
-      <!-- =====================================
-           CLOSING
-      ====================================== -->
 
       <div class="article-end">
-
 
         <div class="article-end-label">
           Final thought
         </div>
 
-
         <p>
-
-          A room finally feels right when its beauty
-          becomes secondary to the feeling of being
-          completely at ease inside it.
-
+          Sometimes changing a room does not require
+          more space. It only requires noticing the
+          quiet corner that was already waiting to be used.
         </p>
-
 
       </div>
 
 
     </article>
-
 
   </main>
 

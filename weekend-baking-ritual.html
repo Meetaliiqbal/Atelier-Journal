@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="description" content="Why measuring, mixing and waiting can turn a simple bake into a small ritual that gives the weekend its own rhythm.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="referrer" content="no-referrer">
+
+<title>The Slow Pleasure of Baking on a Weekend</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<script src="header.js" defer></script>
+
+<script src="footer.js" defer></script>
+
+<style>
+
+:root{
+  --bg:#f3f0eb;
+  --paper:#fbfaf7;
+  --paper-soft:#e9e3da;
+  --text:#272521;
+  --muted:#77736d;
+  --line:#ddd7cf;
+  --accent:#81715f;
+  --accent-dark:#4d4339;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.page{
+  width:min(900px,92%);
+  margin:0 auto;
+  padding:65px 0 75px;
+}
+
+.article-header{
+  max-width:760px;
+  margin:0 auto 45px;
+  text-align:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--accent);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.eyebrow::before{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--accent);
+}
+
+.article-header h1{
+  margin-top:18px;
+  font-family:var(--serif);
+  font-size:clamp(38px,6vw,60px);
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:-.035em;
+}
+
+.article-header h1 em{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.article-intro{
+  max-width:680px;
+  margin:20px auto 0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.85;
+}
+
+.article-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:52px 58px;
+  box-shadow:0 18px 45px rgba(45,38,31,.045);
+}
+
+.article-section{
+  margin-bottom:52px;
+}
+
+.article-section:last-child{
+  margin-bottom:0;
+}
+
+.article-section h2{
+  margin-bottom:19px;
+  font-family:var(--serif);
+  font-size:29px;
+  font-weight:400;
+  line-height:1.25;
+  letter-spacing:-.02em;
+}
+
+.article-section p{
+  margin-bottom:19px;
+  color:#45423d;
+  font-size:15px;
+  line-height:1.9;
+}
+
+.article-section p:last-child{
+  margin-bottom:0;
+}
+
+.article-note{
+  margin:29px 0 0;
+  padding:20px 22px;
+  background:var(--paper-soft);
+  border-left:2px solid var(--accent);
+  color:#625d55;
+  font-family:var(--serif);
+  font-size:16px;
+  font-style:italic;
+  line-height:1.7;
+}
+
+.cta-box{
+  margin:32px 0 5px;
+  padding:28px 29px;
+  background:var(--paper-soft);
+  border:1px solid var(--line);
+  border-radius:5px;
+}
+
+.cta-label{
+  display:block;
+  margin-bottom:9px;
+  color:var(--accent-dark);
+  font-family:var(--sans);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.cta-box h3{
+  margin-bottom:9px;
+  font-family:var(--serif);
+  font-size:23px;
+  font-weight:400;
+  line-height:1.3;
+}
+
+.cta-box p{
+  margin-bottom:17px;
+  color:var(--muted);
+  font-family:var(--sans);
+  font-size:11px;
+  line-height:1.75;
+}
+
+.cta-link{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--accent-dark);
+  font-family:var(--sans);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--accent-dark);
+  padding-bottom:3px;
+}
+
+.cta-link::after{
+  content:"→";
+  font-size:14px;
+}
+
+.cta-link:hover{
+  opacity:.7;
+}
+
+@media(max-width:600px){
+
+  .page{
+    width:92%;
+    padding:40px 0 55px;
+  }
+
+  .article-header{
+    margin-bottom:30px;
+  }
+
+  .eyebrow{
+    font-size:7px;
+    letter-spacing:.17em;
+  }
+
+  .eyebrow::before{
+    width:19px;
+  }
+
+  .article-header h1{
+    margin-top:14px;
+    font-size:36px;
+    line-height:1.12;
+  }
+
+  .article-intro{
+    margin-top:14px;
+    font-size:11px;
+    line-height:1.8;
+  }
+
+  .article-card{
+    padding:30px 21px;
+    border-radius:6px;
+  }
+
+  .article-section{
+    margin-bottom:40px;
+  }
+
+  .article-section h2{
+    margin-bottom:15px;
+    font-size:25px;
+  }
+
+  .article-section p{
+    margin-bottom:17px;
+    font-size:13px;
+    line-height:1.85;
+  }
+
+  .article-note{
+    margin-top:24px;
+    padding:17px 18px;
+    font-size:14px;
+  }
+
+  .cta-box{
+    margin-top:26px;
+    padding:22px 19px;
+  }
+
+  .cta-label{
+    font-size:7px;
+  }
+
+  .cta-box h3{
+    font-size:21px;
+  }
+
+  .cta-box p{
+    font-size:9px;
+    line-height:1.75;
+  }
+
+  .cta-link{
+    font-size:8px;
+  }
+}
+
+@media(max-width:360px){
+
+  .article-header h1{
+    font-size:32px;
+  }
+
+  .article-card{
+    padding:27px 17px;
+  }
+
+  .article-section h2{
+    font-size:23px;
+  }
+
+  .article-section p{
+    font-size:12px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header-container"></div>
+
+<main class="page">
+
+<header class="article-header">
+
+<div class="eyebrow">
+Weekend Baking
+</div>
+
+<h1>
+The Slow Pleasure of Baking on a <em>Weekend</em>
+</h1>
+
+<p class="article-intro">
+Why measuring, mixing and waiting can turn a simple bake
+into a small ritual that gives the weekend its own rhythm.
+</p>
+
+</header>
+
+<article class="article-card">
+
+<section class="article-section">
+
+<h2>
+Begin Without Rushing
+</h2>
+
+<p>
+Baking has a different pace from most weekday cooking.
+There is measuring, mixing, waiting and eventually the
+quiet moment when something warm comes out of the oven.
+That slower rhythm is part of what makes it feel special.
+</p>
+
+<p>
+A weekend morning or afternoon gives those steps enough
+space to be enjoyed rather than hurried through. Even a
+simple loaf, tray of biscuits or small cake can become a
+reason to pause.
+</p>
+
+<p>
+The recipe matters, but so does the process. Taking the time
+to gather ingredients and prepare the kitchen can make the
+bake feel like an activity in its own right.
+</p>
+
+<div class="article-note">
+Baking asks you to wait, and sometimes that is exactly what
+a quiet weekend needs.
+</div>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Measure With Attention
+</h2>
+
+<p>
+One of the pleasures of baking is that the process creates a
+natural reason to slow down. Measuring flour, weighing sugar
+or preparing butter gives the hands something simple and
+specific to do.
+</p>
+
+<p>
+There is something satisfying about seeing separate
+ingredients gradually become one mixture. The transformation
+is ordinary, but it still carries a small sense of occasion
+when there is no need to rush toward the finished result.
+</p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '4fdd309c13924effa225511a2f070524',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/4fdd309c13924effa225511a2f070524/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '0c1fed1bf29c4fe87de4b0b98b156d64',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/0c1fed1bf29c4fe87de4b0b98b156d64/invoke.js"></script>
+</div>
+
+
+
+<p>
+Even familiar recipes can feel different when they are made
+with enough attention to notice the textures, aromas and
+little changes along the way.
+</p>
+
+<div class="cta-box">
+
+<span class="cta-label">
+A Simpler Weekend Treat
+</span>
+
+<h3>
+When you want the treat without the baking
+</h3>
+
+<p>
+Sometimes the weekend calls for something enjoyable with
+none of the preparation. If you would rather spend the time
+elsewhere, you can browse available food choices through the
+external page below. Selection, availability, delivery times
+and fees may vary by location and account.
+</p>
+
+<a class="cta-link" href="foodpark.html" target="_blank" rel="noopener noreferrer">
+Browse Something Sweet or Savoury
+</a>
+
+</div>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Let the Oven Change the Atmosphere
+</h2>
+
+<p>
+There is a reason baking can make an entire home feel
+different. As something cooks, warmth and familiar aromas
+slowly move through the room, creating a sense that something
+is happening even before the food is ready.
+</p>
+
+<p>
+That waiting period can be part of the pleasure. A cup of
+tea, an open book or a quiet conversation can fill the time
+while the oven does its work.
+</p>
+
+<p>
+The bake becomes more than something to eat. It becomes part
+of the atmosphere of the day.
+</p>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Keep the Recipe Comfortably Familiar
+</h2>
+
+<p>
+Weekend baking does not have to be an opportunity to master
+something complicated. Familiar recipes often work better
+because they leave enough attention for enjoying the process.
+</p>
+
+<p>
+A dependable banana loaf, simple biscuits or a basic fruit
+cake can be made repeatedly while small changes keep the
+experience interesting.
+</p>
+
+<p>
+Different fruit, a little spice, toasted nuts or a new
+finishing touch can give an old favourite a slightly
+different personality without changing its comfortable
+foundation.
+</p>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Make Space for the Waiting
+</h2>
+
+<p>
+Perhaps the most unusual part of baking is that much of the
+process involves doing nothing. Dough needs time. Mixtures
+need to settle. Something in the oven simply needs to cook.
+</p>
+
+<p>
+Rather than treating those pauses as empty time, they can
+become part of the ritual. The kitchen can be tidied, the
+table prepared or the rest of the afternoon left completely
+alone.
+</p>
+
+<p>
+There is a quiet satisfaction in knowing that the work has
+been done and the rest can happen at its own pace.
+</p>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Share the Finished Bake Slowly
+</h2>
+
+<p>
+A homemade bake often feels best when it is not immediately
+rushed through. Letting it cool, cutting the first slice and
+sharing it with a warm drink can extend the feeling of the
+afternoon.
+</p>
+
+<p>
+It does not need to be a special occasion. A quiet weekend
+can be enough of a reason to put something homemade on the
+table.
+</p>
+
+<p>
+That may be the real pleasure of weekend baking: not simply
+the finished food, but the slower rhythm that surrounds it.
+Measuring, mixing, waiting and finally sitting down gives an
+ordinary day a little more shape.
+</p>
+
+</section>
+
+</article>
+
+</main>
+
+<div id="footer-container"></div>
+
+</body>
+</html>

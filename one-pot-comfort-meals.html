@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="description"
+  content="Easy, comforting meals that bring preparation and cooking together while keeping the evening pleasantly uncomplicated."
+>
+
+<meta name="robots" content="index, follow">
+
+<meta name="referrer" content="no-referrer">
+
+<title>The Quiet Appeal of Dinner in One Pot</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+  rel="stylesheet"
+>
+
+<script src="header.js" defer></script>
+
+<script src="footer.js" defer></script>
+
+
+<style>
+
+:root{
+
+  --bg:#f3f0eb;
+
+  --paper:#fbfaf7;
+
+  --paper-soft:#e9e3da;
+
+  --text:#272521;
+
+  --muted:#77736d;
+
+  --line:#ddd7cf;
+
+  --accent:#81715f;
+
+  --accent-dark:#4d4339;
+
+  --serif:"Playfair Display",Georgia,serif;
+
+  --sans:"DM Sans",Arial,sans-serif;
+
+}
+
+
+*{
+
+  margin:0;
+
+  padding:0;
+
+  box-sizing:border-box;
+
+}
+
+
+html{
+
+  scroll-behavior:smooth;
+
+}
+
+
+body{
+
+  background:var(--bg);
+
+  color:var(--text);
+
+  font-family:var(--sans);
+
+  overflow-x:hidden;
+
+  -webkit-font-smoothing:antialiased;
+
+}
+
+
+a{
+
+  color:inherit;
+
+  text-decoration:none;
+
+}
+
+
+.page{
+
+  width:min(900px,92%);
+
+  margin:0 auto;
+
+  padding:65px 0 75px;
+
+}
+
+
+.article-header{
+
+  max-width:760px;
+
+  margin:0 auto 45px;
+
+  text-align:center;
+
+}
+
+
+.eyebrow{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:9px;
+
+  color:var(--accent);
+
+  font-size:9px;
+
+  font-weight:600;
+
+  letter-spacing:.2em;
+
+  text-transform:uppercase;
+
+}
+
+
+.eyebrow::before{
+
+  content:"";
+
+  width:25px;
+
+  height:1px;
+
+  background:var(--accent);
+
+}
+
+
+.article-header h1{
+
+  margin-top:18px;
+
+  font-family:var(--serif);
+
+  font-size:clamp(38px,6vw,60px);
+
+  font-weight:400;
+
+  line-height:1.1;
+
+  letter-spacing:-.035em;
+
+}
+
+
+.article-header h1 em{
+
+  color:var(--accent);
+
+  font-style:italic;
+
+}
+
+
+.article-intro{
+
+  max-width:680px;
+
+  margin:20px auto 0;
+
+  color:var(--muted);
+
+  font-size:15px;
+
+  line-height:1.85;
+
+}
+
+
+.article-card{
+
+  background:var(--paper);
+
+  border:1px solid var(--line);
+
+  border-radius:7px;
+
+  padding:52px 58px;
+
+  box-shadow:
+
+    0 18px 45px rgba(45,38,31,.045);
+
+}
+
+
+.article-section{
+
+  margin-bottom:52px;
+
+}
+
+
+.article-section:last-child{
+
+  margin-bottom:0;
+
+}
+
+
+.article-section h2{
+
+  margin-bottom:19px;
+
+  font-family:var(--serif);
+
+  font-size:29px;
+
+  font-weight:400;
+
+  line-height:1.25;
+
+  letter-spacing:-.02em;
+
+}
+
+
+.article-section p{
+
+  margin-bottom:19px;
+
+  color:#45423d;
+
+  font-size:15px;
+
+  line-height:1.9;
+
+}
+
+
+.article-section p:last-child{
+
+  margin-bottom:0;
+
+}
+
+
+.article-note{
+
+  margin:29px 0 0;
+
+  padding:20px 22px;
+
+  background:var(--paper-soft);
+
+  border-left:2px solid var(--accent);
+
+  color:#625d55;
+
+  font-family:var(--serif);
+
+  font-size:16px;
+
+  font-style:italic;
+
+  line-height:1.7;
+
+}
+
+
+.cta-box{
+
+  margin:32px 0 5px;
+
+  padding:28px 29px;
+
+  background:var(--paper-soft);
+
+  border:1px solid var(--line);
+
+  border-radius:5px;
+
+}
+
+
+.cta-label{
+
+  display:block;
+
+  margin-bottom:9px;
+
+  color:var(--accent-dark);
+
+  font-family:var(--sans);
+
+  font-size:9px;
+
+  font-weight:600;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+
+}
+
+
+.cta-box h3{
+
+  margin-bottom:9px;
+
+  font-family:var(--serif);
+
+  font-size:23px;
+
+  font-weight:400;
+
+  line-height:1.3;
+
+}
+
+
+.cta-box p{
+
+  margin-bottom:17px;
+
+  color:var(--muted);
+
+  font-family:var(--sans);
+
+  font-size:11px;
+
+  line-height:1.75;
+
+}
+
+
+.cta-link{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:9px;
+
+  color:var(--accent-dark);
+
+  font-family:var(--sans);
+
+  font-size:10px;
+
+  font-weight:600;
+
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+
+  border-bottom:1px solid var(--accent-dark);
+
+  padding-bottom:3px;
+
+}
+
+
+.cta-link::after{
+
+  content:"→";
+
+  font-size:14px;
+
+}
+
+
+.cta-link:hover{
+
+  opacity:.7;
+
+}
+
+
+@media(max-width:600px){
+
+  .page{
+
+    width:92%;
+
+    padding:40px 0 55px;
+
+  }
+
+
+  .article-header{
+
+    margin-bottom:30px;
+
+  }
+
+
+  .eyebrow{
+
+    font-size:7px;
+
+    letter-spacing:.17em;
+
+  }
+
+
+  .eyebrow::before{
+
+    width:19px;
+
+  }
+
+
+  .article-header h1{
+
+    margin-top:14px;
+
+    font-size:36px;
+
+    line-height:1.12;
+
+  }
+
+
+  .article-intro{
+
+    margin-top:14px;
+
+    font-size:11px;
+
+    line-height:1.8;
+
+  }
+
+
+  .article-card{
+
+    padding:30px 21px;
+
+    border-radius:6px;
+
+  }
+
+
+  .article-section{
+
+    margin-bottom:40px;
+
+  }
+
+
+  .article-section h2{
+
+    margin-bottom:15px;
+
+    font-size:25px;
+
+  }
+
+
+  .article-section p{
+
+    margin-bottom:17px;
+
+    font-size:13px;
+
+    line-height:1.85;
+
+  }
+
+
+  .article-note{
+
+    margin-top:24px;
+
+    padding:17px 18px;
+
+    font-size:14px;
+
+  }
+
+
+  .cta-box{
+
+    margin-top:26px;
+
+    padding:22px 19px;
+
+  }
+
+
+  .cta-label{
+
+    font-size:7px;
+
+  }
+
+
+  .cta-box h3{
+
+    font-size:21px;
+
+  }
+
+
+  .cta-box p{
+
+    font-size:9px;
+
+    line-height:1.75;
+
+  }
+
+
+  .cta-link{
+
+    font-size:8px;
+
+  }
+
+}
+
+
+@media(max-width:360px){
+
+  .article-header h1{
+
+    font-size:32px;
+
+  }
+
+
+  .article-card{
+
+    padding:27px 17px;
+
+  }
+
+
+  .article-section h2{
+
+    font-size:23px;
+
+  }
+
+
+  .article-section p{
+
+    font-size:12px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div id="header-container"></div>
+
+
+<main class="page">
+
+
+  <header class="article-header">
+
+    <div class="eyebrow">
+
+      Comfort
+
+    </div>
+
+
+    <h1>
+
+      The Quiet Appeal of Dinner
+
+      <em>in One Pot</em>
+
+    </h1>
+
+
+    <p class="article-intro">
+
+      Easy, comforting meals that bring preparation and
+      cooking together while keeping the evening pleasantly
+      uncomplicated.
+
+    </p>
+
+  </header>
+
+
+  <article class="article-card">
+
+
+    <section class="article-section">
+
+      <h2>
+
+        Let Dinner Begin in the Same Place
+
+      </h2>
+
+
+      <p>
+
+        There is a particular ease to a meal that does not
+        require several pans waiting on the stove. With one
+        generous pot, the preparation can move naturally from
+        chopping to simmering without turning the kitchen into
+        a collection of separate tasks.
+
+      </p>
+
+
+      <p>
+
+        One-pot cooking also leaves room for flexibility.
+        Vegetables can be adjusted according to what is
+        available, grains can change with the season, and
+        herbs or spices can shift the character of the finished
+        dish without requiring an entirely new recipe.
+
+      </p>
+
+
+      <p>
+
+        The result does not have to feel basic. A thoughtful
+        combination of ingredients can develop layers of
+        flavour while everything cooks together, making the
+        simplicity feel intentional rather than restrictive.
+
+      </p>
+
+
+      <div class="article-note">
+
+        Sometimes the most comforting dinner is the one that
+        asks the least from the evening.
+
+      </div>
+
+    </section>
+
+
+    <section class="article-section">
+
+      <h2>
+
+        Build Flavour in Simple Stages
+
+      </h2>
+
+
+      <p>
+
+        One-pot meals become especially satisfying when each
+        ingredient is given a little attention before the next
+        one joins it. Starting with onions, garlic or other
+        aromatics can create a useful foundation before adding
+        vegetables, grains, beans or proteins.
+
+      </p>
+
+
+      <p>
+
+        Even when everything eventually shares the same pot,
+        the order of preparation can make a noticeable
+        difference. Ingredients that need longer cooking can
+        begin first, while delicate additions can arrive later
+        so they retain their character.
+
+      </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '4fdd309c13924effa225511a2f070524',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/4fdd309c13924effa225511a2f070524/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '0c1fed1bf29c4fe87de4b0b98b156d64',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/0c1fed1bf29c4fe87de4b0b98b156d64/invoke.js"></script>
+</div>
+
+
+
+
+      <p>
+
+        This approach keeps the process relaxed while still
+        allowing the finished meal to feel considered.
+
+      </p>
+
+
+      <div class="cta-box">
+
+        <span class="cta-label">
+
+          An Easier Evening Option
+
+        </span>
+
+
+        <h3>
+
+          Let someone else handle dinner tonight
+
+        </h3>
+
+
+        <p>
+
+          If the appeal of a one-pot meal is simplicity, some
+          evenings call for even less preparation. You can
+          browse available food options through the external
+          page below when you would rather have dinner arrive
+          without the cooking. Selection, availability,
+          delivery times and fees may vary by location and
+          account.
+
+        </p>
+
+
+        <a
+          class="cta-link"
+          href="foodpark.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          Find an Easy Dinner Option
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <section class="article-section">
+
+      <h2>
+
+        Choose Ingredients That Work Together
+
+      </h2>
+
+
+      <p>
+
+        The best one-pot meals often begin with ingredients
+        that naturally complement one another. A grain can
+        provide substance, vegetables can bring colour and
+        texture, while beans, lentils or another protein can
+        make the meal feel complete.
+
+      </p>
+
+
+      <p>
+
+        Broths, sauces and cooking liquids are useful because
+        they carry flavour through the entire dish. As the
+        ingredients cook, the liquid becomes part of the meal
+        rather than something that needs to be prepared
+        separately.
+
+      </p>
+
+
+      <p>
+
+        Fresh herbs added near the end can bring brightness
+        back into a dish that has spent time simmering. A
+        little lemon, fresh greens or a spoonful of something
+        creamy can have the same effect.
+
+      </p>
+
+    </section>
+
+
+    <section class="article-section">
+
+      <h2>
+
+        Keep the Preparation Uncomplicated
+
+      </h2>
+
+
+      <p>
+
+        Comfort cooking does not need a long ingredient list.
+        In fact, a shorter selection can make it easier to
+        notice how each ingredient contributes to the final
+        meal.
+
+      </p>
+
+
+      <p>
+
+        Keeping a few dependable staples nearby makes this
+        style of cooking particularly useful. Tinned beans,
+        tomatoes, grains, stock, onions and dried herbs can
+        form the starting point for many different combinations.
+
+      </p>
+
+
+      <p>
+
+        The kitchen also stays calmer when preparation is
+        modest. One cutting board, one knife and one cooking
+        vessel can often be enough to take an evening meal
+        from idea to table.
+
+      </p>
+
+    </section>
+
+
+    <section class="article-section">
+
+      <h2>
+
+        Give the Pot Time to Do Its Work
+
+      </h2>
+
+
+      <p>
+
+        Some of the nicest parts of one-pot cooking happen
+        while nothing needs to be done. Once the ingredients
+        are combined, gentle cooking can allow flavours to
+        settle into one another while the rest of the evening
+        continues around them.
+
+      </p>
+
+
+      <p>
+
+        That waiting period can be useful. It gives you time
+        to set the table, prepare something fresh on the side
+        or simply step away from the kitchen for a few minutes.
+
+      </p>
+
+
+      <p>
+
+        Instead of measuring the success of dinner by how
+        quickly it is finished, there is something satisfying
+        about allowing a simple meal to develop at its own
+        pace.
+
+      </p>
+
+    </section>
+
+
+    <section class="article-section">
+
+      <h2>
+
+        Make Cleanup Part of the Appeal
+
+      </h2>
+
+
+      <p>
+
+        The final advantage of a one-pot dinner becomes clear
+        when the meal is finished. There are fewer pans to
+        wash, fewer surfaces covered with ingredients and
+        usually less work standing between dinner and the rest
+        of the evening.
+
+      </p>
+
+
+      <p>
+
+        That simplicity is part of why these meals can become
+        dependable favourites. They fit naturally into busy
+        weekdays, quiet weekends and evenings when cooking
+        sounds appealing but an elaborate process does not.
+
+      </p>
+
+
+      <p>
+
+        A good one-pot dinner leaves more than a satisfying
+        meal behind. It leaves the kitchen relatively calm,
+        the washing-up manageable and the evening open to
+        whatever comes next.
+
+      </p>
+
+
+      <p>
+
+        Sometimes that is all comfort really needs: something
+        warm on the table, fewer things to clean and enough
+        time left to enjoy the night.
+
+      </p>
+
+    </section>
+
+
+  </article>
+
+
+</main>
+
+
+<div id="footer-container"></div>
+
+
+</body>
+</html>

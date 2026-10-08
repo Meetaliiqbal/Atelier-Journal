@@ -604,4 +604,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
+
+  /* =========================================
+     ADSTERRA SOCIAL BAR
+  ========================================= */
+
+  if (!document.querySelector(
+    'script[data-adsterra-social-bar]'
+  )) {
+
+    const adsterraSocialBar =
+      document.createElement("script");
+
+    adsterraSocialBar.src =
+      "https://pl31719591.profitableratecpmnetwork.com/b1/24/cf/b124cf62f308f572447c0bc5c5f04457.js";
+
+    adsterraSocialBar.setAttribute(
+      "data-adsterra-social-bar",
+      "true"
+    );
+
+    document.body.appendChild(
+      adsterraSocialBar
+    );
+
+  }
+
 });

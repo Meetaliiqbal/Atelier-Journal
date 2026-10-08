@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="description" content="A thoughtful guide to finding everyday denim that fits your routine, preferred silhouette and personal style.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Finding the Denim You Keep Reaching For</title>
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#f7f3f1;
+  --paper:#fffdfb;
+  --soft:#f0e8e4;
+  --text:#27211f;
+  --muted:#766c68;
+  --line:#e4d9d4;
+  --accent:#9a6f67;
+  --accent-dark:#674943;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.article-page{
+  width:min(820px,90%);
+  margin:0 auto;
+  padding:95px 0 100px;
+}
+
+.article-header{
+  padding-bottom:45px;
+  border-bottom:1px solid var(--line);
+}
+
+.article-eyebrow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--accent);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+
+.article-eyebrow::before{
+  content:"";
+  width:27px;
+  height:1px;
+  background:var(--accent);
+}
+
+.article-header h1{
+  max-width:780px;
+  margin-top:20px;
+  font-family:var(--serif);
+  font-size:clamp(43px,7vw,68px);
+  font-weight:400;
+  line-height:1.05;
+  letter-spacing:-.04em;
+}
+
+.article-intro{
+  max-width:650px;
+  margin-top:23px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-top:25px;
+  color:#968b86;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.article-meta span + span{
+  padding-left:18px;
+  border-left:1px solid var(--line);
+}
+
+.article-body{
+  padding-top:55px;
+}
+
+.article-section{
+  margin-bottom:55px;
+}
+
+.article-section h2{
+  max-width:650px;
+  margin-bottom:18px;
+  font-family:var(--serif);
+  font-size:34px;
+  font-weight:400;
+  line-height:1.15;
+  letter-spacing:-.025em;
+}
+
+.article-section p{
+  max-width:700px;
+  margin-top:17px;
+  color:#514945;
+  font-size:14px;
+  line-height:2;
+}
+
+.article-quote{
+  margin:55px 0;
+  padding:32px 35px;
+  background:var(--soft);
+  border-left:2px solid var(--accent);
+}
+
+.article-quote p{
+  margin:0;
+  font-family:var(--serif);
+  color:var(--text);
+  font-size:24px;
+  line-height:1.45;
+}
+
+.style-list{
+  margin-top:25px;
+  padding:0;
+  list-style:none;
+}
+
+.style-list li{
+  display:grid;
+  grid-template-columns:35px 1fr;
+  gap:15px;
+  padding:17px 0;
+  border-top:1px solid var(--line);
+  color:#514945;
+  font-size:13px;
+  line-height:1.8;
+}
+
+.style-list li:last-child{
+  border-bottom:1px solid var(--line);
+}
+
+.list-number{
+  color:var(--accent);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.1em;
+}
+
+.article-cta{
+  margin:65px 0 10px;
+  padding:38px 35px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  text-align:center;
+  box-shadow:0 15px 40px rgba(65,48,43,.045);
+}
+
+.article-cta-label{
+  color:var(--accent);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+
+.article-cta h3{
+  margin-top:12px;
+  font-family:var(--serif);
+  font-size:28px;
+  font-weight:400;
+  line-height:1.25;
+}
+
+.article-cta p{
+  max-width:540px;
+  margin:10px auto 0;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.8;
+}
+
+.article-cta-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:48px;
+  width:100%;
+  max-width:310px;
+  margin-top:20px;
+  padding:0 20px;
+  background:var(--accent-dark);
+  color:#fff !important;
+  border:1px solid var(--accent-dark);
+  border-radius:4px;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  transition:background .2s ease,transform .2s ease;
+}
+
+.article-cta-button::after{
+  content:"→";
+  font-size:14px;
+}
+
+.article-cta-button:hover{
+  background:var(--accent);
+  transform:translateY(-1px);
+}
+
+.article-cta-note{
+  margin-top:9px;
+  color:#978d88;
+  font-size:8px;
+}
+
+.article-closing{
+  margin-top:60px;
+  padding-top:35px;
+  border-top:1px solid var(--line);
+}
+
+.article-closing p{
+  max-width:680px;
+  font-family:var(--serif);
+  font-size:25px;
+  line-height:1.45;
+  letter-spacing:-.02em;
+}
+
+@media(max-width:600px){
+
+  .article-page{
+    width:92%;
+    padding:58px 0 65px;
+  }
+
+  .article-header{
+    padding-bottom:34px;
+  }
+
+  .article-eyebrow{
+    font-size:7px;
+    letter-spacing:.16em;
+  }
+
+  .article-eyebrow::before{
+    width:20px;
+  }
+
+  .article-header h1{
+    margin-top:15px;
+    font-size:37px;
+    line-height:1.08;
+  }
+
+  .article-intro{
+    margin-top:16px;
+    font-size:11px;
+    line-height:1.85;
+  }
+
+  .article-meta{
+    margin-top:20px;
+    gap:12px;
+    font-size:7px;
+  }
+
+  .article-meta span + span{
+    padding-left:12px;
+  }
+
+  .article-body{
+    padding-top:38px;
+  }
+
+  .article-section{
+    margin-bottom:42px;
+  }
+
+  .article-section h2{
+    margin-bottom:14px;
+    font-size:27px;
+  }
+
+  .article-section p{
+    margin-top:14px;
+    font-size:11px;
+    line-height:1.9;
+  }
+
+  .article-quote{
+    margin:40px 0;
+    padding:24px 22px;
+  }
+
+  .article-quote p{
+    font-size:19px;
+  }
+
+  .style-list{
+    margin-top:20px;
+  }
+
+  .style-list li{
+    grid-template-columns:25px 1fr;
+    gap:10px;
+    padding:14px 0;
+    font-size:10px;
+    line-height:1.8;
+  }
+
+  .article-cta{
+    margin:48px 0 5px;
+    padding:29px 20px;
+  }
+
+  .article-cta-label{
+    font-size:7px;
+  }
+
+  .article-cta h3{
+    margin-top:10px;
+    font-size:23px;
+  }
+
+  .article-cta p{
+    font-size:9px;
+    line-height:1.75;
+  }
+
+  .article-cta-button{
+    max-width:none;
+    min-height:49px;
+    margin-top:17px;
+    font-size:8px;
+  }
+
+  .article-cta-note{
+    font-size:7px;
+  }
+
+  .article-closing{
+    margin-top:45px;
+    padding-top:27px;
+  }
+
+  .article-closing p{
+    font-size:20px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<main class="article-page">
+
+<header class="article-header">
+
+  <div class="article-eyebrow">
+    Fashion Journal
+  </div>
+
+  <h1>
+    Finding the Denim
+    You Keep Reaching For
+  </h1>
+
+  <p class="article-intro">
+    From relaxed cuts to cleaner silhouettes, find a denim
+    shape that works with your actual routine and personal
+    preferences.
+  </p>
+
+  <div class="article-meta">
+    <span>Fashion</span>
+    <span>Essentials</span>
+    <span>5 min read</span>
+  </div>
+
+</header>
+
+<article class="article-body">
+
+<section class="article-section">
+
+  <h2>
+    Start with your everyday routine
+  </h2>
+
+  <p>
+    The most useful pair of jeans is rarely the one that
+    looks impressive only in a carefully planned outfit.
+    Everyday denim earns its place when it works naturally
+    with the way you move through your week.
+  </p>
+
+  <p>
+    Think about where you normally wear jeans, what shoes
+    you reach for and whether you prefer a relaxed or more
+    defined silhouette. These practical details can tell
+    you much more about the right denim shape than a trend
+    ever could.
+  </p>
+
+</section>
+
+<section class="article-section">
+
+  <h2>
+    Pay attention to the silhouette
+  </h2>
+
+  <p>
+    Straight, relaxed, wide and slimmer cuts can all work
+    beautifully, but each creates a different relationship
+    between the denim and the rest of an outfit. The right
+    choice is the one that feels balanced with your existing
+    wardrobe.
+  </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '4fdd309c13924effa225511a2f070524',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/4fdd309c13924effa225511a2f070524/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '0c1fed1bf29c4fe87de4b0b98b156d64',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/0c1fed1bf29c4fe87de4b0b98b156d64/invoke.js"></script>
+</div>
+
+
+
+  <p>
+    A wider leg can work especially well with simpler fitted
+    layers, while a straighter shape can move easily between
+    casual and more polished combinations. There is no single
+    ideal silhouette; the useful one is the one you actually
+    enjoy wearing.
+  </p>
+
+  <div class="article-cta">
+
+    <div class="article-cta-label">
+      Denim Edit
+    </div>
+
+    <h3>
+      Find a pair that fits the way you dress.
+    </h3>
+
+    <p>
+      Explore current fashion selections and browse denim
+      styles that can become dependable parts of an everyday
+      wardrobe.
+    </p>
+
+    <a
+      href="fashionpark.html"
+      class="article-cta-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Explore Denim Styles
+    </a>
+
+    <div class="article-cta-note">
+      Opens the fashion page in a new tab.
+    </div>
+
+  </div>
+
+</section>
+
+<section class="article-section">
+
+  <h2>
+    Consider the rest of your wardrobe
+  </h2>
+
+  <p>
+    Before choosing a new pair, look at the tops, jackets
+    and shoes you already wear most often. Denim becomes much
+    more useful when its shape and wash can connect easily
+    with those existing pieces.
+  </p>
+
+  <p>
+    A pair that works with several familiar combinations is
+    more likely to become a favorite. This is especially
+    helpful when choosing between two similar styles: imagine
+    each one with the clothes already hanging in your closet.
+  </p>
+
+</section>
+
+<div class="article-quote">
+
+  <p>
+    The best denim is often the pair you stop thinking about
+    because it simply works.
+  </p>
+
+</div>
+
+<section class="article-section">
+
+  <h2>
+    Look beyond the first fitting
+  </h2>
+
+  <p>
+    Comfort matters because denim is usually worn for hours
+    at a time. A pair can look excellent in a fitting room
+    but still feel wrong once you walk, sit and move through
+    an ordinary day.
+  </p>
+
+  <ul class="style-list">
+
+    <li>
+      <span class="list-number">01</span>
+      <span>
+        Move naturally when trying denim on rather than judging
+        it only while standing still.
+      </span>
+    </li>
+
+    <li>
+      <span class="list-number">02</span>
+      <span>
+        Notice whether the rise and waistband feel comfortable
+        throughout normal movement.
+      </span>
+    </li>
+
+    <li>
+      <span class="list-number">03</span>
+      <span>
+        Consider whether the leg shape works with the shoes
+        you already wear regularly.
+      </span>
+    </li>
+
+    <li>
+      <span class="list-number">04</span>
+      <span>
+        Choose the silhouette that feels natural rather than
+        simply following what is currently popular.
+      </span>
+    </li>
+
+  </ul>
+
+</section>
+
+<section class="article-section">
+
+  <h2>
+    Let the wash support your style
+  </h2>
+
+  <p>
+    The color and finish of denim can change how easily it
+    moves between outfits. Deeper washes often feel a little
+    more polished, while lighter denim can bring a relaxed
+    quality to simple everyday combinations.
+  </p>
+
+  <p>
+    Think about the overall mood of your wardrobe rather than
+    choosing a wash in isolation. The most useful option is
+    usually the one that gives several of your existing pieces
+    another way to be worn.
+  </p>
+
+</section>
+
+<section class="article-section">
+
+  <h2>
+    Keep the pair that keeps earning its place
+  </h2>
+
+  <p>
+    Denim does not need to be complicated. When the cut feels
+    comfortable, the wash works with your wardrobe and the
+    silhouette suits your routine, a good pair can quietly
+    become one of the pieces you rely on most.
+  </p>
+
+  <p>
+    Instead of searching endlessly for the perfect style,
+    notice which jeans you already reach for without thinking.
+    That instinct is often a better guide than a list of rules.
+  </p>
+
+</section>
+
+<div class="article-closing">
+
+  <p>
+    The right pair of jeans does not demand attention.
+    It makes the rest of getting dressed feel easier.
+  </p>
+
+</div>
+
+</article>
+
+</main>
+
+<div id="footer-container"></div>
+
+</body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="description" content="Simple ways to rethink pasta with seasonal vegetables, pantry ingredients and sauces that make a familiar dinner feel new.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="referrer" content="no-referrer">
+
+<title>A Better Pasta Night Starts With One Good Idea</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<script src="header.js" defer></script>
+
+<script src="footer.js" defer></script>
+
+<style>
+
+:root{
+  --bg:#f3f0eb;
+  --paper:#fbfaf7;
+  --paper-soft:#e9e3da;
+  --text:#272521;
+  --muted:#77736d;
+  --line:#ddd7cf;
+  --accent:#81715f;
+  --accent-dark:#4d4339;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.page{
+  width:min(900px,92%);
+  margin:0 auto;
+  padding:65px 0 75px;
+}
+
+.article-header{
+  max-width:760px;
+  margin:0 auto 45px;
+  text-align:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--accent);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.eyebrow::before{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--accent);
+}
+
+.article-header h1{
+  margin-top:18px;
+  font-family:var(--serif);
+  font-size:clamp(38px,6vw,60px);
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:-.035em;
+}
+
+.article-header h1 em{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.article-intro{
+  max-width:680px;
+  margin:20px auto 0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.85;
+}
+
+.article-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:52px 58px;
+  box-shadow:0 18px 45px rgba(45,38,31,.045);
+}
+
+.article-section{
+  margin-bottom:52px;
+}
+
+.article-section:last-child{
+  margin-bottom:0;
+}
+
+.article-section h2{
+  margin-bottom:19px;
+  font-family:var(--serif);
+  font-size:29px;
+  font-weight:400;
+  line-height:1.25;
+  letter-spacing:-.02em;
+}
+
+.article-section p{
+  margin-bottom:19px;
+  color:#45423d;
+  font-size:15px;
+  line-height:1.9;
+}
+
+.article-section p:last-child{
+  margin-bottom:0;
+}
+
+.article-note{
+  margin:29px 0 0;
+  padding:20px 22px;
+  background:var(--paper-soft);
+  border-left:2px solid var(--accent);
+  color:#625d55;
+  font-family:var(--serif);
+  font-size:16px;
+  font-style:italic;
+  line-height:1.7;
+}
+
+.cta-box{
+  margin:32px 0 5px;
+  padding:28px 29px;
+  background:var(--paper-soft);
+  border:1px solid var(--line);
+  border-radius:5px;
+}
+
+.cta-label{
+  display:block;
+  margin-bottom:9px;
+  color:var(--accent-dark);
+  font-family:var(--sans);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.cta-box h3{
+  margin-bottom:9px;
+  font-family:var(--serif);
+  font-size:23px;
+  font-weight:400;
+  line-height:1.3;
+}
+
+.cta-box p{
+  margin-bottom:17px;
+  color:var(--muted);
+  font-family:var(--sans);
+  font-size:11px;
+  line-height:1.75;
+}
+
+.cta-link{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--accent-dark);
+  font-family:var(--sans);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--accent-dark);
+  padding-bottom:3px;
+}
+
+.cta-link::after{
+  content:"→";
+  font-size:14px;
+}
+
+.cta-link:hover{
+  opacity:.7;
+}
+
+@media(max-width:600px){
+
+  .page{
+    width:92%;
+    padding:40px 0 55px;
+  }
+
+  .article-header{
+    margin-bottom:30px;
+  }
+
+  .eyebrow{
+    font-size:7px;
+    letter-spacing:.17em;
+  }
+
+  .eyebrow::before{
+    width:19px;
+  }
+
+  .article-header h1{
+    margin-top:14px;
+    font-size:36px;
+    line-height:1.12;
+  }
+
+  .article-intro{
+    margin-top:14px;
+    font-size:11px;
+    line-height:1.8;
+  }
+
+  .article-card{
+    padding:30px 21px;
+    border-radius:6px;
+  }
+
+  .article-section{
+    margin-bottom:40px;
+  }
+
+  .article-section h2{
+    margin-bottom:15px;
+    font-size:25px;
+  }
+
+  .article-section p{
+    margin-bottom:17px;
+    font-size:13px;
+    line-height:1.85;
+  }
+
+  .article-note{
+    margin-top:24px;
+    padding:17px 18px;
+    font-size:14px;
+  }
+
+  .cta-box{
+    margin-top:26px;
+    padding:22px 19px;
+  }
+
+  .cta-label{
+    font-size:7px;
+  }
+
+  .cta-box h3{
+    font-size:21px;
+  }
+
+  .cta-box p{
+    font-size:9px;
+    line-height:1.75;
+  }
+
+  .cta-link{
+    font-size:8px;
+  }
+}
+
+@media(max-width:360px){
+
+  .article-header h1{
+    font-size:32px;
+  }
+
+  .article-card{
+    padding:27px 17px;
+  }
+
+  .article-section h2{
+    font-size:23px;
+  }
+
+  .article-section p{
+    font-size:12px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header-container"></div>
+
+<main class="page">
+
+<header class="article-header">
+
+<div class="eyebrow">
+Pasta
+</div>
+
+<h1>
+A Better Pasta Night Starts With <em>One Good Idea</em>
+</h1>
+
+<p class="article-intro">
+Simple ways to rethink pasta with seasonal vegetables,
+pantry ingredients and sauces that make a familiar dinner
+feel new.
+</p>
+
+</header>
+
+<article class="article-card">
+
+<section class="article-section">
+
+<h2>
+Start With the Pasta You Already Love
+</h2>
+
+<p>
+Pasta is one of those meals that rarely needs a complicated
+plan. A familiar shape, a few dependable ingredients and
+something to bring everything together can be enough for
+dinner.
+</p>
+
+<p>
+The easiest way to make pasta night feel different is often
+to change just one element. A new vegetable, a handful of
+fresh herbs or a different finishing ingredient can give a
+familiar bowl an entirely different character.
+</p>
+
+<p>
+This keeps pasta comfortable while leaving enough room for
+experimentation. There is no need to reinvent the meal every
+time.
+</p>
+
+<div class="article-note">
+A good pasta dinner does not need many ingredients. It needs
+one or two that know how to work together.
+</div>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Build the Sauce Around the Ingredients
+</h2>
+
+<p>
+A sauce does not always have to be prepared separately.
+Sometimes the ingredients themselves can create the base.
+Roasted vegetables, tomatoes, garlic, olive oil or a little
+cheese can become part of the sauce as they cook.
+</p>
+
+<p>
+This approach makes pasta particularly flexible. A creamy
+finish can soften roasted vegetables, while olive oil and
+fresh herbs can keep a lighter combination bright.
+</p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '4fdd309c13924effa225511a2f070524',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/4fdd309c13924effa225511a2f070524/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '0c1fed1bf29c4fe87de4b0b98b156d64',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/0c1fed1bf29c4fe87de4b0b98b156d64/invoke.js"></script>
+</div>
+
+
+
+<p>
+The goal is to create enough moisture and flavour for the
+pasta to feel connected to everything around it rather than
+simply coated.
+</p>
+
+<div class="cta-box">
+
+<span class="cta-label">
+A Pasta Night Shortcut
+</span>
+
+<h3>
+When dinner sounds better without the preparation
+</h3>
+
+<p>
+Some evenings call for a comforting bowl of pasta, but not
+necessarily the work that comes before it. If you would
+rather leave the cooking for another time, you can browse
+available food options through the external page below.
+Selection, availability, delivery times and fees may vary by
+location and account.
+</p>
+
+<a class="cta-link" href="foodpark.html" target="_blank" rel="noopener noreferrer">
+Explore Dinner Options
+</a>
+
+</div>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Let Seasonal Vegetables Lead</h2>
+
+<p>
+Vegetables can completely change the personality of a pasta
+dish. Tender greens, roasted squash, tomatoes, mushrooms,
+courgettes or crisp vegetables can each create a different
+direction without changing the basic idea.
+</p>
+
+<p>
+The best combinations often come from using what looks good
+at the market or what is already waiting in the refrigerator.
+Pasta provides the familiar foundation while the vegetables
+give the meal its current character.
+</p>
+
+<p>
+A little colour and contrast can be enough to make the same
+weekly dinner feel much less repetitive.
+</p>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Remember the Finishing Touch</h2>
+
+<p>
+The final few ingredients can have an outsized effect. Fresh
+herbs, grated cheese, toasted breadcrumbs, lemon zest or a
+little olive oil can add something that was missing during
+the cooking process.
+</p>
+
+<p>
+These finishing touches are especially useful when the main
+ingredients are simple. They bring aroma, texture or
+freshness just before the meal reaches the table.
+</p>
+
+<p>
+Keeping a few dependable finishing ingredients nearby can
+make spontaneous pasta dinners much easier to build.
+</p>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Keep Pantry Pasta in Your Rotation</h2>
+
+<p>
+A good pasta dinner does not always depend on fresh shopping.
+Dried pasta, tinned tomatoes, beans, olives, dried herbs and
+other pantry staples can create a useful starting point.
+</p>
+
+<p>
+Having these ingredients available means dinner can still
+come together when the refrigerator looks less inspiring than
+usual.
+</p>
+
+<p>
+Once you become comfortable combining pantry ingredients with
+whatever fresh food is available, pasta becomes less of a
+recipe and more of a flexible kitchen language.
+</p>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Make Pasta Night Feel Like a Ritual</h2>
+
+<p>
+There is no reason pasta night has to be complicated to feel
+special. Putting on music, setting the table properly or
+taking a few extra minutes to finish the dish can change the
+mood of an ordinary evening.
+</p>
+
+<p>
+The pleasure often comes from the familiarity. You know the
+basic process, so there is enough mental space to enjoy the
+small choices that make tonight's version different.
+</p>
+
+<p>
+A favourite bowl, a seasonal ingredient and a little time at
+the table can be enough to turn a dependable dinner into a
+small weekly ritual.
+</p>
+
+</section>
+
+</article>
+
+</main>
+
+<div id="footer-container"></div>
+
+</body>
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="description" content="Practical layering ideas for changing weather, with flexible combinations that make everyday dressing comfortable and considered.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Dressing in Layers When the Weather Cannot Decide</title>
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#f7f3f1;
+  --paper:#fffdfb;
+  --soft:#f0e8e4;
+  --text:#27211f;
+  --muted:#766c68;
+  --line:#e4d9d4;
+  --accent:#9a6f67;
+  --accent-dark:#674943;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.article-page{
+  width:min(820px,90%);
+  margin:0 auto;
+  padding:95px 0 100px;
+}
+
+.article-header{
+  padding-bottom:45px;
+  border-bottom:1px solid var(--line);
+}
+
+.article-eyebrow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--accent);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+
+.article-eyebrow::before{
+  content:"";
+  width:27px;
+  height:1px;
+  background:var(--accent);
+}
+
+.article-header h1{
+  max-width:780px;
+  margin-top:20px;
+  font-family:var(--serif);
+  font-size:clamp(43px,7vw,68px);
+  font-weight:400;
+  line-height:1.05;
+  letter-spacing:-.04em;
+}
+
+.article-intro{
+  max-width:650px;
+  margin-top:23px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-top:25px;
+  color:#968b86;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.article-meta span + span{
+  padding-left:18px;
+  border-left:1px solid var(--line);
+}
+
+.article-body{
+  padding-top:55px;
+}
+
+.article-section{
+  margin-bottom:55px;
+}
+
+.article-section h2{
+  max-width:650px;
+  margin-bottom:18px;
+  font-family:var(--serif);
+  font-size:34px;
+  font-weight:400;
+  line-height:1.15;
+  letter-spacing:-.025em;
+}
+
+.article-section p{
+  max-width:700px;
+  margin-top:17px;
+  color:#514945;
+  font-size:14px;
+  line-height:2;
+}
+
+.article-quote{
+  margin:55px 0;
+  padding:32px 35px;
+  background:var(--soft);
+  border-left:2px solid var(--accent);
+}
+
+.article-quote p{
+  margin:0;
+  font-family:var(--serif);
+  color:var(--text);
+  font-size:24px;
+  line-height:1.45;
+}
+
+.style-list{
+  margin-top:25px;
+  padding:0;
+  list-style:none;
+}
+
+.style-list li{
+  display:grid;
+  grid-template-columns:35px 1fr;
+  gap:15px;
+  padding:17px 0;
+  border-top:1px solid var(--line);
+  color:#514945;
+  font-size:13px;
+  line-height:1.8;
+}
+
+.style-list li:last-child{
+  border-bottom:1px solid var(--line);
+}
+
+.list-number{
+  color:var(--accent);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.1em;
+}
+
+.article-cta{
+  margin:65px 0 10px;
+  padding:38px 35px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  text-align:center;
+  box-shadow:0 15px 40px rgba(65,48,43,.045);
+}
+
+.article-cta-label{
+  color:var(--accent);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+
+.article-cta h3{
+  margin-top:12px;
+  font-family:var(--serif);
+  font-size:28px;
+  font-weight:400;
+  line-height:1.25;
+}
+
+.article-cta p{
+  max-width:540px;
+  margin:10px auto 0;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.8;
+}
+
+.article-cta-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:48px;
+  width:100%;
+  max-width:310px;
+  margin-top:20px;
+  padding:0 20px;
+  background:var(--accent-dark);
+  color:#fff !important;
+  border:1px solid var(--accent-dark);
+  border-radius:4px;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  transition:background .2s ease,transform .2s ease;
+}
+
+.article-cta-button::after{
+  content:"→";
+  font-size:14px;
+}
+
+.article-cta-button:hover{
+  background:var(--accent);
+  transform:translateY(-1px);
+}
+
+.article-cta-note{
+  margin-top:9px;
+  color:#978d88;
+  font-size:8px;
+}
+
+.article-closing{
+  margin-top:60px;
+  padding-top:35px;
+  border-top:1px solid var(--line);
+}
+
+.article-closing p{
+  max-width:680px;
+  font-family:var(--serif);
+  font-size:25px;
+  line-height:1.45;
+  letter-spacing:-.02em;
+}
+
+@media(max-width:600px){
+
+  .article-page{
+    width:92%;
+    padding:58px 0 65px;
+  }
+
+  .article-header{
+    padding-bottom:34px;
+  }
+
+  .article-eyebrow{
+    font-size:7px;
+    letter-spacing:.16em;
+  }
+
+  .article-eyebrow::before{
+    width:20px;
+  }
+
+  .article-header h1{
+    margin-top:15px;
+    font-size:37px;
+    line-height:1.08;
+  }
+
+  .article-intro{
+    margin-top:16px;
+    font-size:11px;
+    line-height:1.85;
+  }
+
+  .article-meta{
+    margin-top:20px;
+    gap:12px;
+    font-size:7px;
+  }
+
+  .article-meta span + span{
+    padding-left:12px;
+  }
+
+  .article-body{
+    padding-top:38px;
+  }
+
+  .article-section{
+    margin-bottom:42px;
+  }
+
+  .article-section h2{
+    margin-bottom:14px;
+    font-size:27px;
+  }
+
+  .article-section p{
+    margin-top:14px;
+    font-size:11px;
+    line-height:1.9;
+  }
+
+  .article-quote{
+    margin:40px 0;
+    padding:24px 22px;
+  }
+
+  .article-quote p{
+    font-size:19px;
+  }
+
+  .style-list{
+    margin-top:20px;
+  }
+
+  .style-list li{
+    grid-template-columns:25px 1fr;
+    gap:10px;
+    padding:14px 0;
+    font-size:10px;
+    line-height:1.8;
+  }
+
+  .article-cta{
+    margin:48px 0 5px;
+    padding:29px 20px;
+  }
+
+  .article-cta-label{
+    font-size:7px;
+  }
+
+  .article-cta h3{
+    margin-top:10px;
+    font-size:23px;
+  }
+
+  .article-cta p{
+    font-size:9px;
+    line-height:1.75;
+  }
+
+  .article-cta-button{
+    max-width:none;
+    min-height:49px;
+    margin-top:17px;
+    font-size:8px;
+  }
+
+  .article-cta-note{
+    font-size:7px;
+  }
+
+  .article-closing{
+    margin-top:45px;
+    padding-top:27px;
+  }
+
+  .article-closing p{
+    font-size:20px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<main class="article-page">
+
+<header class="article-header">
+
+  <div class="article-eyebrow">
+    Fashion Journal
+  </div>
+
+  <h1>
+    Dressing in Layers
+    When the Weather Cannot Decide
+  </h1>
+
+  <p class="article-intro">
+    Build flexible outfits with light layers that can be
+    added, removed and rearranged throughout the day.
+  </p>
+
+  <div class="article-meta">
+    <span>Fashion</span>
+    <span>Layering</span>
+    <span>5 min read</span>
+  </div>
+
+</header>
+
+<article class="article-body">
+
+<section class="article-section">
+
+  <h2>
+    Think of an outfit as a flexible system
+  </h2>
+
+  <p>
+    Changing weather can make getting dressed surprisingly
+    difficult. A morning that feels cool may become warm by
+    midday, while an evening can bring the temperature down
+    again. Layering works because it gives an outfit room to
+    adapt.
+  </p>
+
+  <p>
+    Instead of choosing one heavy piece to solve every
+    temperature change, build around several lighter layers.
+    Each piece can have its own purpose while still working
+    comfortably with everything underneath it.
+  </p>
+
+</section>
+
+<section class="article-section">
+
+  <h2>
+    Begin with a comfortable base
+  </h2>
+
+  <p>
+    The first layer should feel comfortable enough to wear
+    on its own if the weather warms up. A simple top, shirt
+    or lightweight knit can provide the foundation without
+    adding unnecessary bulk.
+  </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '4fdd309c13924effa225511a2f070524',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/4fdd309c13924effa225511a2f070524/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '0c1fed1bf29c4fe87de4b0b98b156d64',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/0c1fed1bf29c4fe87de4b0b98b156d64/invoke.js"></script>
+</div>
+
+
+
+  <p>
+    Keeping this first layer relatively easy makes the rest
+    of the outfit more flexible. You can add a jacket in the
+    morning, remove it later and still have an outfit that
+    feels complete.
+  </p>
+
+  <div class="article-cta">
+
+    <div class="article-cta-label">
+      Layering Inspiration
+    </div>
+
+    <h3>
+      Find pieces that make changing weather easier.
+    </h3>
+
+    <p>
+      Browse current fashion selections and discover versatile
+      layers that can work across different outfits and
+      changing parts of the day.
+    </p>
+
+    <a
+      href="fashionpark.html"
+      class="article-cta-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Explore Layering Pieces
+    </a>
+
+    <div class="article-cta-note">
+      Opens the fashion page in a new tab.
+    </div>
+
+  </div>
+
+</section>
+
+<section class="article-section">
+
+  <h2>
+    Choose layers that work together
+  </h2>
+
+  <p>
+    Good layering is less about owning many pieces and more
+    about choosing pieces that can comfortably sit together.
+    Fabrics, lengths and proportions all matter when several
+    garments share the same space.
+  </p>
+
+  <p>
+    A slightly longer layer underneath a shorter jacket can
+    create useful visual depth, while lighter fabrics beneath
+    structured outer pieces help prevent the outfit from
+    feeling heavy.
+  </p>
+
+</section>
+
+<div class="article-quote">
+
+  <p>
+    The most useful layered outfit is one that still feels
+    complete after the top layer comes off.
+  </p>
+
+</div>
+
+<section class="article-section">
+
+  <h2>
+    Keep the proportions comfortable
+  </h2>
+
+  <p>
+    Layering can quickly become uncomfortable when every
+    piece is oversized or bulky. A little contrast between
+    shapes often creates a cleaner and more wearable result.
+  </p>
+
+  <ul class="style-list">
+
+    <li>
+      <span class="list-number">01</span>
+      <span>
+        Keep the base layer relatively light so additional
+        pieces can sit comfortably above it.
+      </span>
+    </li>
+
+    <li>
+      <span class="list-number">02</span>
+      <span>
+        Balance a relaxed outer layer with a simpler shape
+        underneath.
+      </span>
+    </li>
+
+    <li>
+      <span class="list-number">03</span>
+      <span>
+        Pay attention to sleeve and hem lengths so each layer
+        has enough space to move.
+      </span>
+    </li>
+
+    <li>
+      <span class="list-number">04</span>
+      <span>
+        Avoid adding another layer simply because you can;
+        every piece should have a reason to be there.
+      </span>
+    </li>
+
+  </ul>
+
+</section>
+
+<section class="article-section">
+
+  <h2>
+    Let texture create the interest
+  </h2>
+
+  <p>
+    Layers give you an opportunity to combine textures without
+    relying on strong colors. A smooth shirt beneath a soft
+    knit or a crisp jacket over a relaxed top can make a simple
+    palette feel more dimensional.
+  </p>
+
+  <p>
+    This also helps familiar pieces feel different when they
+    are worn together. The same base outfit can take on a new
+    character simply by changing the outer layer.
+  </p>
+
+</section>
+
+<section class="article-section">
+
+  <h2>
+    Make the final layer easy to carry
+  </h2>
+
+  <p>
+    When the temperature is unpredictable, the outer layer
+    should ideally be easy to remove or carry. This practical
+    detail can make the difference between a layered outfit
+    that works all day and one that becomes inconvenient.
+  </p>
+
+  <p>
+    A useful wardrobe gives you options without asking you to
+    plan every temperature change in advance. The simpler the
+    system, the more naturally it becomes part of your routine.
+  </p>
+
+</section>
+
+<div class="article-closing">
+
+  <p>
+    Good layering is not about wearing more. It is about giving
+    an outfit enough flexibility to move with the day.
+  </p>
+
+</div>
+
+</article>
+
+</main>
+
+<div id="footer-container"></div>
+
+</body>
+</html>

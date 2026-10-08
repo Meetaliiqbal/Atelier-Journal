@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="description" content="A thoughtful closet edit for keeping useful, comfortable and personal pieces while making everyday dressing feel less crowded.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="referrer" content="no-referrer">
+
+<title>The Closet Edit: Keeping What Earns Its Place</title>
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#f7f3f1;
+  --paper:#fffdfb;
+  --soft:#f0e8e4;
+  --text:#27211f;
+  --muted:#766c68;
+  --line:#e4d9d4;
+  --accent:#9a6f67;
+  --accent-dark:#674943;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.article-page{
+  width:min(820px,90%);
+  margin:0 auto;
+  padding:95px 0 100px;
+}
+
+.article-header{
+  padding-bottom:45px;
+  border-bottom:1px solid var(--line);
+}
+
+.article-eyebrow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--accent);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+
+.article-eyebrow::before{
+  content:"";
+  width:27px;
+  height:1px;
+  background:var(--accent);
+}
+
+.article-header h1{
+  max-width:780px;
+  margin-top:20px;
+  font-family:var(--serif);
+  font-size:clamp(43px,7vw,68px);
+  font-weight:400;
+  line-height:1.05;
+  letter-spacing:-.04em;
+}
+
+.article-intro{
+  max-width:650px;
+  margin-top:23px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-top:25px;
+  color:#968b86;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.article-meta span + span{
+  padding-left:18px;
+  border-left:1px solid var(--line);
+}
+
+.article-body{
+  padding-top:55px;
+}
+
+.article-section{
+  margin-bottom:55px;
+}
+
+.article-section h2{
+  max-width:650px;
+  margin-bottom:18px;
+  font-family:var(--serif);
+  font-size:34px;
+  font-weight:400;
+  line-height:1.15;
+  letter-spacing:-.025em;
+}
+
+.article-section p{
+  max-width:700px;
+  margin-top:17px;
+  color:#514945;
+  font-size:14px;
+  line-height:2;
+}
+
+.article-quote{
+  margin:55px 0;
+  padding:32px 35px;
+  background:var(--soft);
+  border-left:2px solid var(--accent);
+}
+
+.article-quote p{
+  margin:0;
+  font-family:var(--serif);
+  color:var(--text);
+  font-size:24px;
+  line-height:1.45;
+}
+
+.style-list{
+  margin-top:25px;
+  padding:0;
+  list-style:none;
+}
+
+.style-list li{
+  display:grid;
+  grid-template-columns:35px 1fr;
+  gap:15px;
+  padding:17px 0;
+  border-top:1px solid var(--line);
+  color:#514945;
+  font-size:13px;
+  line-height:1.8;
+}
+
+.style-list li:last-child{
+  border-bottom:1px solid var(--line);
+}
+
+.list-number{
+  color:var(--accent);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.1em;
+}
+
+.article-cta{
+  margin:65px 0 10px;
+  padding:38px 35px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  text-align:center;
+  box-shadow:0 15px 40px rgba(65,48,43,.045);
+}
+
+.article-cta-label{
+  color:var(--accent);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+
+.article-cta h3{
+  margin-top:12px;
+  font-family:var(--serif);
+  font-size:28px;
+  font-weight:400;
+  line-height:1.25;
+}
+
+.article-cta p{
+  max-width:540px;
+  margin:10px auto 0;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.8;
+}
+
+.article-cta-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:48px;
+  width:100%;
+  max-width:310px;
+  margin-top:20px;
+  padding:0 20px;
+  background:var(--accent-dark);
+  color:#fff !important;
+  border:1px solid var(--accent-dark);
+  border-radius:4px;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  transition:background .2s ease,transform .2s ease;
+}
+
+.article-cta-button::after{
+  content:"→";
+  font-size:14px;
+}
+
+.article-cta-button:hover{
+  background:var(--accent);
+  transform:translateY(-1px);
+}
+
+.article-cta-note{
+  margin-top:9px;
+  color:#978d88;
+  font-size:8px;
+}
+
+.article-closing{
+  margin-top:60px;
+  padding-top:35px;
+  border-top:1px solid var(--line);
+}
+
+.article-closing p{
+  max-width:680px;
+  font-family:var(--serif);
+  font-size:25px;
+  line-height:1.45;
+  letter-spacing:-.02em;
+}
+
+@media(max-width:600px){
+
+  .article-page{
+    width:92%;
+    padding:58px 0 65px;
+  }
+
+  .article-header{
+    padding-bottom:34px;
+  }
+
+  .article-eyebrow{
+    font-size:7px;
+    letter-spacing:.16em;
+  }
+
+  .article-eyebrow::before{
+    width:20px;
+  }
+
+  .article-header h1{
+    margin-top:15px;
+    font-size:37px;
+    line-height:1.08;
+  }
+
+  .article-intro{
+    margin-top:16px;
+    font-size:11px;
+    line-height:1.85;
+  }
+
+  .article-meta{
+    margin-top:20px;
+    gap:12px;
+    font-size:7px;
+  }
+
+  .article-meta span + span{
+    padding-left:12px;
+  }
+
+  .article-body{
+    padding-top:38px;
+  }
+
+  .article-section{
+    margin-bottom:42px;
+  }
+
+  .article-section h2{
+    margin-bottom:14px;
+    font-size:27px;
+  }
+
+  .article-section p{
+    margin-top:14px;
+    font-size:11px;
+    line-height:1.9;
+  }
+
+  .article-quote{
+    margin:40px 0;
+    padding:24px 22px;
+  }
+
+  .article-quote p{
+    font-size:19px;
+  }
+
+  .style-list{
+    margin-top:20px;
+  }
+
+  .style-list li{
+    grid-template-columns:25px 1fr;
+    gap:10px;
+    padding:14px 0;
+    font-size:10px;
+    line-height:1.8;
+  }
+
+  .article-cta{
+    margin:48px 0 5px;
+    padding:29px 20px;
+  }
+
+  .article-cta-label{
+    font-size:7px;
+  }
+
+  .article-cta h3{
+    margin-top:10px;
+    font-size:23px;
+  }
+
+  .article-cta p{
+    font-size:9px;
+    line-height:1.75;
+  }
+
+  .article-cta-button{
+    max-width:none;
+    min-height:49px;
+    margin-top:17px;
+    font-size:8px;
+  }
+
+  .article-cta-note{
+    font-size:7px;
+  }
+
+  .article-closing{
+    margin-top:45px;
+    padding-top:27px;
+  }
+
+  .article-closing p{
+    font-size:20px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<main class="article-page">
+
+<header class="article-header">
+
+  <div class="article-eyebrow">
+    Fashion Journal
+  </div>
+
+  <h1>
+    The Closet Edit:
+    Keeping What Earns Its Place
+  </h1>
+
+  <p class="article-intro">
+    A thoughtful way to reconsider unworn pieces and make
+    everyday choices feel less crowded and more intentional.
+  </p>
+
+  <div class="article-meta">
+    <span>Fashion</span>
+    <span>Wardrobe</span>
+    <span>5 min read</span>
+  </div>
+
+</header>
+
+<article class="article-body">
+
+<section class="article-section">
+
+  <h2>
+    Begin without trying to remove everything
+  </h2>
+
+  <p>
+    Editing a wardrobe does not have to mean creating a
+    dramatically empty closet. The more useful approach is
+    to understand which pieces genuinely support the way
+    you dress and which ones have quietly stopped doing so.
+  </p>
+
+  <p>
+    Start by looking at what you reach for during ordinary
+    weeks. Those repeated choices can reveal the silhouettes,
+    fabrics and colors that already make sense in your life.
+    The goal is to notice patterns rather than impose rules.
+  </p>
+
+</section>
+
+<section class="article-section">
+
+  <h2>
+    Ask better questions about each piece
+  </h2>
+
+  <p>
+    A garment does not need to be worn every week to deserve
+    a place in your wardrobe. Some pieces have a specific
+    purpose, while others become useful because they work
+    across many different outfits.
+  </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '4fdd309c13924effa225511a2f070524',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/4fdd309c13924effa225511a2f070524/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '0c1fed1bf29c4fe87de4b0b98b156d64',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/0c1fed1bf29c4fe87de4b0b98b156d64/invoke.js"></script>
+</div>
+
+
+
+  <p>
+    Instead of asking only whether something is still
+    fashionable, consider whether it fits comfortably, works
+    with your other clothes and still feels like something
+    you would choose today.
+  </p>
+
+  <div class="article-cta">
+
+    <div class="article-cta-label">
+      Refresh Your Wardrobe
+    </div>
+
+    <h3>
+      Find pieces worth making room for.
+    </h3>
+
+    <p>
+      Explore current fashion selections and discover styles
+      that can bring a fresh perspective to the wardrobe
+      without making it feel overcomplicated.
+    </p>
+
+    <a
+      href="fashionpark.html"
+      class="article-cta-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Browse New Style Ideas
+    </a>
+
+    <div class="article-cta-note">
+      Opens the fashion page in a new tab.
+    </div>
+
+  </div>
+
+</section>
+
+<section class="article-section">
+
+  <h2>
+    Notice the pieces that create difficulty
+  </h2>
+
+  <p>
+    Sometimes a crowded wardrobe feels difficult because
+    too many pieces require special combinations. A top that
+    only works with one pair of trousers or a jacket that
+    needs a particular shoe may add more decisions than value.
+  </p>
+
+  <p>
+    This does not mean those pieces must automatically go.
+    Instead, notice how often you choose them and whether the
+    effort involved still feels worthwhile.
+  </p>
+
+</section>
+
+<div class="article-quote">
+
+  <p>
+    A useful wardrobe is not measured by how full it is, but
+    by how naturally its pieces work together.
+  </p>
+
+</div>
+
+<section class="article-section">
+
+  <h2>
+    Keep the pieces that make dressing easier
+  </h2>
+
+  <p>
+    Certain garments quietly earn their place because they
+    solve everyday problems. They work with several outfits,
+    feel comfortable for long periods and rarely require much
+    thought before leaving the house.
+  </p>
+
+  <ul class="style-list">
+
+    <li>
+      <span class="list-number">01</span>
+      <span>
+        Keep pieces that regularly work with clothes you
+        already enjoy wearing.
+      </span>
+    </li>
+
+    <li>
+      <span class="list-number">02</span>
+      <span>
+        Notice garments that make several different outfits
+        possible.
+      </span>
+    </li>
+
+    <li>
+      <span class="list-number">03</span>
+      <span>
+        Give comfortable pieces credit instead of judging
+        usefulness only by appearance.
+      </span>
+    </li>
+
+    <li>
+      <span class="list-number">04</span>
+      <span>
+        Leave room for a few distinctive pieces that bring
+        personality to simpler outfits.
+      </span>
+    </li>
+
+  </ul>
+
+</section>
+
+<section class="article-section">
+
+  <h2>
+    Give uncertain pieces some space
+  </h2>
+
+  <p>
+    Not every decision has to be made immediately. If you
+    are genuinely unsure about a garment, setting it aside
+    for a while can be more useful than making a rushed
+    decision.
+  </p>
+
+  <p>
+    After some time away, you may discover that you miss
+    the piece and know exactly how you would wear it. Or
+    you may realize that its absence has made getting dressed
+    easier. Either response gives you useful information.
+  </p>
+
+</section>
+
+<section class="article-section">
+
+  <h2>
+    Let the wardrobe evolve naturally
+  </h2>
+
+  <p>
+    A closet edit is not something that needs to happen only
+    once. Your lifestyle, preferences and daily routines can
+    change, and your clothes can change with them.
+  </p>
+
+  <p>
+    The most comfortable wardrobe is usually one that is
+    periodically reconsidered without becoming a constant
+    project. Keep noticing what works, what you miss and what
+    no longer feels connected to your life.
+  </p>
+
+</section>
+
+<div class="article-closing">
+
+  <p>
+    The best closet edit leaves you with fewer doubts, not
+    simply fewer clothes.
+  </p>
+
+</div>
+
+</article>
+
+</main>
+
+<div id="footer-container"></div>
+
+</body>
+</html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="description" content="Sometimes the most memorable part of a journey is simply watching unfamiliar streets, fields or coastlines pass slowly by.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="referrer" content="no-referrer">
+
+<title>The View From the Window</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+<style>
+
+:root{
+  --bg:#f2f4f1;
+  --paper:#fafbf8;
+  --soft:#e5ebe4;
+  --text:#202622;
+  --muted:#717972;
+  --line:#d8ddd7;
+  --accent:#536c5c;
+  --deep:#29362e;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.article-page{
+  width:min(820px,90%);
+  margin:0 auto;
+  padding:90px 0 100px;
+}
+
+.article-header{
+  padding-bottom:48px;
+  border-bottom:1px solid var(--line);
+}
+
+.article-meta{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--accent);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+
+.article-meta::before{
+  content:"";
+  width:27px;
+  height:1px;
+  background:var(--accent);
+}
+
+.article-header h1{
+  max-width:760px;
+  margin-top:22px;
+  font-family:var(--serif);
+  font-size:clamp(48px,7vw,76px);
+  font-weight:400;
+  line-height:1.03;
+  letter-spacing:-.045em;
+}
+
+.article-intro{
+  max-width:650px;
+  margin-top:24px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-body{
+  padding-top:52px;
+}
+
+.article-section{
+  margin-bottom:58px;
+}
+
+.article-section h2{
+  max-width:650px;
+  margin-bottom:22px;
+  font-family:var(--serif);
+  font-size:36px;
+  font-weight:400;
+  line-height:1.2;
+  letter-spacing:-.03em;
+}
+
+.article-section p{
+  max-width:690px;
+  margin-bottom:23px;
+  color:#4f5751;
+  font-size:14px;
+  line-height:2;
+}
+
+.article-section p:first-of-type{
+  color:var(--text);
+  font-family:var(--serif);
+  font-size:22px;
+  line-height:1.55;
+}
+
+.article-note{
+  margin:38px 0;
+  padding:30px 28px;
+  background:var(--soft);
+  border-left:2px solid var(--accent);
+}
+
+.article-note p{
+  margin:0 !important;
+  color:var(--deep) !important;
+  font-family:var(--serif) !important;
+  font-size:21px !important;
+  line-height:1.55 !important;
+}
+
+.article-cta{
+  margin-top:42px;
+  padding:38px 34px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  text-align:center;
+}
+
+.cta-label{
+  color:var(--accent);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.article-cta h3{
+  margin-top:13px;
+  font-family:var(--serif);
+  font-size:29px;
+  font-weight:400;
+  line-height:1.25;
+}
+
+.article-cta p{
+  max-width:530px;
+  margin:11px auto 0;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+  width:100%;
+  max-width:320px;
+  min-height:50px;
+  margin-top:20px;
+  padding:0 20px;
+  background:var(--deep);
+  color:#fff !important;
+  border:1px solid var(--deep);
+  border-radius:4px;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  transition:
+    background .2s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.cta-button::after{
+  content:"→";
+  font-size:14px;
+}
+
+.cta-button:hover{
+  background:var(--accent);
+  transform:translateY(-1px);
+  box-shadow:0 8px 20px rgba(41,54,46,.12);
+}
+
+.cta-subtext{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:8px;
+  opacity:.75;
+}
+
+.article-closing{
+  margin-top:70px;
+  padding-top:38px;
+  border-top:1px solid var(--line);
+}
+
+.article-closing h2{
+  font-family:var(--serif);
+  font-size:34px;
+  font-weight:400;
+  line-height:1.2;
+}
+
+.article-closing p{
+  max-width:690px;
+  margin-top:20px;
+  color:#4f5751;
+  font-size:14px;
+  line-height:2;
+}
+
+.article-disclosure{
+  max-width:650px;
+  margin:42px auto 0;
+  color:var(--muted);
+  font-size:8px;
+  line-height:1.8;
+  text-align:center;
+  opacity:.75;
+}
+
+#footer-container{
+  width:100%;
+}
+
+@media(max-width:600px){
+
+  .article-page{
+    width:92%;
+    padding:52px 0 70px;
+  }
+
+  .article-header{
+    padding-bottom:32px;
+  }
+
+  .article-meta{
+    font-size:7px;
+    letter-spacing:.16em;
+  }
+
+  .article-meta::before{
+    width:19px;
+  }
+
+  .article-header h1{
+    margin-top:16px;
+    font-size:40px;
+    line-height:1.07;
+  }
+
+  .article-intro{
+    margin-top:17px;
+    font-size:11px;
+    line-height:1.85;
+  }
+
+  .article-body{
+    padding-top:36px;
+  }
+
+  .article-section{
+    margin-bottom:43px;
+  }
+
+  .article-section h2{
+    margin-bottom:17px;
+    font-size:29px;
+  }
+
+  .article-section p{
+    margin-bottom:19px;
+    font-size:11px;
+    line-height:1.9;
+  }
+
+  .article-section p:first-of-type{
+    font-size:19px;
+    line-height:1.55;
+  }
+
+  .article-note{
+    margin:30px 0;
+    padding:23px 18px;
+  }
+
+  .article-note p{
+    font-size:18px !important;
+  }
+
+  .article-cta{
+    margin-top:31px;
+    padding:28px 18px;
+  }
+
+  .article-cta h3{
+    font-size:25px;
+  }
+
+  .article-cta p{
+    font-size:9px;
+    line-height:1.8;
+  }
+
+  .cta-button{
+    max-width:none;
+    min-height:51px;
+    font-size:8px;
+    letter-spacing:.11em;
+  }
+
+  .cta-subtext{
+    font-size:7px;
+  }
+
+  .article-closing{
+    margin-top:52px;
+    padding-top:29px;
+  }
+
+  .article-closing h2{
+    font-size:28px;
+  }
+
+  .article-closing p{
+    font-size:11px;
+    line-height:1.9;
+  }
+
+  .article-disclosure{
+    margin-top:32px;
+    font-size:7px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<main class="article-page">
+
+  <header class="article-header">
+
+    <div class="article-meta">
+      Travel / Observation
+    </div>
+
+    <h1>
+      The View From
+      the Window
+    </h1>
+
+    <p class="article-intro">
+      Sometimes the most memorable part of a journey is simply
+      watching unfamiliar streets, fields or coastlines pass
+      slowly by.
+    </p>
+
+  </header>
+
+  <article class="article-body">
+
+    <section class="article-section">
+
+      <h2>
+        There is something about watching
+      </h2>
+
+      <p>
+        A window can turn travel into a moving landscape, giving
+        you a chance to experience a place without needing to
+        stop and explore every part of it.
+      </p>
+
+      <p>
+        From a train, bus, car or room, familiar patterns disappear
+        and new ones appear. Buildings become fields, fields become
+        towns and towns gradually change into another landscape.
+      </p>
+
+      <p>
+        The view does not ask anything from you. You can simply
+        watch it change, noticing whatever happens to catch your
+        attention.
+      </p>
+
+      <div class="article-note">
+
+        <p>
+          Sometimes travel is most enjoyable when you are not
+          trying to get somewhere, but simply watching the world
+          pass on the way.
+        </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '4fdd309c13924effa225511a2f070524',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/4fdd309c13924effa225511a2f070524/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '0c1fed1bf29c4fe87de4b0b98b156d64',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/0c1fed1bf29c4fe87de4b0b98b156d64/invoke.js"></script>
+</div>
+
+
+
+      </div>
+
+    </section>
+
+    <section class="article-section">
+
+      <h2>
+        Let the scenery unfold naturally
+      </h2>
+
+      <p>
+        There is a particular pleasure in landscapes that cannot
+        be seen all at once.
+      </p>
+
+      <p>
+        A coastline might appear briefly before disappearing
+        behind a curve. A distant hillside can slowly become
+        clearer as the road approaches. In a city, an ordinary
+        street can reveal layers of life through a passing window.
+      </p>
+
+      <p>
+        These views are temporary, which may be part of why they
+        feel so memorable. There is no expectation that you will
+        return to exactly the same scene.
+      </p>
+
+      <p>
+        Choosing the right journey or accommodation can sometimes
+        create more opportunities for this kind of observation,
+        especially when the surroundings are part of the appeal.
+      </p>
+
+      <div class="article-cta">
+
+        <div class="cta-label">
+          Travel Inspiration
+        </div>
+
+        <h3>
+          Discover journeys worth looking out for
+        </h3>
+
+        <p>
+          Explore travel possibilities and find destinations,
+          stays and journeys where the scenery can become part
+          of the experience.
+        </p>
+
+        <a
+          href="travelpark.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore Travel Ideas
+        </a>
+
+        <div class="cta-subtext">
+          Continue to the travel details page.
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="article-section">
+
+      <h2>
+        Notice the spaces between places
+      </h2>
+
+      <p>
+        Travel is often focused on destinations, but the spaces
+        between them can reveal a different side of a region.
+      </p>
+
+      <p>
+        Small settlements, fields, industrial areas, quiet roads
+        and stretches of water may never appear on an itinerary,
+        yet they show how a place changes from one environment
+        into another.
+      </p>
+
+      <p>
+        Watching these transitions can create a stronger sense
+        of distance and geography than looking at a map ever can.
+      </p>
+
+    </section>
+
+    <section class="article-section">
+
+      <h2>
+        Give yourself permission to do nothing
+      </h2>
+
+      <p>
+        Not every part of a journey needs to be productive.
+        Looking through a window can be enough.
+      </p>
+
+      <p>
+        There is no checklist to complete and no particular
+        detail that needs to be remembered. The view can simply
+        occupy your attention while the journey continues.
+      </p>
+
+      <p>
+        These quiet periods can become valuable pauses between
+        more active parts of a trip, especially when the rest of
+        the itinerary is full.
+      </p>
+
+    </section>
+
+    <div class="article-closing">
+
+      <h2>
+        The scenery between memories
+      </h2>
+
+      <p>
+        A window view may last only a few minutes, but it can
+        become closely connected to the feeling of a journey.
+      </p>
+
+      <p>
+        Perhaps it is because these scenes are unplanned and
+        fleeting. You were simply passing through, watching an
+        unfamiliar world move gently beyond the glass, and for
+        a moment that was enough.
+      </p>
+
+    </div>
+
+  </article>
+
+  <p class="article-disclosure">
+    This article is provided for general informational
+    purposes. Travel availability, pricing, accommodation
+    details and booking conditions may vary by provider.
+  </p>
+
+</main>
+
+<div id="footer-container"></div>
+
+</body>
+</html>

@@ -11,24 +11,16 @@
 
   <meta
     name="description"
-    content="The sound of trees after the rain can transform an ordinary walk into a quieter, more attentive experience. Explore the atmosphere of wet forests, cooler air and dripping leaves."
+    content="Natural textures, imperfect forms and seasonal elements can add a quieter sense of character to everyday surroundings."
   >
 
   <meta name="robots" content="index, follow">
 
   <meta name="referrer" content="no-referrer">
 
-  <title>The Sound of Trees After the Rain — Nature</title>
+  <title>The Outdoor Details Worth Bringing Indoors — Nature</title>
 
-
-  <!-- =========================================
-       GOOGLE FONTS
-  ========================================== -->
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link
     rel="preconnect"
@@ -41,50 +33,23 @@
     rel="stylesheet"
   >
 
-
-  <!-- =========================================
-       HEADER / FOOTER
-  ========================================== -->
-
   <script src="header.js" defer></script>
-
   <script src="footer.js" defer></script>
-
 
   <style>
 
-    /* =========================================
-       ROOT
-    ========================================== */
-
     :root {
-
       --bg: #f3f5ef;
-
       --paper: #fafbf7;
-
       --ink: #20261f;
-
       --muted: #747b70;
-
       --line: #d8ddd2;
-
       --accent: #61725b;
-
       --deep: #344334;
-
       --soft: #e6ebe1;
-
       --serif: "Playfair Display", Georgia, serif;
-
       --sans: "DM Sans", Arial, sans-serif;
-
     }
-
-
-    /* =========================================
-       RESET
-    ========================================== */
 
     * {
       margin: 0;
@@ -92,590 +57,311 @@
       box-sizing: border-box;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
 
-
     body {
-
       background: var(--bg);
-
       color: var(--ink);
-
       font-family: var(--sans);
-
       line-height: 1.75;
-
       -webkit-font-smoothing: antialiased;
-
       overflow-x: hidden;
-
     }
-
 
     a {
       color: inherit;
       text-decoration: none;
     }
 
-
-    /* =========================================
-       ARTICLE WRAPPER
-    ========================================== */
-
     .article-page {
-
       width: min(920px, 90%);
-
       margin: 0 auto;
-
       padding: 105px 0 110px;
-
     }
-
-
-    /* =========================================
-       ARTICLE HEADER
-    ========================================== */
 
     .article-header {
-
       max-width: 800px;
-
       margin: 0 auto;
-
       text-align: center;
-
     }
-
 
     .article-kicker {
-
       display: inline-flex;
-
       align-items: center;
-
       gap: 12px;
-
       color: var(--accent);
-
       font-size: 9px;
-
       font-weight: 700;
-
       letter-spacing: .18em;
-
       text-transform: uppercase;
-
     }
-
 
     .article-kicker::before,
     .article-kicker::after {
-
       content: "";
-
       width: 25px;
-
       height: 1px;
-
       background: var(--accent);
-
     }
-
 
     .article-header h1 {
-
       margin-top: 25px;
-
       font-family: var(--serif);
-
       font-size: clamp(48px, 7vw, 78px);
-
       font-weight: 500;
-
       line-height: .98;
-
       letter-spacing: -.055em;
-
     }
-
 
     .article-header h1 em {
-
       color: var(--accent);
-
       font-style: italic;
-
     }
-
 
     .article-intro {
-
       max-width: 650px;
-
       margin: 28px auto 0;
-
       color: var(--muted);
-
       font-size: 14px;
-
       line-height: 1.9;
-
     }
-
 
     .article-meta {
-
       margin-top: 25px;
-
       color: #8a9185;
-
       font-size: 9px;
-
       font-weight: 600;
-
       letter-spacing: .12em;
-
       text-transform: uppercase;
-
     }
-
-
-    /* =========================================
-       ARTICLE BODY
-    ========================================== */
 
     .article-body {
-
       max-width: 720px;
-
       margin: 75px auto 0;
-
     }
-
 
     .article-section {
-
       margin-bottom: 65px;
-
     }
-
 
     .section-label {
-
       margin-bottom: 15px;
-
       color: var(--accent);
-
       font-size: 9px;
-
       font-weight: 700;
-
       letter-spacing: .16em;
-
       text-transform: uppercase;
-
     }
-
 
     .article-section h2 {
-
       margin-bottom: 20px;
-
       font-family: var(--serif);
-
       font-size: 34px;
-
       font-weight: 500;
-
       line-height: 1.15;
-
       letter-spacing: -.035em;
-
     }
-
 
     .article-section p {
-
       margin-bottom: 19px;
-
       color: #555d52;
-
       font-size: 14px;
-
       line-height: 1.95;
-
     }
-
 
     .article-section p:last-child {
-
       margin-bottom: 0;
-
     }
-
-
-    /* =========================================
-       FEATURE QUOTE
-    ========================================== */
 
     .article-quote {
-
       margin: 65px 0;
-
       padding: 35px 40px;
-
       background: var(--soft);
-
       border-left: 2px solid var(--accent);
-
     }
-
 
     .article-quote p {
-
       margin: 0;
-
       color: var(--deep);
-
       font-family: var(--serif);
-
       font-size: 27px;
-
       line-height: 1.4;
-
       letter-spacing: -.02em;
-
     }
-
-
-    /* =========================================
-       CTA
-    ========================================== */
 
     .article-cta {
-
       margin: 70px 0;
-
       padding: 38px 40px;
-
       background: var(--paper);
-
       border: 1px solid var(--line);
-
     }
-
 
     .cta-label {
-
       color: var(--accent);
-
       font-size: 8px;
-
       font-weight: 700;
-
       letter-spacing: .17em;
-
       text-transform: uppercase;
-
     }
-
 
     .article-cta h3 {
-
       margin-top: 12px;
-
       font-family: var(--serif);
-
       font-size: 30px;
-
       font-weight: 500;
-
       line-height: 1.2;
-
       letter-spacing: -.025em;
-
     }
-
 
     .article-cta p {
-
       max-width: 590px;
-
       margin-top: 12px;
-
       color: var(--muted);
-
       font-size: 12px;
-
       line-height: 1.8;
-
     }
-
 
     .cta-link {
-
       display: inline-flex;
-
       align-items: center;
-
       gap: 10px;
-
       margin-top: 22px;
-
       padding-bottom: 5px;
-
       border-bottom: 1px solid var(--deep);
-
       color: var(--deep);
-
       font-size: 9px;
-
       font-weight: 700;
-
       letter-spacing: .14em;
-
       text-transform: uppercase;
-
     }
-
 
     .cta-link::after {
-
       content: "→";
-
       font-size: 14px;
-
       transition: transform .2s ease;
-
     }
-
 
     .cta-link:hover::after {
-
       transform: translateX(5px);
-
     }
-
 
     .cta-note {
-
       margin-top: 10px;
-
       color: #8a9185;
-
       font-size: 8px;
-
     }
-
-
-    /* =========================================
-       CLOSING
-    ========================================== */
 
     .article-ending {
-
       padding-top: 45px;
-
       border-top: 1px solid var(--line);
-
       text-align: center;
-
     }
-
 
     .article-ending p {
-
       max-width: 650px;
-
       margin: 0 auto;
-
       font-family: var(--serif);
-
       font-size: 27px;
-
       line-height: 1.4;
-
       letter-spacing: -.025em;
-
     }
-
 
     .article-ending span {
-
       display: block;
-
       margin-top: 15px;
-
       color: var(--muted);
-
       font-size: 8px;
-
       font-family: var(--sans);
-
       font-weight: 700;
-
       letter-spacing: .15em;
-
       text-transform: uppercase;
-
     }
-
-
-    /* =========================================
-       MOBILE
-    ========================================== */
 
     @media (max-width: 650px) {
 
       .article-page {
-
         width: 92%;
-
         padding: 75px 0 75px;
-
       }
-
 
       .article-header h1 {
-
         font-size: 45px;
-
         line-height: 1.02;
-
       }
-
 
       .article-intro {
-
         margin-top: 22px;
-
         font-size: 12px;
-
         line-height: 1.85;
-
       }
-
 
       .article-meta {
-
         font-size: 7px;
-
       }
-
 
       .article-body {
-
         margin-top: 55px;
-
       }
-
 
       .article-section {
-
         margin-bottom: 48px;
-
       }
-
 
       .article-section h2 {
-
         font-size: 29px;
-
       }
-
 
       .article-section p {
-
         font-size: 12px;
-
         line-height: 1.9;
-
       }
-
 
       .article-quote {
-
         margin: 48px 0;
-
         padding: 27px 23px;
-
       }
-
 
       .article-quote p {
-
         font-size: 22px;
-
       }
-
 
       .article-cta {
-
         margin: 50px 0;
-
         padding: 28px 22px;
-
       }
-
 
       .article-cta h3 {
-
         font-size: 26px;
-
       }
-
 
       .article-cta p {
-
         font-size: 10px;
-
       }
-
 
       .cta-link {
-
         font-size: 8px;
-
       }
 
-
       .article-ending p {
-
         font-size: 22px;
-
       }
 
     }
 
-
-    /* =========================================
-       SMALL MOBILE
-    ========================================== */
-
     @media (max-width: 360px) {
 
       .article-header h1 {
-
         font-size: 39px;
-
       }
-
 
       .article-section h2 {
-
         font-size: 27px;
-
       }
 
-
       .article-quote p {
-
         font-size: 20px;
-
       }
 
     }
@@ -684,16 +370,9 @@
 
 </head>
 
-
 <body>
 
-
   <main class="article-page">
-
-
-    <!-- =====================================
-         HEADER
-    ====================================== -->
 
     <header class="article-header">
 
@@ -701,67 +380,55 @@
         Nature Journal
       </div>
 
-
       <h1>
-        The Sound of Trees
-        <em>After the Rain</em>
+        The Outdoor Details
+        <em>Worth Bringing Indoors</em>
       </h1>
 
-
       <p class="article-intro">
-        Wet leaves, dripping branches and cooler air can
-        create a completely different atmosphere in the
-        woods after a passing shower. Sometimes the forest
-        feels less like a destination and more like a place
-        asking us to slow down.
+        Natural textures, imperfect forms and seasonal
+        elements can add a quieter sense of character to
+        everyday surroundings.
       </p>
 
-
       <div class="article-meta">
-        Nature / Atmosphere / Quiet Moments
+        Nature / Natural Details / Everyday Surroundings
       </div>
 
     </header>
 
 
-
-    <!-- =====================================
-         ARTICLE
-    ====================================== -->
-
     <article class="article-body">
 
-
-      <!-- SECTION 01 -->
 
       <section class="article-section">
 
         <div class="section-label">
-          After the rain
+          Bringing nature closer
         </div>
 
-
         <h2>
-          The forest sounds different
+          Natural character does not need to be complicated
         </h2>
 
-
         <p>
-          Rain changes more than the appearance of a
-          landscape. It seems to soften the edges of
-          everything around it. Paths become darker,
-          leaves hold tiny drops of water and the air
-          carries a cooler, cleaner feeling.
+          Outdoor spaces contain textures and forms that can
+          be easy to appreciate without thinking about how
+          they might look somewhere else. Rough bark, smooth
+          stones, dried leaves and simple branches each have
+          their own visual character.
         </p>
 
+        <p>
+          Bringing carefully chosen natural details indoors
+          can create a connection with the outside world
+          without trying to recreate an entire landscape.
+        </p>
 
         <p>
-          Then there is the sound. Water continues to fall
-          long after the clouds have moved on, dropping
-          from branches onto leaves and from leaves onto
-          the ground. What was once background noise can
-          suddenly become the most noticeable part of
-          the walk.
+          The appeal often comes from their imperfections.
+          Unlike manufactured objects, natural forms rarely
+          look exactly the same twice.
         </p>
 
 
@@ -822,112 +489,110 @@
 
 
 
-
-        <p>
-          The forest does not need to be completely silent
-          to feel peaceful. The small, repeating sounds
-          simply give the mind something uncomplicated
-          to follow.
-        </p>
-
       </section>
 
-
-
-      <!-- =====================================
-           QUOTE
-      ====================================== -->
 
       <div class="article-quote">
 
         <p>
-          After the rain, even familiar places can feel
-          briefly unfamiliar — quieter, cooler and
-          easier to notice.
+          Nature often adds character through the details
+          that were never designed to be perfectly uniform.
         </p>
 
       </div>
 
 
-
-      <!-- SECTION 02 -->
-
       <section class="article-section">
 
         <div class="section-label">
-          Notice the details
+          Texture and form
         </div>
 
-
         <h2>
-          A slower kind of attention
+          Imperfect surfaces can make a space feel more alive
         </h2>
 
-
         <p>
-          Walking through wet woods encourages a different
-          pace. The ground may be slippery, puddles appear
-          where there were none before, and branches still
-          release water without warning. There is less
-          reason to rush.
+          Smooth and polished surfaces have their place, but
+          natural textures introduce another kind of visual
+          interest. A piece of weathered wood, a textured
+          stone or a dried botanical form can create contrast
+          without demanding attention.
         </p>
 
-
         <p>
-          That slower pace makes room for details that might
-          normally disappear into the background. The
-          pattern of water on a leaf. The darker color of
-          tree bark. A distant bird calling between the
-          branches. The movement of a single drop as it
-          travels along the edge of a leaf.
+          These details can also make familiar surroundings
+          feel less predictable. The irregular edge of a leaf
+          or the grain in a branch gives the eye something
+          subtle to explore.
         </p>
 
-
         <p>
-          None of these things are particularly dramatic.
-          Their appeal comes from how ordinary they are.
-          When attention becomes quieter, small details can
-          become enough.
+          The goal does not have to be decoration in the
+          traditional sense. Sometimes one small natural
+          element is enough to change the feeling of a corner.
         </p>
 
       </section>
 
 
+      <section class="article-section">
 
-      <!-- =====================================
-           CTA
-      ====================================== -->
+        <div class="section-label">
+          Seasonal details
+        </div>
+
+        <h2>
+          Nature can bring a sense of the season indoors
+        </h2>
+
+        <p>
+          Outdoor landscapes change throughout the year, and
+          some of those changes can be reflected through
+          simple natural details.
+        </p>
+
+        <p>
+          Fresh green growth can suggest the beginning of a
+          season, while dried grasses, fallen leaves or muted
+          branches can carry the quieter character of later
+          months.
+        </p>
+
+        <p>
+          This connection to seasonal change can make an
+          interior feel more closely tied to what is happening
+          beyond the windows.
+        </p>
+
+      </section>
+
 
       <aside class="article-cta">
 
         <div class="cta-label">
-          A related opportunity
+          A nature opportunity
         </div>
 
-
         <h3>
-          Planning your next escape?
+          Find more natural inspiration outdoors
         </h3>
 
-
         <p>
-          If this kind of slower outdoor atmosphere has
-          you thinking about getting away, you can explore
-          the current travel options available through
-          the provider's page and review the details
-          directly before deciding.
+          Explore nature-focused options and discover
+          landscapes, gardens and outdoor settings that can
+          inspire the textures, forms and seasonal details
+          you bring into everyday spaces.
         </p>
-
 
         <a
           href="naturepark.html"
           class="cta-link"
-		  target="_blank"
-        rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Explore travel options
+          Explore nature options
         </a>
-
 
         <div class="cta-note">
           External provider · Availability and terms may vary.
@@ -936,62 +601,47 @@
       </aside>
 
 
-
-      <!-- SECTION 03 -->
-
       <section class="article-section">
 
         <div class="section-label">
-          Staying a little longer
+          Keep it simple
         </div>
 
-
         <h2>
-          Let the weather change the experience
+          A little natural texture can be enough
         </h2>
 
-
         <p>
-          We often think of good weather as the absence
-          of rain. But some of the most memorable outdoor
-          moments happen when conditions are less perfect.
-          A passing shower can change the color, sound and
-          pace of an entire landscape.
+          It is easy to overthink the idea of bringing outdoor
+          elements inside. But natural character usually works
+          best when it feels relaxed rather than arranged too
+          carefully.
         </p>
 
-
         <p>
-          There is something refreshing about seeing a
-          familiar trail immediately after rain. The same
-          trees are there, but the atmosphere has shifted.
-          Instead of trying to recreate the landscape as
-          it looked before, you get to experience the
-          version that exists for a short while.
+          One interesting texture beside smoother materials
+          can create enough contrast. A small seasonal detail
+          can introduce change without transforming the entire
+          room.
         </p>
 
-
         <p>
-          Perhaps that is the real pleasure of walking
-          outside after rain: it gives an ordinary place
-          a temporary character that will disappear as
-          the ground dries and the day continues.
+          What matters most is the feeling of connection. A
+          natural form can remind us that the world outside is
+          full of shapes and textures that do not need to be
+          perfectly finished to be beautiful.
         </p>
 
       </section>
 
 
-
-      <!-- =====================================
-           ENDING
-      ====================================== -->
-
       <div class="article-ending">
 
         <p>
-          Sometimes the best way to notice a place is to
-          visit it just after it has changed.
+          Sometimes bringing a little of the outdoors inside
+          is simply a way of keeping our attention connected
+          to the natural world.
         </p>
-
 
         <span>
           A quiet note from nature
@@ -999,20 +649,12 @@
 
       </div>
 
-
     </article>
-
 
   </main>
 
 
-
-  <!-- =========================================
-       FOOTER
-  ========================================== -->
-
   <div id="footer-container"></div>
-
 
 </body>
 </html>

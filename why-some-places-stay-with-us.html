@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta
+  name="description"
+  content="Certain destinations become part of our memory for reasons that have little to do with famous sights and everything to do with how they felt.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Why Some Places Stay With Us | Lumina Haven</title>
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+  rel="stylesheet"
+>
+
+<style>
+
+:root{
+  --bg:#f2f4f1;
+  --paper:#fafbf8;
+  --soft:#e5ebe4;
+  --text:#202622;
+  --muted:#717972;
+  --line:#d8ddd7;
+  --accent:#536c5c;
+  --deep:#29362e;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;
+}
+
+.article-page{
+  width:min(820px,90%);
+  margin:0 auto;
+  padding:90px 0 100px;
+}
+
+.article-header{
+  border-bottom:1px solid var(--line);
+  padding-bottom:42px;
+}
+
+.article-eyebrow{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:18px;
+}
+
+.article-header h1{
+  margin:0;
+  font-family:var(--serif);
+  font-size:56px;
+  line-height:1.08;
+  font-weight:400;
+  letter-spacing:-.025em;
+}
+
+.article-intro{
+  margin:25px 0 0;
+  max-width:690px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.8;
+}
+
+.article-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:25px;
+}
+
+.article-meta span{
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"·";
+  margin-left:10px;
+  color:var(--line);
+}
+
+.article-body{
+  padding-top:52px;
+}
+
+.article-section{
+  margin-bottom:58px;
+}
+
+.article-section h2{
+  margin:0 0 20px;
+  font-family:var(--serif);
+  font-size:36px;
+  line-height:1.2;
+  font-weight:400;
+  letter-spacing:-.015em;
+}
+
+.article-section p{
+  margin:0 0 20px;
+  font-size:14px;
+  line-height:2;
+  color:var(--text);
+}
+
+.article-section p:last-child{
+  margin-bottom:0;
+}
+
+.article-section > p:first-of-type{
+  font-family:var(--serif);
+  font-size:22px;
+  line-height:1.65;
+}
+
+.article-note{
+  margin:32px 0;
+  padding:26px 28px;
+  background:var(--soft);
+  border-left:3px solid var(--accent);
+}
+
+.article-note p{
+  margin:0;
+  color:var(--deep);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-cta{
+  margin:42px 0 10px;
+  padding:42px 35px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  text-align:center;
+}
+
+.article-cta-label{
+  margin-bottom:12px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+.article-cta h3{
+  margin:0;
+  font-family:var(--serif);
+  font-size:30px;
+  line-height:1.25;
+  font-weight:400;
+}
+
+.article-cta p{
+  max-width:550px;
+  margin:17px auto 25px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.8;
+}
+
+.article-cta-button{
+  display:block;
+  width:min(320px,100%);
+  margin:0 auto;
+  padding:15px 22px;
+  background:var(--deep);
+  color:#fff;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.05em;
+  transition:opacity .2s ease;
+}
+
+.article-cta-button:hover{
+  opacity:.88;
+}
+
+.article-cta-sub{
+  margin-top:13px;
+  color:var(--muted);
+  font-size:10px;
+}
+
+.article-closing{
+  margin-top:58px;
+  padding-top:35px;
+  border-top:1px solid var(--line);
+}
+
+.article-closing p{
+  margin:0;
+  font-family:var(--serif);
+  font-size:20px;
+  line-height:1.7;
+  color:var(--deep);
+}
+
+.article-disclosure{
+  margin-top:25px;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.7;
+}
+
+@media(max-width:600px){
+
+  .article-page{
+    width:92%;
+    padding:58px 0 65px;
+  }
+
+  .article-header{
+    padding-bottom:32px;
+  }
+
+  .article-header h1{
+    font-size:40px;
+  }
+
+  .article-intro{
+    font-size:14px;
+    line-height:1.75;
+  }
+
+  .article-body{
+    padding-top:40px;
+  }
+
+  .article-section{
+    margin-bottom:45px;
+  }
+
+  .article-section h2{
+    font-size:30px;
+  }
+
+  .article-section p{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-section > p:first-of-type{
+    font-size:19px;
+  }
+
+  .article-note{
+    padding:22px;
+  }
+
+  .article-cta{
+    padding:34px 22px;
+  }
+
+  .article-cta h3{
+    font-size:27px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header-container"></div>
+
+<main class="article-page">
+
+  <header class="article-header">
+
+    <div class="article-eyebrow">
+      Travel Journal
+    </div>
+
+    <h1>
+      Why Some Places Stay With Us
+    </h1>
+
+    <p class="article-intro">
+      Certain destinations become part of our memory for reasons that have little to do with famous sights and everything to do with how they felt.
+    </p>
+
+    <div class="article-meta">
+      <span>Travel</span>
+      <span>Reflection</span>
+      <span>5 min read</span>
+    </div>
+
+  </header>
+
+  <article class="article-body">
+
+    <section class="article-section">
+
+      <h2>
+        Not Every Place Leaves the Same Mark
+      </h2>
+
+      <p>
+        We can visit somewhere remarkable and remember very little of it, while another place can remain vivid for years after only a short stay.
+      </p>
+
+      <p>
+        The difference is rarely explained by the number of landmarks we saw. A destination becomes memorable when something about the experience connects with us personally.
+      </p>
+
+      <p>
+        It might be the pace of the streets, the quality of the light, a conversation with someone we never expected to meet, or simply the feeling of having enough time to notice what was around us.
+      </p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '4fdd309c13924effa225511a2f070524',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/4fdd309c13924effa225511a2f070524/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '0c1fed1bf29c4fe87de4b0b98b156d64',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/0c1fed1bf29c4fe87de4b0b98b156d64/invoke.js"></script>
+</div>
+
+
+
+    </section>
+
+    <section class="article-section">
+
+      <h2>
+        Memory Follows Feeling
+      </h2>
+
+      <p>
+        We often remember experiences through atmosphere before we remember them through facts.
+      </p>
+
+      <p>
+        Years later, you may not recall the exact name of a street, but you remember how quiet it was in the morning. You may forget the route you took but remember the warmth of the evening air as you walked back to where you were staying.
+      </p>
+
+      <div class="article-note">
+
+        <p>
+          A memorable place is often less about what happened there and more about what the experience allowed you to notice, feel or understand.
+        </p>
+
+      </div>
+
+      <p>
+        These impressions are difficult to plan. They tend to appear between the scheduled parts of a journey, when attention is free enough to wander.
+      </p>
+
+    </section>
+
+    <section class="article-section">
+
+      <h2>
+        The Ordinary Can Become Significant
+      </h2>
+
+      <p>
+        Some of the strongest travel memories come from moments that would seem completely ordinary to someone else.
+      </p>
+
+      <p>
+        Sitting outside with breakfast, watching people cross a square, taking the same walk twice or waiting for a train can become part of the emotional shape of a trip.
+      </p>
+
+      <p>
+        Distance changes the way we see these simple moments. Away from familiar routines, even small observations can feel new enough to stay with us.
+      </p>
+
+    </section>
+
+    <section class="article-section">
+
+      <h2>
+        What We Carry Forward
+      </h2>
+
+      <p>
+        A memorable destination sometimes changes what we want from future journeys. After experiencing a slower place, we may start leaving more empty space in our itineraries.
+      </p>
+
+      <p>
+        After spending time somewhere walkable, we might begin looking at cities differently. After discovering a quiet landscape, we may seek more moments without constant activity.
+      </p>
+
+      <p>
+        In this way, a place stays with us not only as a memory but as an influence. It quietly becomes part of the way we choose, notice and experience the next journey.
+      </p>
+
+    </section>
+
+    <div class="article-cta">
+
+      <div class="article-cta-label">
+        Travel Discovery
+      </div>
+
+      <h3>
+        Explore places that might become part of your story
+      </h3>
+
+      <p>
+        Discover travel possibilities and destinations where the atmosphere, surroundings and everyday details can become part of the experience.
+      </p>
+
+      <a
+        class="article-cta-button"
+        href="travelpark.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore Travel Ideas
+      </a>
+
+      <div class="article-cta-sub">
+        Continue to the travel details page.
+      </div>
+
+    </div>
+
+    <div class="article-closing">
+
+      <p>
+        Perhaps the places we remember most are not the ones that gave us the most to see, but the ones that gave us something we wanted to keep noticing.
+      </p>
+
+      <div class="article-disclosure">
+        Travel ideas and reflections are provided for general inspiration. Availability, pricing and travel details may vary.
+      </div>
+
+    </div>
+
+  </article>
+
+</main>
+
+<div id="footer-container"></div>
+
+</body>
+</html>

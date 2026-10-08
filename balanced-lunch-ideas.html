@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="description" content="Flexible ideas for combining grains, vegetables, proteins and simple sauces into lunches that feel satisfying without being fussy.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Lunches That Make the Middle of the Day Better</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<script src="header.js" defer></script>
+
+<script src="footer.js" defer></script>
+
+<style>
+
+:root{
+  --bg:#f3f0eb;
+  --paper:#fbfaf7;
+  --paper-soft:#e9e3da;
+  --text:#272521;
+  --muted:#77736d;
+  --line:#ddd7cf;
+  --accent:#81715f;
+  --accent-dark:#4d4339;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.page{
+  width:min(900px,92%);
+  margin:0 auto;
+  padding:65px 0 75px;
+}
+
+.article-header{
+  max-width:760px;
+  margin:0 auto 45px;
+  text-align:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--accent);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.eyebrow::before{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--accent);
+}
+
+.article-header h1{
+  margin-top:18px;
+  font-family:var(--serif);
+  font-size:clamp(38px,6vw,60px);
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:-.035em;
+}
+
+.article-header h1 em{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.article-intro{
+  max-width:680px;
+  margin:20px auto 0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.85;
+}
+
+.article-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:52px 58px;
+  box-shadow:0 18px 45px rgba(45,38,31,.045);
+}
+
+.article-section{
+  margin-bottom:52px;
+}
+
+.article-section:last-child{
+  margin-bottom:0;
+}
+
+.article-section h2{
+  margin-bottom:19px;
+  font-family:var(--serif);
+  font-size:29px;
+  font-weight:400;
+  line-height:1.25;
+  letter-spacing:-.02em;
+}
+
+.article-section p{
+  margin-bottom:19px;
+  color:#45423d;
+  font-size:15px;
+  line-height:1.9;
+}
+
+.article-section p:last-child{
+  margin-bottom:0;
+}
+
+.article-note{
+  margin:29px 0 0;
+  padding:20px 22px;
+  background:var(--paper-soft);
+  border-left:2px solid var(--accent);
+  color:#625d55;
+  font-family:var(--serif);
+  font-size:16px;
+  font-style:italic;
+  line-height:1.7;
+}
+
+.cta-box{
+  margin:32px 0 5px;
+  padding:28px 29px;
+  background:var(--paper-soft);
+  border:1px solid var(--line);
+  border-radius:5px;
+}
+
+.cta-label{
+  display:block;
+  margin-bottom:9px;
+  color:var(--accent-dark);
+  font-family:var(--sans);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.cta-box h3{
+  margin-bottom:9px;
+  font-family:var(--serif);
+  font-size:23px;
+  font-weight:400;
+  line-height:1.3;
+}
+
+.cta-box p{
+  margin-bottom:17px;
+  color:var(--muted);
+  font-family:var(--sans);
+  font-size:11px;
+  line-height:1.75;
+}
+
+.cta-link{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--accent-dark);
+  font-family:var(--sans);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--accent-dark);
+  padding-bottom:3px;
+}
+
+.cta-link::after{
+  content:"→";
+  font-size:14px;
+}
+
+.cta-link:hover{
+  opacity:.7;
+}
+
+@media(max-width:600px){
+
+  .page{
+    width:92%;
+    padding:40px 0 55px;
+  }
+
+  .article-header{
+    margin-bottom:30px;
+  }
+
+  .eyebrow{
+    font-size:7px;
+    letter-spacing:.17em;
+  }
+
+  .eyebrow::before{
+    width:19px;
+  }
+
+  .article-header h1{
+    margin-top:14px;
+    font-size:36px;
+    line-height:1.12;
+  }
+
+  .article-intro{
+    margin-top:14px;
+    font-size:11px;
+    line-height:1.8;
+  }
+
+  .article-card{
+    padding:30px 21px;
+    border-radius:6px;
+  }
+
+  .article-section{
+    margin-bottom:40px;
+  }
+
+  .article-section h2{
+    margin-bottom:15px;
+    font-size:25px;
+  }
+
+  .article-section p{
+    margin-bottom:17px;
+    font-size:13px;
+    line-height:1.85;
+  }
+
+  .article-note{
+    margin-top:24px;
+    padding:17px 18px;
+    font-size:14px;
+  }
+
+  .cta-box{
+    margin-top:26px;
+    padding:22px 19px;
+  }
+
+  .cta-label{
+    font-size:7px;
+  }
+
+  .cta-box h3{
+    font-size:21px;
+  }
+
+  .cta-box p{
+    font-size:9px;
+    line-height:1.75;
+  }
+
+  .cta-link{
+    font-size:8px;
+  }
+}
+
+@media(max-width:360px){
+
+  .article-header h1{
+    font-size:32px;
+  }
+
+  .article-card{
+    padding:27px 17px;
+  }
+
+  .article-section h2{
+    font-size:23px;
+  }
+
+  .article-section p{
+    font-size:12px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header-container"></div>
+
+<main class="page">
+
+<header class="article-header">
+
+<div class="eyebrow">
+Midday Meals
+</div>
+
+<h1>
+Lunches That Make the Middle of the Day <em>Better</em>
+</h1>
+
+<p class="article-intro">
+Flexible ideas for combining grains, vegetables, proteins
+and simple sauces into lunches that feel satisfying without
+being fussy.
+</p>
+
+</header>
+
+<article class="article-card">
+
+<section class="article-section">
+
+<h2>
+Think of Lunch as a Complete Little Meal
+</h2>
+
+<p>
+Lunch can easily become an afterthought, especially on days
+when everything seems to be happening at once. But a meal
+with a few complementary elements can make the middle of
+the day feel noticeably more settled.
+</p>
+
+<p>
+A useful starting point is something substantial, something
+fresh and something that brings the two together. A grain,
+some vegetables and a simple dressing can be enough, while
+beans, eggs, chicken or another protein can make the meal
+more filling when needed.
+</p>
+
+<p>
+The combination does not have to follow a strict formula.
+The idea is simply to give lunch enough variety that it feels
+like a proper pause rather than something eaten between
+tasks.
+</p>
+
+<div class="article-note">
+A satisfying lunch does not need to be elaborate. It simply
+needs to give the middle of the day a little attention.
+</div>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Build Around What Is Already Available
+</h2>
+
+<p>
+Some of the easiest lunches begin with leftovers or a few
+ingredients already waiting in the refrigerator. Cooked
+grains can become the base of a bowl, roasted vegetables can
+become a filling, and yesterday's chicken can find a new
+place beside fresh greens.
+</p>
+
+
+<style>
+.adsterra-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.adsterra-mobile {
+  display: none;
+}
+
+.adsterra-desktop {
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .adsterra-desktop {
+    display: none;
+  }
+
+  .adsterra-mobile {
+    display: flex;
+  }
+}
+</style>
+
+<div class="adsterra-banner adsterra-mobile">
+<script>
+  atOptions = {
+    'key' : '4fdd309c13924effa225511a2f070524',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/4fdd309c13924effa225511a2f070524/invoke.js"></script>
+</div>
+
+<div class="adsterra-banner adsterra-desktop">
+<script>
+  atOptions = {
+    'key' : '0c1fed1bf29c4fe87de4b0b98b156d64',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/0c1fed1bf29c4fe87de4b0b98b156d64/invoke.js"></script>
+</div>
+
+
+
+<p>
+This way of thinking makes lunch less dependent on having a
+specific recipe available. Instead, ingredients can be
+combined according to texture, flavour and what needs using
+first.
+</p>
+
+<p>
+A simple sauce can then bring everything together. Lemon and
+olive oil, yoghurt with herbs or a light dressing can turn
+separate ingredients into something that feels deliberately
+prepared.
+</p>
+
+<div class="cta-box">
+
+<span class="cta-label">
+A Midday Shortcut
+</span>
+
+<h3>
+When lunch deserves to be effortless
+</h3>
+
+<p>
+Not every day leaves room for preparing a thoughtful lunch.
+When you would rather take the break without cooking, you
+can browse available food options through the external page
+below. Selection, availability, delivery times and fees may
+vary by location and account.
+</p>
+
+<a class="cta-link" href="foodpark.html" target="_blank" rel="noopener noreferrer">
+See Convenient Lunch Choices
+</a>
+
+</div>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Add Something Fresh
+</h2>
+
+<p>
+Freshness can keep a lunch from feeling too heavy. Crisp
+lettuce, cucumber, tomatoes, herbs, fruit or lightly dressed
+vegetables can bring contrast to warmer or more substantial
+ingredients.
+</p>
+
+<p>
+Even a small amount can make a difference. A few slices of
+cucumber alongside a warm grain bowl or a handful of herbs
+over beans can give the meal a brighter character.
+</p>
+
+<p>
+Fresh elements are also useful because they can change the
+texture of leftovers without requiring much additional
+cooking.
+</p>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Give Texture a Place on the Plate
+</h2>
+
+<p>
+A lunch becomes more interesting when every part does not
+feel the same. Something soft can work beautifully beside
+something crisp, while a creamy dressing can balance roasted
+or toasted ingredients.
+</p>
+
+<p>
+Nuts, seeds, toasted bread, fresh vegetables and crunchy
+greens are simple ways to add another dimension without
+turning lunch into a complicated project.
+</p>
+
+<p>
+Thinking about texture can also make familiar ingredients
+feel different from one day to the next.
+</p>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Keep a Few Reliable Combinations
+</h2>
+
+<p>
+There is value in having a small collection of lunch ideas
+that can be prepared almost without thinking. A grain bowl,
+vegetable wrap, hearty salad or simple soup can become a
+reliable starting point.
+</p>
+
+<p>
+These combinations can then change with the ingredients
+available. The structure remains familiar while the flavours
+shift according to the season or whatever happens to be in
+the kitchen.
+</p>
+
+<p>
+That flexibility makes lunch easier to maintain as a habit
+without making it repetitive.
+</p>
+
+</section>
+
+<section class="article-section">
+
+<h2>
+Let Lunch Be a Real Pause
+</h2>
+
+<p>
+Perhaps the most useful improvement is not another recipe but
+a little more attention. Sitting down, stepping away from
+work and giving the meal enough time to be enjoyed can make
+the same food feel different.
+</p>
+
+<p>
+A lunch does not need to become an elaborate ritual. Even a
+few quiet minutes without another task competing for
+attention can make the middle of the day feel less rushed.
+</p>
+
+<p>
+When simple food is combined with a genuine pause, lunch can
+become one of the small anchors that gives the day a better
+rhythm.
+</p>
+
+</section>
+
+</article>
+
+</main>
+
+<div id="footer-container"></div>
+
+</body>
+</html>
